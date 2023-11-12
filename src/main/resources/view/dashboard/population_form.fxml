@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.Populationcontroller">
+
+   <Pane layoutX="-15.0" layoutY="1.0" prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
+      <Label layoutX="224.0" layoutY="224.0" text="Population In The Garden Is Gonnaa be Here" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </Pane>
+</AnchorPane>

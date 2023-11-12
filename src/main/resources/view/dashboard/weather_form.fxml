@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="1010.0" prefWidth="1410.0" style="-fx-background-color: 250,250,250;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.controller.dashboard.WeatherController">
+   <WebView prefHeight="1010.0" prefWidth="1411.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+   <ImageView fitHeight="707.0" fitWidth="1411.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../asserts/weather%20images/dark-blue-texture-with-cloudy-sky-vector.jpg"/>
+   </ImageView>
+   <Label layoutX="325.0" layoutY="653.0" text="Click Here To Check The Current Weather">
+      <font>
+         <Font size="43.0"/>
+      </font>
+   </Label>
+   <Hyperlink layoutX="656.0" layoutY="742.0" onAction="#onActionOpenweather" text="Click Here">
+      <font>
+         <Font size="25.0"/>
+      </font>
+   </Hyperlink>
+</AnchorPane>

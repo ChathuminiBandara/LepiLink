@@ -1,0 +1,137 @@
+CREATE DATABASE LepiLink;
+
+USE LepiLink;
+
+CREATE TABLE area(
+    areaId VARCHAR(20) PRIMARY KEY NOT NULL,
+    areaName VARCHAR(50) NOT NULL,
+    areaType VARCHAR(50) NOT NULL,
+    bVarietyCount INT NOT NULL
+);
+
+CREATE TABLE booking(
+    reservationId VARCHAR(20) PRIMARY KEY NOT NULL,
+    visitorName VARCHAR(50) NOT NULL,
+    visitDate DATE NOT NULL,
+    eventName VARCHAR(50) NOT NULL,
+    paymentStatus VARCHAR(50) NOT NULL ,
+    numberOfAttendance INT NOT NULL,
+    status VARCHAR(50) NOT NULL
+
+);
+
+CREATE TABLE visitor(
+    visitorId VARCHAR(20) PRIMARY KEY NOT NULL,
+    visitorName VARCHAR(50) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    time VARCHAR(10) NOT NULL,
+    paymentStatus VARCHAR(50) NOT NULL,
+    date DATE NOT NULL,
+    reservationId VARCHAR(20),
+    constraint FOREIGN KEY (reservationId) REFERENCES booking (reservationId) ON DELETE CASCADE ON UPDATE CASCADE
+
+);
+
+CREATE TABLE areaVisitorDetails(
+    visitorId VARCHAR(20),
+    areaId VARCHAR(20),
+    constraint FOREIGN KEY (visitorId) REFERENCES visitor (visitorId) ON DELETE CASCADE ON UPDATE CASCADE,
+    constraint FOREIGN KEY (areaId) REFERENCES area (areaId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE payment(
+    paymentId VARCHAR(20) PRIMARY KEY NOT NULL,
+    visitorName VARCHAR(50) NOT NULL,
+    paymentStatus VARCHAR(50) NOT NULL,
+    visitorContactNum VARCHAR(20) NOT NULL,
+    reservationId VARCHAR(20),
+    constraint FOREIGN KEY (reservationId) REFERENCES booking (reservationId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE goods(
+    pId VARCHAR(20) PRIMARY KEY NOT NULL,
+    pName VARCHAR(50) NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    dateSupplied DATE NOT NULL,
+    pAvailability VARCHAR(20)NOT NULL,
+    qtyOnHand INT
+);
+
+CREATE TABLE supplier(
+    supplierId VARCHAR(20)PRIMARY KEY NOT NULL,
+    supplierName VARCHAR(50)NOT NULL,
+    supplierCompanyName VARCHAR(20),
+    dateSupplied DATE NOT NULL,
+    qtySupplied INT NOT NULL,
+    pId VARCHAR(20),
+    constraint FOREIGN KEY (pId) REFERENCES goods (pId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE userAdmin(
+    userId VARCHAR(20) PRIMARY KEY NOT NULL,
+    username VARCHAR(20)NOT NULL,
+    password VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE employee(
+    eId VARCHAR(20) PRIMARY KEY NOT NULL,
+    eName VARCHAR(50) NOT NULL,
+    contact VARCHAR(20) NOT NULL,
+    startedDate DATE NOT NULL,
+    eSrt VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE salary(
+    sId VARCHAR(20) PRIMARY KEY NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    empId VARCHAR(20),
+    constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE information(
+    infoId VARCHAR(20) PRIMARY KEY NOT NULL,
+    infoType VARCHAR(20) NOT NULL,
+    dateEntered DATE NOT NULL,
+    infoEmp VARCHAR(50)NOT NULL,
+    empId VARCHAR(20)NOT NULL,
+    bId VARCHAR(20) NOT NULL,
+    constraint FOREIGN KEY (bId) REFERENCES butterflyVariety (bId) ON DELETE CASCADE ON UPDATE CASCADE,
+    constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE schedule(
+    scheduleId VARCHAR(20) PRIMARY KEY NOT NULL,
+    supervisor VARCHAR(50) NOT NULL,
+    scheduleNote VARCHAR(50) NOT NULL,
+    scheduleLocation VARCHAR(20) NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    date DATE NOT NULL,
+    empId VARCHAR(20) NOT NULL,
+    constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE task(
+    taskId VARCHAR(20) PRIMARY KEY NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    creationDay VARCHAR(20)NOT NULL,
+    completionDate DATE NOT NULL,
+    notes VARCHAR(50) NOT NULL,
+    status VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE employeeTaskDetails(
+    empId VARCHAR(20) NOT NULL,
+    taskId VARCHAR(20) NOT NULL,
+    constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE,
+    constraint FOREIGN KEY (taskId) REFERENCES task (taskId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE butterflyVariety(
+    bId VARCHAR(20) PRIMARY KEY NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(50) NOT NULL,
+    species VARCHAR(20) NOT NULL,
+    avgLifeTime DECIMAL(10,2) NOT NULL,
+    currentCount int NOT NULL
+);

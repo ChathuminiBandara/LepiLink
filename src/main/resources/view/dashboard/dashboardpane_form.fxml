@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.DashboardpaneFormController">
+   <children>
+      <Label fx:id="lblTime" layoutX="276.0" layoutY="140.0" prefHeight="139.0" prefWidth="762.0" />
+      <Label fx:id="lblDate" layoutX="300.0" layoutY="426.0" prefHeight="139.0" prefWidth="762.0" />
+   </children>
+</AnchorPane>
