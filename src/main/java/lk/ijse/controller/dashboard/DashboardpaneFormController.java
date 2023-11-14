@@ -9,8 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DashboardpaneFormController {
-
-
     public Label lblTime;
     public Label lblDate;
 

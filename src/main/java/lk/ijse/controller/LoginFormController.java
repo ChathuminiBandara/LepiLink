@@ -17,7 +17,6 @@ public class LoginFormController {
         AnchorPane pane = FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml"));
         Scene scene = new Scene(pane);
         Stage stage = (Stage) root.getScene().getWindow();
-//        scene.getStylesheets().add(getClass().getResource("styleSheet.css").toExternalForm());
         stage.setScene(scene);
         stage.centerOnScreen();
 
