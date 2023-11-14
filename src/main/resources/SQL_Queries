@@ -15,9 +15,7 @@ CREATE TABLE booking(
     visitDate DATE NOT NULL,
     eventName VARCHAR(50) NOT NULL,
     paymentStatus VARCHAR(50) NOT NULL ,
-    numberOfAttendance INT NOT NULL,
-    status VARCHAR(50) NOT NULL
-
+    numberOfAttendance INT NOT NULL
 );
 
 CREATE TABLE visitor(
@@ -67,7 +65,7 @@ CREATE TABLE supplier(
     constraint FOREIGN KEY (pId) REFERENCES goods (pId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE userAdmin(
+CREATE TABLE user(
     userId VARCHAR(20) PRIMARY KEY NOT NULL,
     username VARCHAR(20)NOT NULL,
     password VARCHAR(20) NOT NULL
@@ -89,11 +87,9 @@ CREATE TABLE salary(
     constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE information(
-    infoId VARCHAR(20) PRIMARY KEY NOT NULL,
-    infoType VARCHAR(20) NOT NULL,
+CREATE TABLE BEdetails(
     dateEntered DATE NOT NULL,
-    infoEmp VARCHAR(50)NOT NULL,
+    status VARCHAR(50)NOT NULL,
     empId VARCHAR(20)NOT NULL,
     bId VARCHAR(20) NOT NULL,
     constraint FOREIGN KEY (bId) REFERENCES butterflyVariety (bId) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -117,14 +113,16 @@ CREATE TABLE task(
     creationDay VARCHAR(20)NOT NULL,
     completionDate DATE NOT NULL,
     notes VARCHAR(50) NOT NULL,
-    status VARCHAR(50) NOT NULL
-);
+    status VARCHAR(50) NOT NULL,
+    empId VARCHAR(20) NOT NULL,
+    constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE
+    );
 
 CREATE TABLE employeeTaskDetails(
     empId VARCHAR(20) NOT NULL,
     taskId VARCHAR(20) NOT NULL,
     constraint FOREIGN KEY (empId) REFERENCES employee (eId) ON DELETE CASCADE ON UPDATE CASCADE,
-    constraint FOREIGN KEY (taskId) REFERENCES task (taskId) ON DELETE CASCADE ON UPDATE CASCADE
+    constraint  FOREIGN KEY (taskId) REFERENCES task (taskId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE butterflyVariety(

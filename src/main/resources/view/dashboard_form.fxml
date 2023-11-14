@@ -57,9 +57,9 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="28.0" layoutY="458.0" lineSpacing="67.0" onAction="#releasplansOnAction" prefHeight="60.0" prefWidth="478.0" text="Releasing Plans" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="28.0" layoutY="458.0" lineSpacing="67.0" onAction="#releasplansOnAction" prefHeight="60.0" prefWidth="478.0" text="Releasing Plans &amp; Genetic Data" textFill="#f2f2f2">
         <font>
-            <Font size="30.0" />
+            <Font size="22.0" />
         </font>
         <effect>
             <DropShadow />
@@ -94,7 +94,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="26.0" layoutY="512.0" lineSpacing="67.0" onAction="#geneticDataOnAction" prefHeight="60.0" prefWidth="478.0" text="Genetic Data" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="26.0" layoutY="512.0" lineSpacing="67.0" onAction="#visitorsOnAction" prefHeight="60.0" prefWidth="478.0" text="Visitors" textFill="#f2f2f2">
         <font>
             <Font size="30.0" />
         </font>
@@ -157,6 +157,9 @@
       <font>
          <Font size="30.0" />
       </font>
+      <graphic>
+         <FontAwesomeIconView fill="WHITE" glyphName="STAR" size="40" />
+      </graphic>
    </JFXButton>
    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="20.0" layoutY="869.0" lineSpacing="67.0" onAction="#suppliersOnAction" prefHeight="60.0" prefWidth="478.0" text="About Us" textFill="WHITE">
       <font>

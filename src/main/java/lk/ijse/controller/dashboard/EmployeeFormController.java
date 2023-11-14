@@ -62,6 +62,11 @@ public class EmployeeFormController implements Initializable {
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
+        Employee_ID.clear();
+        Employee_Name.clear();
+        StartedDate.clear();
+        Shift_Time.clear();
+        TP.clear();
     }
 
     @Override

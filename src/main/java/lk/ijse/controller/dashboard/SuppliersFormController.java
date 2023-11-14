@@ -23,5 +23,11 @@ public class SuppliersFormController {
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
+        Sup_ID.clear();
+        Sup_Name.clear();
+        CompanyNAme.clear();
+        Description.clear();
+        QtySupplied.clear();
+        ProductSupplied.clear();
     }
 }

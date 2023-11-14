@@ -17,29 +17,29 @@ import java.util.ResourceBundle;
 public class ButterflyFxmlController implements Initializable {
 
    @FXML
-   public TextField Butterfly_INtrntnl_Variety_ID;
+   public TextField bId;
     @FXML
-    public TextField Variety_Name;
+    public TextField name;
     @FXML
-    public TextField Avg_lifetime;
+    public TextField description;
     @FXML
-    public TextField Description;
+    public TextField species;
     @FXML
-    public TextField Species_Name;
+    public TextField avgLifeTime;
     @FXML
-    public TextField Current_Count;
+    public TextField currentCount;
     @FXML
     public TableView Butterfly_Table;
 
     public void saveButterfly()  {
-        String Int_Id = Butterfly_INtrntnl_Variety_ID.getText();
-        String Variety_Name1 = Variety_Name.getText();
-        String Avg_Life_Time = Avg_lifetime.getText();
-        String Description1 = Description.getText();
-        String Species_Name1 = Species_Name.getText();
-        String Current_Count1 = Current_Count.getText();
+        String BId = bId.getText();
+        String Name = name.getText();
+        String desc = description.getText();
+        String Specie = species.getText();
+        String lifetime = avgLifeTime.getText();
+        String count = currentCount.getText();
 
-      var dto =  new butterfltDto(Int_Id,Variety_Name1,Description1,Avg_Life_Time,Species_Name1,Current_Count1);
+        var dto =  new butterfltDto(BId,Name,desc,Specie,lifetime,count);
 
 
         boolean isSaved = false;
@@ -49,8 +49,12 @@ public class ButterflyFxmlController implements Initializable {
 
         if (isSaved){
             System.out.println("Saved");
+            new Alert(Alert.AlertType.CONFIRMATION,"Saved").show();
+
         } else {
             System.out.println("Not Saved");
+            new Alert(Alert.AlertType.CONFIRMATION,"Not Saved").show();
+
         }
 
         } catch (SQLException e) {
@@ -62,8 +66,6 @@ public class ButterflyFxmlController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
-
     }
 
     public void SaveOnAction(ActionEvent actionEvent) {
@@ -71,14 +73,14 @@ public class ButterflyFxmlController implements Initializable {
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-        String Int_Id = Butterfly_INtrntnl_Variety_ID.getText();
-        String Variety_Name1 = Variety_Name.getText();
-        String Avg_Life_Time = Avg_lifetime.getText();
-        String Description1 = Description.getText();
-        String Species_Name1 = Species_Name.getText();
-        String Current_Count1 = Current_Count.getText();
+        String BId = bId.getText();
+        String Name = name.getText();
+        String desc = description.getText();
+        String Specie = species.getText();
+        String lifetime = avgLifeTime.getText();
+        String count = currentCount.getText();
 
-        var dto =  new butterfltDto(Int_Id,Variety_Name1,Description1,Avg_Life_Time,Species_Name1,Current_Count1);
+        var dto =  new butterfltDto(BId,Name,desc,Specie,lifetime,count);
 
         boolean isSaved = false;
         try {
@@ -99,7 +101,7 @@ public class ButterflyFxmlController implements Initializable {
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
-        String Int_Id = Butterfly_INtrntnl_Variety_ID.getText();
+        String Int_Id = bId.getText();
 
         boolean b = ButterflyModel.deleteButterfly(Int_Id);
 
@@ -112,28 +114,28 @@ public class ButterflyFxmlController implements Initializable {
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
-        Butterfly_INtrntnl_Variety_ID.clear();
-        Variety_Name.clear();
-        Avg_lifetime.clear();
-        Description.clear();
-        Species_Name.clear();
-        Current_Count.clear();
+        bId.clear();
+        name.clear();
+        description.clear();
+        species.clear();
+        avgLifeTime.clear();
+        currentCount.clear();
 
     }
 
 
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
-        String id = Butterfly_INtrntnl_Variety_ID.getText();
+        String id = bId.getText();
 
         butterfltDto dto = ButterflyModel.getDetails(id);
         if (dto == null){
             new Alert(Alert.AlertType.ERROR,"Not Found").show();
         } else {
-            Variety_Name.setText(dto.getB_Name());
-            Avg_lifetime.setText(dto.getAvg_Life_Time());
-            Description.setText(dto.getB_Description());
-            Species_Name.setText(dto.getSpecies());
-            Current_Count.setText(dto.getCurrent_Count());
+            name.setText(dto.getName());
+            description.setText(dto.getDesc());
+            species.setText(dto.getSpecies());
+            avgLifeTime.setText(dto.getLifeTime());
+            currentCount.setText(dto.getCount());
         }
     }
 }

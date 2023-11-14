@@ -57,6 +57,11 @@ public class PaymentsForm implements Initializable {
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
+        PId.clear();
+        Vname.clear();
+        status.clear();
+        TP.clear();
+        Rid.clear();
     }
 
     @Override

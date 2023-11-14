@@ -2,10 +2,17 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.DashboardpaneFormController">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.DashboardpaneFormController">
    <children>
-      <Label fx:id="lblTime" layoutX="276.0" layoutY="140.0" prefHeight="139.0" prefWidth="762.0" />
-      <Label fx:id="lblDate" layoutX="300.0" layoutY="426.0" prefHeight="139.0" prefWidth="762.0" />
+      <Label fx:id="lblTime" layoutX="14.0" layoutY="21.0" prefHeight="106.0" prefWidth="422.0" style="-fx-background-color: White;" textFill="#1e1b1b">
+         <font>
+            <Font size="56.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="14.0" layoutY="154.0" prefHeight="124.0" prefWidth="422.0" style="-fx-background-color: white;" textFill="#221d1d">
+         <font>
+            <Font name="System Bold" size="55.0" />
+         </font></Label>
    </children>
 </AnchorPane>

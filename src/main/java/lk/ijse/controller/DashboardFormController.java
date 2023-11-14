@@ -68,4 +68,8 @@ public class DashboardFormController {
     public void visitSchedulesOnAction(ActionEvent actionEvent) throws IOException {
         setform("/view/dashboard/visit_scheduls_form.fxml");
     }
+
+    public void visitorsOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/visitor.fxml");
+    }
 }

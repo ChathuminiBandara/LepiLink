@@ -17,41 +17,41 @@
          <columns>
             <TableColumn prefWidth="75.0" text="BUtterfly Variety ID" />
             <TableColumn prefWidth="75.0" text="Variety Name" />
-            <TableColumn prefWidth="75.0" text="Variety ID" />
             <TableColumn prefWidth="75.0" text="Description" />
-            <TableColumn prefWidth="75.0" text="Species " />
+            <TableColumn prefWidth="75.0" text="Species" />
+            <TableColumn prefWidth="75.0" text="Average Life Time" />
             <TableColumn prefWidth="75.0" text="Current Count" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="Butterfly_INtrntnl_Variety_ID" layoutX="172.0" layoutY="227.0" onAction="#idOnAction" prefHeight="49.0" prefWidth="362.0" promptText="Butterfly Variety Id">
+      <TextField fx:id="bId" layoutX="172.0" layoutY="227.0" onAction="#idOnAction" prefHeight="49.0" prefWidth="362.0" promptText="Ex : B001">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="Variety_Name" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Variety Name">
+      <TextField fx:id="name" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex : King Monarch">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="Avg_lifetime" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Avarage Life Time">
+      <TextField fx:id="description" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Add The Description Here">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="Description" layoutX="172.0" layoutY="550.0" prefHeight="49.0" prefWidth="362.0" promptText="Description">
+      <TextField fx:id="species" layoutX="172.0" layoutY="550.0" prefHeight="49.0" prefWidth="362.0" promptText="Species Name Here">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="Species_Name" layoutX="730.0" layoutY="307.0" prefHeight="49.0" prefWidth="362.0" promptText="Species Name">
+      <TextField fx:id="avgLifeTime" layoutX="730.0" layoutY="307.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex :  1 Year">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="Current_Count" layoutX="731.0" layoutY="441.0" prefHeight="49.0" prefWidth="362.0" promptText="Current Count">
+      <TextField fx:id="currentCount" layoutX="731.0" layoutY="441.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex : 25">
          <font>
             <Font size="18.0" />
          </font>
@@ -61,7 +61,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="410.0" text="Average Life Time" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="410.0" text="Description" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
@@ -71,12 +71,12 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="519.0" text="Description" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="519.0" text="Species" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="733.0" layoutY="281.0" text="Species" textFill="WHITE">
+      <Label layoutX="733.0" layoutY="281.0" text="Average Life Time" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

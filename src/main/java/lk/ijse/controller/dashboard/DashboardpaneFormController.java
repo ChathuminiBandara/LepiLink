@@ -15,7 +15,7 @@ public class DashboardpaneFormController {
     public Label lblDate;
 
     public void initialize() {
-        lblTime.setText(new SimpleDateFormat("hh:mm:ss a").format(new Date()));
+        lblTime.setText(new SimpleDateFormat("hh:mm a").format(new Date()));
         lblDate.setText(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
     }
 

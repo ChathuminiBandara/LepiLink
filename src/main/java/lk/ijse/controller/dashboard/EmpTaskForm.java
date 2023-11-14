@@ -23,5 +23,12 @@ public class EmpTaskForm {
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
+        Task_ID.clear();
+        Description.clear();
+        completionDate.clear();
+        created_Day.clear();
+        notes.clear();
+        status.clear();
+
     }
 }
