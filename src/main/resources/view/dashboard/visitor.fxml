@@ -16,13 +16,13 @@
         <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
         <TableView fx:id="Payment_Table" layoutX="128.0" layoutY="656.0" prefHeight="344.0" prefWidth="831.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="Visitor ID" />
-                <TableColumn prefWidth="75.0" text="Vsitior Name" />
-                <TableColumn prefWidth="75.0" text="Status" />
-                <TableColumn prefWidth="75.0" text="Time" />
-                <TableColumn prefWidth="75.0" text="Payment Status" />
-                <TableColumn prefWidth="75.0" text="Date" />
-            <TableColumn prefWidth="108.0" text="Booking ID" />
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Visitor ID" />
+                <TableColumn fx:id="colName" prefWidth="75.0" text="Visitor Name" />
+                <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+                <TableColumn fx:id="colTime" prefWidth="75.0" text="Time" />
+                <TableColumn fx:id="colPayment" prefWidth="75.0" text="Payment Status" />
+                <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colBookId" prefWidth="108.0" text="Booking ID" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

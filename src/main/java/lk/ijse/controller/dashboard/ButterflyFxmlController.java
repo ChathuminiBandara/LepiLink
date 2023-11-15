@@ -110,7 +110,6 @@ public class ButterflyFxmlController implements Initializable {
         } else {
             new Alert(Alert.AlertType.ERROR,"Not Deleted").show();
         }
-
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
@@ -122,7 +121,6 @@ public class ButterflyFxmlController implements Initializable {
         currentCount.clear();
 
     }
-
 
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = bId.getText();

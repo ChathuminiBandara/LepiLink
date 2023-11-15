@@ -11,7 +11,6 @@ public class paymentDto {
     private String visitorName;
     private String paymentStatus;
     private String visitorContactNum;
-    private String reservationId;
 
 
 }

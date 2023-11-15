@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.AboutusController">
+   <children>
+      <Label layoutX="384.0" layoutY="345.0" text="About Us Is Gonna Be Here" textFill="WHITE">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="572.0" layoutY="636.0" onAction="#openDilmahOnAction" text="Dilmah Conservation">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="649.0" layoutY="677.0" text="Click Here " textFill="WHITE" />
+   </children>
+</AnchorPane>

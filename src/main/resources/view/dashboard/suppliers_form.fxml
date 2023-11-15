@@ -10,6 +10,92 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.SuppliersFormController">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.SuppliersFormController">
+    <Pane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
+        <TableView fx:id="payment_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Payment Id" />
+                <TableColumn prefWidth="75.0" text="Visitor Name" />
+                <TableColumn prefWidth="75.0" text="Payment Status" />
+                <TableColumn prefWidth="75.0" text="Visitor TP" />
+                <TableColumn prefWidth="75.0" text="Reservation Id" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <TextField fx:id="PId" layoutX="172.0" layoutY="227.0" prefHeight="49.0" prefWidth="362.0" promptText="Salary  Id">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="Vname" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Variety Name">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="status" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Avarage Life Time">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="TP" layoutX="172.0" layoutY="550.0" prefHeight="49.0" prefWidth="362.0" promptText="Description">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </TextField>
 
-        </AnchorPane>
+        <Label layoutX="172.0" layoutY="196.0" text="Salary Id" textFill="WHITE">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="172.0" layoutY="410.0" text="Payment Status" textFill="WHITE">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="170.0" layoutY="300.0" text="Visitor Name" textAlignment="RIGHT" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="172.0" layoutY="519.0" text="Visitor TP" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="736.0" layoutY="414.0" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Update" textFill="#1b1919">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Delete" textFill="#1b1919">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Clear" textFill="#1b1919">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="435.0" layoutY="66.0" text="Supplier Management" textFill="WHITE">
+            <font>
+                <Font size="58.0" />
+            </font>
+        </Label>
+    </Pane>
+</AnchorPane>

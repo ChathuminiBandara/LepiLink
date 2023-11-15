@@ -45,11 +45,7 @@
                 <Font size="20.0" />
             </font>
         </TextField>
-        <TextField fx:id="Rid" layoutX="730.0" layoutY="307.0" prefHeight="49.0" prefWidth="362.0" promptText="Species Name">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </TextField>
+
         <Label layoutX="172.0" layoutY="196.0" text="Payment Id" textFill="WHITE">
             <font>
                 <Font size="21.0" />
@@ -70,11 +66,7 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Label layoutX="733.0" layoutY="281.0" text="Reservation Id" textFill="WHITE">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
+
         <Label layoutX="736.0" layoutY="414.0" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -100,7 +92,7 @@
                 <Font size="32.0" />
             </font>
         </JFXButton>
-        <Label layoutX="435.0" layoutY="66.0" text="Butterfly Management" textFill="WHITE">
+        <Label layoutX="435.0" layoutY="66.0" text="Payment Management" textFill="WHITE">
             <font>
                 <Font size="58.0" />
             </font>

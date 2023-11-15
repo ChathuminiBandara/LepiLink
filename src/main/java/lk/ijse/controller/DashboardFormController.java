@@ -38,17 +38,8 @@ public class DashboardFormController {
         setform("/view/dashboard/weather_form.fxml");
     }
 
-    public void populationOnAction(ActionEvent actionEvent) throws IOException {
-        setform("/view/dashboard/population_form.fxml");
-    }
-
-    public void releasplansOnAction(ActionEvent actionEvent) throws IOException {
+    public void releasplansGeneticsOnAction(ActionEvent actionEvent) throws IOException {
         setform("/view/dashboard/releasingPlans_form.fxml");
-    }
-
-
-    public void geneticDataOnAction(ActionEvent actionEvent) throws IOException {
-        setform("/view/dashboard/genetic_data_form.fxml");
     }
 
 
@@ -56,14 +47,6 @@ public class DashboardFormController {
         setform("/view/dashboard/payments_form.fxml");
     }
 
-    public void suppliersOnAction(ActionEvent actionEvent) throws IOException {
-        setform("/view/dashboard/suppliers_form.fxml");
-    }
-
-
-    public void tasksOnAction(ActionEvent actionEvent) throws IOException {
-        setform("/view/dashboard/emp_Task_form.fxml");
-    }
 
     public void visitSchedulesOnAction(ActionEvent actionEvent) throws IOException {
         setform("/view/dashboard/visit_scheduls_form.fxml");
@@ -71,5 +54,27 @@ public class DashboardFormController {
 
     public void visitorsOnAction(ActionEvent actionEvent) throws IOException {
         setform("/view/dashboard/visitor.fxml");
+    }
+
+    public void suppliersGoodsOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/suppliers_form.fxml");
+
+    }
+
+    public void aboutUsOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/aboutus.fxml");
+    }
+
+    public void populationAreaOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/population_form.fxml");
+
+    }
+
+    public void SchedulestasksOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/emp_Task_form.fxml");
+
+    }
+    public void salaryOnAction(ActionEvent actionEvent) throws IOException {
+        setform("/view/dashboard/salary_form.fxml");
     }
 }

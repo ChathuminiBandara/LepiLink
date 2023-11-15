@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 import lk.ijse.dto.empScheduleDto;
 import lk.ijse.model.ButterflyModel;
 import lk.ijse.model.empScheduleModel;
+import com.jfoenix.controls.JFXDatePicker;
+
 
 import java.sql.SQLException;
 
@@ -43,7 +45,8 @@ public class EmpSchedulesForm {
         }
 
     }
-    public void SaveOnAction(ActionEvent actionEvent) {
+    public void SaveOnAction(ActionEvent actionEvent) throws SQLException {
+        saveEmployeeSchedule();
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {

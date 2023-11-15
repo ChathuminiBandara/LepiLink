@@ -14,21 +14,18 @@ import java.util.ResourceBundle;
 
 public class PaymentsForm implements Initializable {
 
-
     public  TextField TP;
     public TableView payment_Table;
     public TextField PId;
     public TextField Vname;
     public TextField status;
-    public TextField Rid;
 
     public void savePayment()  {
         String paymentId = PId.getText();
         String visitorName = Vname.getText();
         String paymentStatus = status.getText();
         String visitorContactNum = TP.getText();
-        String rId = Rid.getText();
-        var dto =  new paymentDto(paymentId,visitorName,paymentStatus,visitorContactNum,rId);
+        var dto =  new paymentDto(paymentId,visitorName,paymentStatus,visitorContactNum);
 
         boolean isSaved = false;
         try {
@@ -61,7 +58,6 @@ public class PaymentsForm implements Initializable {
         Vname.clear();
         status.clear();
         TP.clear();
-        Rid.clear();
     }
 
     @Override

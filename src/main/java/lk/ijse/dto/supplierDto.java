@@ -1,5 +1,10 @@
 package lk.ijse.dto;
+import lombok.*;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class supplierDto {
 
     private String supplierId;
@@ -9,8 +14,5 @@ public class supplierDto {
     private String qtySupplied;
     private String pId;
 
-    public static class VisitorDto {
-        public VisitorDto(String visitorId, String name, String status, String time, String pStatus, String date) {
-        }
-    }
+
 }

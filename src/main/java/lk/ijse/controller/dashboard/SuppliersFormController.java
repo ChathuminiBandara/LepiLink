@@ -12,6 +12,7 @@ public class SuppliersFormController {
     public TextField Description;
     public TextField QtySupplied;
     public TextField ProductSupplied;
+    public TableView payment_Table;
 
     public void SaveOnAction(ActionEvent actionEvent) {
     }

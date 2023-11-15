@@ -3,6 +3,7 @@ package lk.ijse.controller.dashboard;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.butterfltDto;
@@ -23,6 +24,13 @@ public class VisitorController implements Initializable {
     public TextField pstatus;
     public TextField date;
     public TextField bookingId;
+    public TableColumn colId;
+    public TableColumn colName;
+    public TableColumn colStatus;
+    public TableColumn colTime;
+    public TableColumn colPayment;
+    public TableColumn colDate;
+    public TableColumn colBookId;
 
 
     public void saveVisitor() {

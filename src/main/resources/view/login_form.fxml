@@ -10,18 +10,20 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" prefHeight="1040.0" prefWidth="1920.0" style="-fx-background-color: black;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
-   <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1159.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949da4" height="972.0" layoutX="58.0" layoutY="51.0" opacity="0.24" stroke="BLACK" strokeType="INSIDE" width="732.0" />
+   <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1153.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../asserts/photos_background/butterfly_Half.jpg" />
    </ImageView>
-   <TextField layoutX="133.0" layoutY="524.0" prefHeight="60.0" prefWidth="601.0" promptText="ex :  JohnJeon">
+   <TextField layoutX="133.0" layoutY="524.0" prefHeight="10.0" prefWidth="500.0" promptText="ex :  JohnJeon">
       <font>
          <Font size="33.0" />
       </font>
    </TextField>
-   <PasswordField layoutX="133.0" layoutY="690.0" prefHeight="60.0" prefWidth="601.0" promptText="ex : 1234@78">
+   <PasswordField layoutX="133.0" layoutY="690.0" prefHeight="10.0" prefWidth="500.0" promptText="ex : 1234@78">
       <font>
          <Font size="33.0" />
       </font>
