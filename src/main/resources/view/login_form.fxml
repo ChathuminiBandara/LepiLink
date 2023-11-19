@@ -4,68 +4,77 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="1040.0" prefWidth="1920.0" style="-fx-background-color: black;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
-   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949da4" height="972.0" layoutX="58.0" layoutY="51.0" opacity="0.24" stroke="BLACK" strokeType="INSIDE" width="732.0" />
-   <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1153.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../asserts/photos_background/butterfly_Half.jpg" />
-   </ImageView>
-   <TextField layoutX="133.0" layoutY="524.0" prefHeight="10.0" prefWidth="500.0" promptText="ex :  JohnJeon">
+<AnchorPane fx:id="root" prefHeight="1018.0" prefWidth="1920.0" style="-fx-background-color: #0d2d3a;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <ImageView fitHeight="1031.0" fitWidth="1920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+      <image>
+         <Image url="@../asserts/weather%20images/butterflycms.png" />
+      </image></ImageView>
+   <TextField layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
       <font>
-         <Font size="33.0" />
+         <Font size="20.0" />
       </font>
    </TextField>
-   <PasswordField layoutX="133.0" layoutY="690.0" prefHeight="10.0" prefWidth="500.0" promptText="ex : 1234@78">
+   <PasswordField layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
       <font>
-         <Font size="33.0" />
+         <Font size="20.0" />
       </font>
    </PasswordField>
-   <JFXButton buttonType="RAISED" layoutX="332.0" layoutY="855.0" onAction="#loginOnAction" prefHeight="47.0" prefWidth="146.0" text="Log in" textFill="#f2f2f2">
+   <JFXButton buttonType="RAISED" layoutX="742.0" layoutY="759.0" onAction="#loginOnAction" prefHeight="65.0" prefWidth="482.0" style="-fx-background-color: blue;" text="Log in" textFill="#f2f2f2">
       <font>
          <Font size="30.0" />
       </font>
    </JFXButton>
-   <Label layoutX="123.0" layoutY="112.0" prefHeight="219.0" prefWidth="562.0" text="Welcome Back   " textFill="WHITE">
+   <Label layoutX="731.0" layoutY="537.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
       <font>
-         <Font name="Constantia" size="75.0" />
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="730.0" layoutY="632.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Line endX="286.0" layoutX="954.0" layoutY="851.0" startX="-236.0" stroke="#f5f5f5" />
+   <Label layoutX="804.0" layoutY="883.0" text="Log in to start managing our Beauty" textFill="WHITE">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Label layoutX="798.0" layoutY="464.0" text="L E P I L I N K  " textFill="WHITE">
+      <font>
+         <Font name="Courier New Bold" size="38.0" />
       </font>
       <effect>
-         <Bloom />
+         <Glow />
       </effect>
    </Label>
-   <Label layoutX="129.0" layoutY="284.0" prefHeight="165.0" prefWidth="1382.0" text="Today Is a new day. It's your day. You shape it. " textAlignment="RIGHT" textFill="#f2f2f2">
+   <Label layoutX="774.0" layoutY="507.0" text="INNOVATIVE BUTTERFLY GARDEN MANAGEMENT SYSTEM" textFill="WHITE">
       <font>
-         <Font size="30.0" />
+         <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="129.0" layoutY="381.0" text="Log in to start managing our Beauty." textFill="WHITE">
+   <Label layoutX="43.0" layoutY="1020.0" text="\@ 2023.  LepiLink.BMS v1.0.01" textFill="WHITE">
       <font>
-         <Font size="30.0" />
+         <Font size="14.0" />
       </font>
    </Label>
-   <Label layoutX="134.0" layoutY="480.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
+   <Line endX="54.5" endY="3.0" layoutX="128.0" layoutY="1034.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
+   <Label layoutX="1686.0" layoutY="1018.0" text="Created by M.K.C.Bandara. Sri Lanka" textFill="WHITE">
       <font>
-         <Font size="25.0" />
+         <Font size="14.0" />
       </font>
    </Label>
-   <Label layoutX="133.0" layoutY="645.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
+   <Line endX="68.5" endY="3.0" layoutX="1780.0" layoutY="1032.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
+   <JFXButton buttonType="RAISED" layoutX="919.0" layoutY="956.0" onAction="#adminEmpOnAction" style="-fx-background-color: grey;" text="Admin or Emp?" textFill="WHITE">
       <font>
-         <Font size="25.0" />
+         <Font name="System Bold" size="19.0" />
       </font>
-   </Label>
-   <Line endX="526.0" endY="179.0" layoutX="202.0" layoutY="645.0" startX="-64.0" startY="179.0" stroke="WHITE" />
-   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="620.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-      <effect>
-         <Glow level="1.0" />
-      </effect>
-      <Image url="@../asserts/transprnt_Images/white_logo_Butterfly.png" />
-   </ImageView>
+   </JFXButton>
 </AnchorPane>

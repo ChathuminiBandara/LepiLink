@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.AboutusController">
+<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.AboutusController">
    <children>
       <Label layoutX="384.0" layoutY="345.0" text="About Us Is Gonna Be Here" textFill="WHITE">
          <font>
             <Font size="47.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="572.0" layoutY="636.0" onAction="#openDilmahOnAction" text="Dilmah Conservation">
+      <Hyperlink fx:id="openDilmah" layoutX="572.0" layoutY="636.0" onAction="#openDilmahOnAction" text="Dilmah Conservation">
          <font>
             <Font size="21.0" />
          </font>

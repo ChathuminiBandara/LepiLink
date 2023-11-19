@@ -16,18 +16,8 @@
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>19.0.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>19.0.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>us.ihmc</groupId>
-            <artifactId>jfoenix</artifactId>
-            <version>17-0.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.jfoenix</groupId>
@@ -39,11 +29,6 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-            <dependency>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-web</artifactId>
-                <version>16</version>
-            </dependency>
         <dependency>
             <groupId>de.jensd</groupId>
             <artifactId>fontawesomefx-fontawesome</artifactId>
@@ -54,21 +39,7 @@
             <artifactId>jfoenix</artifactId>
             <version>17-0.1.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+
         <dependency>
             <groupId>com.github.sunsear</groupId>
             <artifactId>Color_Deconvolution_IJ2</artifactId>
@@ -86,40 +57,14 @@
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
             <version>1.5.0-b01</version>
         </dependency>
-
         <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.github.quantum-framework</groupId>
+            <artifactId>quantum-api</artifactId>
+            <version>2.0.1</version>
         </dependency>
     </dependencies>
 </project>
