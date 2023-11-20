@@ -12,16 +12,16 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" prefHeight="1018.0" prefWidth="1920.0" style="-fx-background-color: #0d2d3a;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
-   <ImageView fitHeight="1031.0" fitWidth="1920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+   <ImageView fitHeight="1042.0" fitWidth="1920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
       <image>
          <Image url="@../asserts/weather%20images/butterflycms.png" />
       </image></ImageView>
-   <TextField layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
+   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
       <font>
          <Font size="20.0" />
       </font>
    </TextField>
-   <PasswordField layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
+   <PasswordField fx:id="password" layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
       <font>
          <Font size="20.0" />
       </font>
@@ -60,12 +60,6 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="43.0" layoutY="1020.0" text="\@ 2023.  LepiLink.BMS v1.0.01" textFill="WHITE">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Label>
-   <Line endX="54.5" endY="3.0" layoutX="128.0" layoutY="1034.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
    <Label layoutX="1686.0" layoutY="1018.0" text="Created by M.K.C.Bandara. Sri Lanka" textFill="WHITE">
       <font>
          <Font size="14.0" />

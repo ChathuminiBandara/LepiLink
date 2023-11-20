@@ -52,9 +52,19 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.github.bastiaanjansen</groupId>
+            <artifactId>otp-java</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.sunsear</groupId>
             <artifactId>Color_Deconvolution_IJ2</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>17</version> <!-- Use the version appropriate for your project -->
         </dependency>
         <dependency>
             <groupId>javax.mail</groupId>

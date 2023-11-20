@@ -1,19 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.AdminController">
+<AnchorPane prefHeight="983.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.AdminController">
    <children>
-      <JFXButton buttonType="RAISED" layoutX="481.0" layoutY="322.0" onAction="#backOnAction" text="back">
+      <ImageView fitHeight="1040.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/weather%20images/butterflycms.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="703.0" layoutY="598.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
          <font>
-            <Font size="27.0" />
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="702.0" layoutY="695.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </PasswordField>
+      <JFXButton buttonType="RAISED" layoutX="709.0" layoutY="776.0" onAction="#loginOnAction" prefHeight="65.0" prefWidth="482.0" style="-fx-background-color: #29ADB2; -fx-background-radius: 20;" text="Log in" textFill="#f2f2f2">
+         <font>
+            <Font size="30.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="241.0" layoutY="248.0" onAction="#loginOnAction" text="Login" textFill="#1118ff">
+      <Label layoutX="703.0" layoutY="554.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
          <font>
-            <Font size="27.0" />
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="649.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="286.0" layoutX="926.0" layoutY="883.0" startX="-236.0" stroke="#f5f5f5" />
+      <Label layoutX="776.0" layoutY="910.0" text="Log in to start managing our Beauty" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="770.0" layoutY="481.0" text="L E P I L I N K  " textFill="WHITE">
+         <font>
+            <Font name="Courier New Bold" size="38.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label layoutX="747.0" layoutY="524.0" text="INNOVATIVE BUTTERFLY GARDEN MANAGEMENT SYSTEM" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1449.0" layoutY="778.0" onAction="#backOnAction" prefHeight="47.0" prefWidth="204.0" style="-fx-background-color: #29ADB2; -fx-background-radius: 20;" text="Log in" textFill="#f2f2f2">
+         <font>
+            <Font size="30.0" />
          </font>
       </JFXButton>
    </children>
