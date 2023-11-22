@@ -4,39 +4,48 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="1018.0" prefWidth="1920.0" style="-fx-background-color: #0d2d3a;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+<AnchorPane fx:id="root" prefHeight="1018.0" prefWidth="1920.0" style="-fx-background-color: #256D85;" stylesheets="@../styleCssLogin.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
    <ImageView fitHeight="1042.0" fitWidth="1920.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
       <image>
          <Image url="@../asserts/weather%20images/butterflycms.png" />
       </image></ImageView>
-   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
+   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon" style="-fx-background-radius: 15;">
       <font>
          <Font size="20.0" />
       </font>
    </TextField>
-   <PasswordField fx:id="password" layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
+   <PasswordField fx:id="password" layoutX="730.0" layoutY="671.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78" style="-fx-background-radius: 15;">
       <font>
          <Font size="20.0" />
       </font>
    </PasswordField>
-   <JFXButton buttonType="RAISED" layoutX="742.0" layoutY="759.0" onAction="#loginOnAction" prefHeight="65.0" prefWidth="482.0" style="-fx-background-color: blue;" text="Log in" textFill="#f2f2f2">
+   <JFXButton buttonType="RAISED" layoutX="738.0" layoutY="747.0" onAction="#loginOnAction" prefHeight="77.0" prefWidth="482.0" style="-fx-background-color: #00E7FF; -fx-background-radius: 15;" text="Log in" textFill="#f2f2f2">
       <font>
          <Font size="30.0" />
       </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.18226121366024017" green="0.2662118375301361" blue="0.44736841320991516" />
+            </color>
+         </DropShadow>
+      </effect>
    </JFXButton>
    <Label layoutX="731.0" layoutY="537.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label layoutX="730.0" layoutY="632.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
+   <Label layoutX="730.0" layoutY="629.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
       <font>
          <Font size="18.0" />
       </font>
@@ -60,15 +69,20 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="1686.0" layoutY="1018.0" text="Created by M.K.C.Bandara. Sri Lanka" textFill="WHITE">
+   <Label layoutX="1686.0" layoutY="1022.0" text="Created by M.K.C.Bandara. Sri Lanka" textFill="WHITE">
       <font>
          <Font size="14.0" />
       </font>
    </Label>
-   <Line endX="68.5" endY="3.0" layoutX="1780.0" layoutY="1032.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
-   <JFXButton buttonType="RAISED" layoutX="919.0" layoutY="956.0" onAction="#adminEmpOnAction" style="-fx-background-color: grey;" text="Admin or Emp?" textFill="WHITE">
+   <Line endX="68.5" endY="3.0" layoutX="1780.0" layoutY="1038.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
+   <JFXButton buttonType="RAISED" layoutX="906.0" layoutY="956.0" onAction="#adminEmpOnAction" style="-fx-background-color: grey; -fx-background-radius: 10;" text="Admin or Emp?" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="906.0">
       <font>
          <Font name="System Bold" size="19.0" />
       </font>
    </JFXButton>
+   <Label layoutX="20.0" layoutY="1025.0" text="\@ 2023 LepiLink BMS v1.01.01" textFill="WHITE">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
 </AnchorPane>

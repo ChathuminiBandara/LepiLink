@@ -4,14 +4,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.EmployeeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #256D85;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.EmployeeController">
    <children>
       <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="327.0" onAction="#backOnAction" text="BACK">
          <font>
@@ -20,25 +22,32 @@
       </JFXButton>
       <JFXButton buttonType="RAISED" layoutX="261.0" layoutY="238.0" onAction="#loginOnAction" text="Login" />
    </children>
-   <ImageView fitHeight="1040.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="1040.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 50;">
       <image>
          <Image url="@../../asserts/weather%20images/butterflycms.png" />
       </image>
    </ImageView>
-   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
+   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon" style="-fx-background-radius: 15;">
       <font>
          <Font size="20.0" />
       </font>
    </TextField>
-   <PasswordField fx:id="password" layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
+   <PasswordField fx:id="password" layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78" style="-fx-background-radius: 15;">
       <font>
          <Font size="20.0" />
       </font>
    </PasswordField>
-   <JFXButton buttonType="RAISED" layoutX="742.0" layoutY="759.0" onAction="#loginOnAction" prefHeight="65.0" prefWidth="482.0" style="-fx-background-color: blue;" text="Log in" textFill="#f2f2f2">
+   <JFXButton buttonType="RAISED" layoutX="742.0" layoutY="743.0" onAction="#loginOnAction" prefHeight="81.0" prefWidth="482.0" style="-fx-background-color: #00E7FF; -fx-background-radius: 20;" text="Log in" textFill="#f2f2f2">
       <font>
          <Font size="30.0" />
       </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.08485623449087143" green="0.08775585144758224" blue="0.09210526198148727" />
+            </color>
+         </DropShadow>
+      </effect>
    </JFXButton>
    <Label layoutX="731.0" layoutY="537.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
       <font>
@@ -80,9 +89,21 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Label layoutX="1298.0" layoutY="94.0" text="Employee login" textFill="WHITE">
+   <JFXButton buttonType="RAISED" layoutX="902.0" layoutY="945.0" onAction="#backOnAction" prefHeight="37.0" prefWidth="171.0" style="-fx-background-color: grey; -fx-background-radius: 10;" text="Back" textFill="WHITE">
       <font>
-         <Font name="Corbel" size="80.0" />
+         <Font size="28.0" />
+      </font>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.16081871092319489" green="0.16081871092319489" blue="0.31578946113586426" />
+            </color>
+         </DropShadow>
+      </effect>
+   </JFXButton>
+   <Label layoutX="851.0" layoutY="109.0" prefHeight="49.0" prefWidth="228.0" text="Employee login" textFill="WHITE">
+      <font>
+         <Font name="Corbel" size="35.0" />
       </font>
       <effect>
          <Glow />
