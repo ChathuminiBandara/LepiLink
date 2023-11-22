@@ -6,13 +6,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboard.SuppliersFormController">
-    <Pane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.SuppliersFormController">
+    <Pane layoutY="61.0" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="-61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0">
         <TableView fx:id="payment_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
             <columns>
                 <TableColumn prefWidth="75.0" text="Payment Id" />
@@ -25,17 +23,17 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <TextField fx:id="PId" layoutX="172.0" layoutY="227.0" prefHeight="49.0" prefWidth="362.0" promptText="Salary  Id">
+        <TextField fx:id="supplierId" layoutX="172.0" layoutY="227.0" prefHeight="49.0" prefWidth="362.0" promptText="Salary  Id">
             <font>
                 <Font size="17.0" />
             </font>
         </TextField>
-        <TextField fx:id="Vname" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Variety Name">
+        <TextField fx:id="supplierName" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Variety Name">
             <font>
                 <Font size="17.0" />
             </font>
         </TextField>
-        <TextField fx:id="status" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Avarage Life Time">
+        <TextField fx:id="supplierCompanyName" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Avarage Life Time">
             <font>
                 <Font size="17.0" />
             </font>
@@ -46,22 +44,22 @@
             </font>
         </TextField>
 
-        <Label layoutX="172.0" layoutY="196.0" text="Salary Id" textFill="WHITE">
+        <Label layoutX="172.0" layoutY="196.0" text="Supplier ID" textFill="WHITE">
             <font>
                 <Font size="21.0" />
             </font>
         </Label>
-        <Label layoutX="172.0" layoutY="410.0" text="Payment Status" textFill="WHITE">
+        <Label layoutX="172.0" layoutY="410.0" text="Company Name" textFill="WHITE">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <Label layoutX="170.0" layoutY="300.0" text="Visitor Name" textAlignment="RIGHT" textFill="WHITE">
+        <Label layoutX="170.0" layoutY="300.0" text="Supplier Name" textAlignment="RIGHT" textFill="WHITE">
             <font>
                 <Font size="22.0" />
             </font>
         </Label>
-        <Label layoutX="172.0" layoutY="519.0" text="Visitor TP" textFill="WHITE">
+        <Label layoutX="172.0" layoutY="519.0" text="Date Supplied" textFill="WHITE">
             <font>
                 <Font size="24.0" />
             </font>
@@ -97,5 +95,15 @@
                 <Font size="58.0" />
             </font>
         </Label>
+      <TextField fx:id="qtySupplied" layoutX="608.0" layoutY="445.0" prefHeight="49.0" prefWidth="362.0" promptText="Description">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="608.0" layoutY="414.0" text="Quantity Supplied" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
     </Pane>
 </AnchorPane>

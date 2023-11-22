@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.EmployeeController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="327.0" onAction="#backOnAction" text="BACK">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="261.0" layoutY="238.0" onAction="#loginOnAction" text="Login" />
+   </children>
+   <ImageView fitHeight="1040.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/weather%20images/butterflycms.png" />
+      </image>
+   </ImageView>
+   <TextField fx:id="username" layoutX="731.0" layoutY="581.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex :  JohnJeon">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </TextField>
+   <PasswordField fx:id="password" layoutX="730.0" layoutY="678.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0" promptText="ex : 1234@78">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </PasswordField>
+   <JFXButton buttonType="RAISED" layoutX="742.0" layoutY="759.0" onAction="#loginOnAction" prefHeight="65.0" prefWidth="482.0" style="-fx-background-color: blue;" text="Log in" textFill="#f2f2f2">
+      <font>
+         <Font size="30.0" />
+      </font>
+   </JFXButton>
+   <Label layoutX="731.0" layoutY="537.0" prefHeight="55.0" prefWidth="246.0" text="User Name" textFill="#f2f2f2">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="730.0" layoutY="632.0" prefHeight="55.0" prefWidth="246.0" text="Password" textFill="#f2f2f2">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Line endX="286.0" layoutX="954.0" layoutY="851.0" startX="-236.0" stroke="#f5f5f5" />
+   <Label layoutX="804.0" layoutY="883.0" text="Log in to start managing our Beauty" textFill="WHITE">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Label layoutX="43.0" layoutY="1020.0" text="\@ 2023.  LepiLink.BMS v1.0.01" textFill="WHITE">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Line endX="54.5" endY="3.0" layoutX="128.0" layoutY="1034.0" startX="-25.5" startY="3.0" stroke="#f5f5f5" />
+   <Label layoutX="1686.0" layoutY="1018.0" text="Created by M.K.C.Bandara. Sri Lanka" textFill="WHITE">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="780.0" layoutY="466.0" text="L E P I L I N K  " textFill="WHITE">
+      <font>
+         <Font name="Courier New Bold" size="38.0" />
+      </font>
+      <effect>
+         <Glow />
+      </effect>
+   </Label>
+   <Label layoutX="757.0" layoutY="509.0" text="INNOVATIVE BUTTERFLY GARDEN MANAGEMENT SYSTEM" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+   <Label layoutX="1298.0" layoutY="94.0" text="Employee login" textFill="WHITE">
+      <font>
+         <Font name="Corbel" size="80.0" />
+      </font>
+      <effect>
+         <Glow />
+      </effect>
+   </Label>
+      <effect>
+         <Glow />
+      </effect>
+</AnchorPane>

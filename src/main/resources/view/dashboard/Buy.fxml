@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.VisitschedulsForm">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="199.0" layoutY="233.0" onAction="#customerOnAction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY;" text="CUSTOMER">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="315.0" layoutY="360.0" size="80" />
+      <JFXButton buttonType="RAISED" layoutX="554.0" layoutY="233.0" onAction="#itemOnaction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY;" text="ITEM">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="667.0" layoutY="360.0" size="80" />
+      <JFXButton buttonType="RAISED" layoutX="930.0" layoutY="232.0" onAction="#placeOrderOnAction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY;" text="PLACE ORDER">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="1035.0" layoutY="359.0" size="80" />
+   </children>
+</AnchorPane>

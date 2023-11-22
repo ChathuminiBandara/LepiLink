@@ -13,7 +13,7 @@ public class Mail implements Runnable {
     private String msg="Hello Java Mail API";
     private String to="pthashmika@gmail.com";
     private String subject="Example Mail";
-    private String file="invoice.pdf";
+//    private String file="invoice.pdf";
 
     public Mail() {
     }
@@ -22,7 +22,7 @@ public class Mail implements Runnable {
         this.msg = msg;
         this.to = to;
         this.subject = subject;
-        this.file = file;
+//        this.file = file;
     }
 
     public void setMsg(String msg) {
@@ -34,9 +34,9 @@ public class Mail implements Runnable {
     public void setSubject(String subject) {
         this.subject = subject;
     }
-    public void setFile(String file) {
-        this.file = file;
-    }
+//    public void setFile(String file) {
+//        this.file = file;
+//    }
 
     public void outMail() throws MessagingException, IOException {
 
@@ -65,14 +65,14 @@ public class Mail implements Runnable {
         MimeBodyPart mimeBodyPart = new MimeBodyPart();
         mimeBodyPart.setContent(msg, "text/html");
 
-        Multipart multipart = new MimeMultipart();
-        multipart.addBodyPart(mimeBodyPart);
-
-        MimeBodyPart attachmentBodyPart = new MimeBodyPart();
-        attachmentBodyPart.attachFile(new File(file));
-        multipart.addBodyPart(attachmentBodyPart);
-        mimeMessage.setContent(multipart);
-
+//        Multipart multipart = new MimeMultipart();
+//        multipart.addBodyPart(mimeBodyPart);
+//visitor
+//        MimeBodyPart attachmentBodyPart = new MimeBodyPart();
+//        attachmentBodyPart.attachFile(new File(file));
+//        multipart.addBodyPart(attachmentBodyPart);
+//        mimeMessage.setContent(multipart);
+//
         Transport.send(mimeMessage);
 
         System.out.println("sent");

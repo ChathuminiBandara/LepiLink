@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="282.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.loadingFormController">
+    <children>
+        <ImageView fx:id="imageView" fitHeight="369.0" fitWidth="493.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/transprnt_Images/white_logo_Butterfly.png" />
+         </image></ImageView>
+        <ProgressBar cache="true" layoutX="119.0" layoutY="328.0" prefHeight="13.0" prefWidth="172.0" />
+    </children>
+</AnchorPane>
