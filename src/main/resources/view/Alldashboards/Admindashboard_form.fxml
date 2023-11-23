@@ -7,17 +7,32 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" style="-fx-background-color: #9494b8;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormControllerMain">
-    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: green;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
+    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+            </color>
+         </DropShadow>
+      </effect></AnchorPane>
     <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="34.0" layoutY="264.0" lineSpacing="67.0" onAction="#employeeOnAction" prefHeight="45.0" prefWidth="478.0" text=" Employee" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
       <graphic>
-         <FontAwesomeIconView fill="WHITE" glyphName="USER" size="40" />
+         <FontAwesomeIconView fill="WHITE" glyphName="USER" size="40">
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
     <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="36.0" layoutY="163.0" onAction="#dashboardOnAction" prefHeight="45.0" prefWidth="474.0" ripplerFill="BLACK" text="Dashboard" textFill="#f2f2f2">
@@ -25,7 +40,14 @@
             <Font size="25.0" />
         </font>
       <graphic>
-         <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="40" text="" wrappingWidth="37.0" />
+         <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="40" text="" wrappingWidth="37.0">
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
     <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="27.0" layoutY="320.0" lineSpacing="67.0" onAction="#weatherOnAction" prefHeight="45.0" prefWidth="478.0" text=" Weather" textFill="#f2f2f2">
@@ -33,11 +55,21 @@
             <Font size="25.0" />
         </font>
         <effect>
-            <DropShadow />
+            <DropShadow>
+            <color>
+               <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+            </color></DropShadow>
         </effect>
         <graphic>
             <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-rain-cloud-50.png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
         </graphic>
     </JFXButton>
@@ -46,11 +78,21 @@
             <Font size="25.0" />
         </font>
         <effect>
-            <DropShadow />
+            <DropShadow>
+            <color>
+               <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+            </color></DropShadow>
         </effect>
         <graphic>
             <ImageView fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../asserts/icons/icons8-butterfly-64%20(1).png" />
+                <Image url="@../../asserts/icons/icons8-butterfly-64%20(1).png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
         </graphic>
     </JFXButton>
@@ -64,6 +106,13 @@
         <graphic>
             <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-butterfly-64.png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
         </graphic>
     </JFXButton>
@@ -79,6 +128,13 @@
             <image>
                <Image url="@../../asserts/icons/icons8-delivery-box-64.png" />
             </image>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
          </ImageView>
       </graphic>
     </JFXButton>
@@ -92,6 +148,13 @@
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-planetarium-visitors-50.png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
         </graphic>
     </JFXButton>
@@ -103,7 +166,14 @@
             <DropShadow />
         </effect>
       <graphic>
-         <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="40" />
+         <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="40">
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
     <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="755.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="45.0" prefWidth="490.0" text="Suppliers &amp; Goods" textFill="WHITE">
@@ -116,6 +186,13 @@
         <graphic>
             <ImageView fitHeight="51.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-supplier-50.png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
         </graphic>
     </JFXButton>
@@ -153,6 +230,13 @@
             <image>
                <Image url="@../../asserts/icons/bt.png" />
             </image>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
          </ImageView>
       </graphic>
    </JFXButton>
@@ -161,7 +245,10 @@
          <Font size="23.0" />
       </font>
       <effect>
-         <DropShadow />
+         <DropShadow>
+            <color>
+               <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+            </color></DropShadow>
       </effect>
       <graphic>
           <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
@@ -186,6 +273,13 @@
             <image>
                <Image url="@../../asserts/icons/icons8-blueprint-64.png" />
             </image>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
          </ImageView>
       </graphic>
    </JFXButton>
@@ -199,20 +293,16 @@
       <graphic>
             <ImageView fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-schedule-50.png" />
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
+                  </color>
+               </DropShadow>
+            </effect>
             </ImageView>
       </graphic>
     </JFXButton>
-   <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="61.0" layoutX="30.0" layoutY="856.0" lineSpacing="67.0" onAction="#reportOnAction" prefHeight="50.0" prefWidth="463.0" text="Generate Report" textFill="WHITE">
-      <font>
-         <Font size="25.0" />
-      </font>
-      <effect>
-         <DropShadow />
-      </effect>
-      <graphic>
-         <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="40" wrappingWidth="48.19047927856445" />
-      </graphic>
-   </JFXButton>
    <JFXButton layoutX="167.0" layoutY="933.0" onAction="#logoutOnAction" text="Logout" textFill="#051c75">
       <font>
          <Font size="19.0" />

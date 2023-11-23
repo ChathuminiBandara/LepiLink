@@ -7,13 +7,16 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.ReleasingPlansController">
-    <Pane maxHeight="-Infinity" maxWidth="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1080.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <Pane maxHeight="-Infinity" maxWidth="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
-      <Label layoutX="262.0" layoutY="133.0" maxWidth="1000.0" prefHeight="132.0" prefWidth="848.0" text="Releasing Plans re Gonna Be Here" textFill="WHITE">
+      <Label layoutX="524.0" layoutY="54.0" maxWidth="1000.0" prefHeight="132.0" prefWidth="435.0" text="Releasing Plans " textFill="WHITE">
          <font>
-            <Font size="57.0" />
+            <Font size="52.0" />
          </font>
       </Label>
+      <Pane layoutX="73.0" layoutY="247.0" opacity="0.52" prefHeight="312.0" prefWidth="523.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="78.0" layoutY="595.0" opacity="0.58" prefHeight="451.0" prefWidth="527.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="634.0" layoutY="247.0" opacity="0.45" prefHeight="797.0" prefWidth="737.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
 
 
 

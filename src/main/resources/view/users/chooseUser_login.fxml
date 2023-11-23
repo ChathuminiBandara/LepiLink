@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.ChooseUserController">
+<AnchorPane prefHeight="582.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.ChooseUserController">
    <children>
-      <ImageView fitHeight="410.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="593.0" fitWidth="882.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Desktop/110428-black-and-blue-blurred-background-vector.jpg" />
+            <Image url="@../../asserts/purpleSky.jpg" />
          </image>
       </ImageView>
-      <JFXButton layoutX="139.0" layoutY="86.0" onAction="#AdminOnAction" prefHeight="188.0" prefWidth="158.0" style="-fx-background-color: blue;" text="ADMIN" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="232.0" onAction="#AdminOnAction" prefHeight="218.0" prefWidth="158.0" text="ADMIN" textFill="#1b0505">
          <font>
             <Font size="26.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="436.0" layoutY="86.0" onAction="#employeeOnAction" prefHeight="188.0" prefWidth="158.0" style="-fx-background-color: red;" text="EMPLOYEE" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="558.0" layoutY="249.0" onAction="#employeeOnAction" prefHeight="188.0" prefWidth="158.0" text="EMPLOYEE" textFill="#221111">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="26.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="248.0" layoutY="339.0" onAction="#backOnAction" style="-fx-background-color: green;" text="Button" textFill="#f8f8f8" />
+      <JFXButton layoutX="383.0" layoutY="479.0" onAction="#backOnAction" prefHeight="53.0" prefWidth="139.0" style="-fx-background-color: #cd9ed3; -fx-background-radius: 15;" text="Button" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.23660452663898468" green="0.2225877195596695" blue="0.2368421107530594" />
+               </color>
+            </DropShadow>
+         </effect></JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/icons8-admin-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="566.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/icons8-employee-80.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="70.0" text="Employee Admin Login" textFill="#0d0d0d">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

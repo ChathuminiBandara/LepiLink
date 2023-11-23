@@ -293,4 +293,15 @@ public class PlaceOrderFormController {
         Stage stage = (Stage) root.getScene().getWindow();
         stage.close();
     }
+
+    public void reportOnAction(ActionEvent actionEvent) {
+        try {
+            Stage stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard/report_form.fxml"))));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.ERROR, "Something went wrong: " + e.getMessage()).show();
+        }
+    }
 }

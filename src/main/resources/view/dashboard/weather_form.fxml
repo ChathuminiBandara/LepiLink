@@ -6,10 +6,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.web.WebView?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: 250,250,250;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.WeatherController">
-   <WebView maxWidth="-1.0" minHeight="-Infinity" minWidth="-1.0" prefHeight="1000.0" prefWidth="1410.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    <ImageView fitHeight="707.0" fitWidth="1411.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../asserts/weather%20images/dark-blue-texture-with-cloudy-sky-vector.jpg" />
    </ImageView>

@@ -83,6 +83,7 @@ public class DashboardFormControllerMain {
 
 
     public void reportOnAction(ActionEvent actionEvent) {
+
     }
 
     public void logoutOnAction(ActionEvent actionEvent) {

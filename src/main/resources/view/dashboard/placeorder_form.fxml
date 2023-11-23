@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.PlaceOrderFormController">
+<AnchorPane prefHeight="684.0" prefWidth="774.0" style="-fx-background-color: #9F91CC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.PlaceOrderFormController">
     <children>
-        <Label layoutX="235.0" prefHeight="42.0" prefWidth="330.0" text="Place Order Form" textFill="#5e5c5c">
+        <Label layoutX="260.0" prefHeight="42.0" prefWidth="330.0" text="Place Order Form" textFill="#282525">
             <font>
                 <Font name="System Bold" size="26.0" />
             </font>
@@ -158,5 +158,10 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
+      <JFXButton buttonType="RAISED" layoutX="322.0" layoutY="617.0" onAction="#reportOnAction" prefHeight="39.0" prefWidth="183.0" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>

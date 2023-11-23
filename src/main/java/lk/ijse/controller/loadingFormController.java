@@ -33,7 +33,7 @@ public class loadingFormController implements Initializable {
         imageView.setCache(true);
 
         Timeline timeline = new Timeline();
-        KeyFrame keyFrame1 = new KeyFrame(Duration.millis(1000), actionEvent -> {
+        KeyFrame keyFrame1 = new KeyFrame(Duration.millis(5000), actionEvent -> {
             System.out.println("Initializing Application....");
             System.out.println("Welcome to System v1.0.0");
         });
@@ -43,15 +43,11 @@ public class loadingFormController implements Initializable {
 
         timeline.setOnFinished(actionEvent -> {
             try {
-                // Check if LodingForm is not null before accessing its properties
-                if (LodingForm != null && LodingForm.getScene() != null && LodingForm.getScene().getWindow() != null) {
-                    LodingForm.getScene().getWindow().hide();
-                }
+                LodingForm.getScene().getWindow().hide();
 
                 Parent root = FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
-//                stage.initStyle(StageStyle.UNDECORATED);
                 stage.show();
             } catch (IOException e) {
                 throw new RuntimeException(e);

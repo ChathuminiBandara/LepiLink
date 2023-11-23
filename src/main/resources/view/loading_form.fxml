@@ -5,12 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="282.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.loadingFormController">
+<AnchorPane fx:id="LodingForm" prefHeight="282.0" prefWidth="346.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.loadingFormController">
     <children>
-        <ImageView fx:id="imageView" fitHeight="369.0" fitWidth="493.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/transprnt_Images/white_logo_Butterfly.png" />
-         </image></ImageView>
-        <ProgressBar cache="true" layoutX="119.0" layoutY="328.0" prefHeight="13.0" prefWidth="172.0" />
+        <ImageView fx:id="imageView" fitHeight="247.0" fitWidth="315.0" layoutX="44.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asserts/images_Logo/LepiLink2.png" />
+            </image></ImageView>
+        <ProgressBar cache="true" layoutX="81.0" layoutY="182.0" prefHeight="13.0" prefWidth="172.0" />
     </children>
 </AnchorPane>
