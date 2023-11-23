@@ -33,5 +33,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
+       <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+           <font>
+               <Font size="15.0" />
+           </font>
+       </Label>
    </Pane>
 </AnchorPane>

@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmpSchedulesForm" />
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmpSchedulesForm">
+   <children>
+      <Pane layoutX="107.0" layoutY="183.0" opacity="0.34" prefHeight="771.0" prefWidth="453.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="640.0" layoutY="185.0" opacity="0.34" prefHeight="407.0" prefWidth="703.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="643.0" layoutY="655.0" opacity="0.34" prefHeight="295.0" prefWidth="470.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="1163.0" layoutY="653.0" opacity="0.34" prefHeight="295.0" prefWidth="173.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Label layoutX="493.0" layoutY="60.0" text="Employee Schedules" textFill="WHITE">
+         <font>
+            <Font size="45.0" />
+         </font>
+         <effect>
+            <Glow level="0.84" />
+         </effect>
+      </Label>
+      <Label layoutX="1228.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

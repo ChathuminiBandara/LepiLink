@@ -29,11 +29,9 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
-        <dependency>
-            <groupId>de.jensd</groupId>
-            <artifactId>fontawesomefx-fontawesome</artifactId>
-            <version>4.7.0-9.1.2</version>
-        </dependency>
+
+
+
         <dependency>
             <groupId>us.ihmc</groupId>
             <artifactId>jfoenix</artifactId>
@@ -45,6 +43,7 @@
             <artifactId>Color_Deconvolution_IJ2</artifactId>
             <version>1.0.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -56,10 +55,19 @@
             <artifactId>otp-java</artifactId>
             <version>2.0.3</version>
         </dependency>
+
+
+
         <dependency>
-            <groupId>com.github.sunsear</groupId>
-            <artifactId>Color_Deconvolution_IJ2</artifactId>
-            <version>1.0.0</version>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.20.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-fontawesome</artifactId>
+            <version>4.7.0-9.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -71,6 +79,7 @@
             <artifactId>mail</artifactId>
             <version>1.5.0-b01</version>
         </dependency>
+
         <dependency>
             <groupId>com.github.quantum-framework</groupId>
             <artifactId>quantum-api</artifactId>

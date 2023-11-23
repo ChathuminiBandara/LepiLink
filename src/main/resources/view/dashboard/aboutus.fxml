@@ -18,5 +18,10 @@
          </font>
       </Hyperlink>
       <Label layoutX="649.0" layoutY="677.0" text="Click Here " textFill="WHITE" />
+      <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

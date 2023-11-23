@@ -7,11 +7,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.EmployeeDashboardController">
-    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: green;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #9F91CC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.EmployeeDashboardController">
+    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
     <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="34.0" layoutY="264.0" lineSpacing="67.0" onAction="#employeeOnAction" prefHeight="45.0" prefWidth="478.0" text=" Employee" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
@@ -50,7 +51,7 @@
         </effect>
         <graphic>
             <ImageView fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../asserts/icons/icons8-butterfly-64%20(1).png" />
+                <Image url="@../../asserts/icons/icons8-butterfly-64%20(1).png" />
             </ImageView>
         </graphic>
     </JFXButton>
@@ -80,7 +81,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="755.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="45.0" prefWidth="490.0" text="Suppliers &amp; Goods" textFill="WHITE">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="694.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="45.0" prefWidth="490.0" text="Suppliers &amp; Goods" textFill="WHITE">
         <font>
             <Font size="25.0" />
         </font>
@@ -104,11 +105,14 @@
             </ImageView>
         </graphic>
         <effect>
-            <DropShadow />
+            <DropShadow>
+            <color>
+               <Color red="0.3166666626930237" blue="1.0" />
+            </color></DropShadow>
         </effect>
     </Label>
-    <Line endX="338.5" layoutX="115.0" layoutY="646.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
-    <Label layoutX="55.0" layoutY="614.0" text="Other" textFill="WHITE">
+    <Line endX="338.5" layoutX="115.0" layoutY="667.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
+    <Label layoutX="55.0" layoutY="638.0" text="Other" textFill="WHITE">
         <font>
             <Font name="Candara Light" size="24.0" />
         </font>
@@ -161,5 +165,8 @@
             </ImageView>
         </graphic>
     </JFXButton>
-   <JFXButton buttonType="RAISED" layoutX="170.0" layoutY="920.0" onAction="#logOutOnAction" text="Logout" />
+   <JFXButton buttonType="RAISED" layoutX="164.0" layoutY="885.0" onAction="#logOutOnAction" prefHeight="60.0" prefWidth="129.0" text="Logout">
+      <font>
+         <Font size="24.0" />
+      </font></JFXButton>
 </AnchorPane>

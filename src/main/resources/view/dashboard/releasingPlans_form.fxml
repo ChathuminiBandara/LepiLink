@@ -18,7 +18,11 @@
       <Pane layoutX="78.0" layoutY="595.0" opacity="0.58" prefHeight="451.0" prefWidth="527.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
       <Pane layoutX="634.0" layoutY="247.0" opacity="0.45" prefHeight="797.0" prefWidth="737.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
 
-
+        <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
 
     </Pane>
 </AnchorPane>

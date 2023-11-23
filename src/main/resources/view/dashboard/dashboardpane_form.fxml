@@ -34,5 +34,10 @@
       </AnchorPane>
       <AnchorPane layoutX="73.0" layoutY="800.0" opacity="0.12" prefHeight="202.0" prefWidth="841.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
       <AnchorPane layoutX="70.0" layoutY="265.0" opacity="0.12" prefHeight="486.0" prefWidth="163.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
+      <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

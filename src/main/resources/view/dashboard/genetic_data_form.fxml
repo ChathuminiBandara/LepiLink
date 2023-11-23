@@ -22,6 +22,11 @@
          <Pane layoutX="625.0" layoutY="427.0" opacity="0.47" prefHeight="270.0" prefWidth="266.0" style="-fx-background-color: white; -fx-background-radius: 19;" />
          <Pane layoutX="621.0" layoutY="252.0" opacity="0.47" prefHeight="146.0" prefWidth="266.0" style="-fx-background-color: white; -fx-background-radius: 19;" />
          <Pane layoutX="928.0" layoutY="246.0" opacity="0.47" prefHeight="444.0" prefWidth="434.0" style="-fx-background-color: white; -fx-background-radius: 19;" />
+          <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+              <font>
+                  <Font size="15.0" />
+              </font>
+          </Label>
       </children>
     </Pane>
 </AnchorPane>

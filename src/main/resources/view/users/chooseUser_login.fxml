@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="593.0" fitWidth="882.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asserts/purpleSky.jpg" />
+            <Image url="@../../asserts/icons/purpleSky.jpg" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="232.0" onAction="#AdminOnAction" prefHeight="218.0" prefWidth="158.0" text="ADMIN" textFill="#1b0505">
@@ -40,12 +40,12 @@
          </effect></JFXButton>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asserts/icons8-admin-64.png" />
+            <Image url="@../../asserts/images_Logo/icons8-admin-64.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="566.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asserts/icons8-employee-80.png" />
+            <Image url="@../../asserts/icons/icons8-employee-80.png" />
          </image>
       </ImageView>
       <Label layoutX="299.0" layoutY="70.0" text="Employee Admin Login" textFill="#0d0d0d">
