@@ -2,8 +2,11 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
@@ -15,15 +18,7 @@
             <Font name="System Bold" size="41.0" />
          </font>
       </JFXButton>
-      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="315.0" layoutY="360.0" size="80">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.9411764740943909" green="0.7764706015586853" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect></FontAwesomeIconView>
-      <JFXButton buttonType="RAISED" layoutX="554.0" layoutY="233.0" onAction="#itemOnaction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY;" text="ITEM">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="554.0" layoutY="233.0" onAction="#itemOnaction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY; -fx-opacity: 30; -fx-background-radius: 50;" text="ITEM">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
@@ -34,15 +29,17 @@
                </color>
             </DropShadow>
          </effect>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/3d-casual-life-e-commerce-completed-order.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="667.0" layoutY="360.0" size="80">
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.9411764740943909" green="0.7764706015586853" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect></FontAwesomeIconView>
       <JFXButton buttonType="RAISED" layoutX="930.0" layoutY="232.0" onAction="#placeOrderOnAction" prefHeight="389.0" prefWidth="292.0" style="-fx-background-color: GREY;" text="PLACE ORDER">
          <font>
             <Font name="System Bold" size="34.0" />
