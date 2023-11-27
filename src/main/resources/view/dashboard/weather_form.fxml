@@ -6,13 +6,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <!--<?import javafx.scene.control.Label?>-->
 <!--<?import javafx.scene.effect.Glow?>-->
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: 250,250,250;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.WeatherController">
-   <ImageView fitHeight="707.0" fitWidth="1411.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="707.0" fitWidth="1411.0" layoutX="-7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@../../asserts/weather%20images/dark-blue-texture-with-cloudy-sky-vector.jpg" />
    </ImageView>
    <Pane layoutX="976.0" layoutY="193.0" opacity="0.42" prefHeight="328.0" prefWidth="351.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
@@ -33,5 +34,168 @@
          <Font name="System Bold" size="62.0" />
       </font>
    </Label>
-   <Pane layoutX="38.0" layoutY="200.0" prefHeight="200.0" prefWidth="905.0" style="-fx-background-radius: 19; -fx-border-radius: 19;" />
+   <Pane layoutX="9.0" layoutY="200.0" prefHeight="321.0" prefWidth="957.0" style="-fx-background-radius: 19; -fx-border-radius: 19;">
+      <children>
+         <ImageView fitHeight="85.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-fog-64%20(1).png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="106.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-fog-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="200.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-full-moon-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="587.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-lightning-bolt-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="295.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-hail-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="806.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-snow-storm-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="714.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-snow-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="629.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-smiling-sun-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="539.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-sad-sun-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="453.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-rainy-night-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="368.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-rainwater-catchment-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="274.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-rainbow-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="187.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-rain-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="86.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-partly-cloudy-day-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-no-rain-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="847.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-night-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="748.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-new-moon-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="670.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-moon-and-stars-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="492.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-hygrometer-64.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="387.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../asserts/3D/icons8-haze-64.png" />
+            </image>
+         </ImageView>
+      </children></Pane>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bbbbbc" height="314.0" layoutX="198.0" layoutY="510.0" opacity="0.25" stroke="BLACK" strokeType="INSIDE" width="508.0" />
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="51.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-storm-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="248.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-sun-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="146.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-summer-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="342.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-sunrise-64%20(1).png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="438.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-sunset-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="54.0" layoutY="686.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-tsunami-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="155.0" layoutY="685.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-umbrella-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="115.0" fitWidth="101.0" layoutX="616.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-wildfire-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="115.0" fitWidth="101.0" layoutX="619.0" layoutY="637.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-wildfire-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="115.0" fitWidth="101.0" layoutX="759.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-wind-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="115.0" fitWidth="101.0" layoutX="767.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-windsock-64.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="115.0" fitWidth="101.0" layoutX="777.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../asserts/3D/icons8-windsock-64.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
