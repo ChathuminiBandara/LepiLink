@@ -10,24 +10,43 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="582.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.ChooseUserController">
+<AnchorPane prefHeight="582.0" prefWidth="882.0" style="-fx-background-color: #75C2F6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.ChooseUserController">
    <children>
-      <ImageView fitHeight="593.0" fitWidth="882.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="577.0" fitWidth="327.0" layoutX="557.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asserts/icons/purpleSky.jpg" />
+            <Image url="@../../asserts/3D/tree.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="232.0" onAction="#AdminOnAction" prefHeight="218.0" prefWidth="158.0" text="ADMIN" textFill="#1b0505">
+      <ImageView fitHeight="279.0" fitWidth="296.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="243.0" layoutY="162.0" onAction="#AdminOnAction" prefHeight="218.0" prefWidth="158.0" text="ADMIN" textFill="#1b0505">
          <font>
             <Font size="26.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/images_Logo/icons8-admin-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="558.0" layoutY="249.0" onAction="#employeeOnAction" prefHeight="188.0" prefWidth="158.0" text="EMPLOYEE" textFill="#221111">
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="481.0" layoutY="167.0" onAction="#employeeOnAction" prefHeight="188.0" prefWidth="158.0" text="EMPLOYEE" textFill="#221111">
          <font>
             <Font size="26.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/icons/icons8-employee-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <JFXButton layoutX="383.0" layoutY="479.0" onAction="#backOnAction" prefHeight="53.0" prefWidth="139.0" style="-fx-background-color: #cd9ed3; -fx-background-radius: 15;" text="Button" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="383.0" layoutY="479.0" onAction="#backOnAction" prefHeight="53.0" prefWidth="139.0" style="-fx-background-color: #279EFF; -fx-background-radius: 15;" text="Back" textFill="WHITE">
          <font>
             <Font size="28.0" />
          </font>
@@ -38,22 +57,19 @@
                </color>
             </DropShadow>
          </effect></JFXButton>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../asserts/images_Logo/icons8-admin-64.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="566.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../asserts/icons/icons8-employee-80.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="299.0" layoutY="70.0" text="Employee Admin Login" textFill="#0d0d0d">
+      <Label layoutX="299.0" layoutY="70.0" text="Employee Admin Login" textFill="WHITE">
          <font>
             <Font size="29.0" />
          </font>
          <effect>
-            <Glow level="1.0" />
+            <Glow level="0.41">
+               <input>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.009381091222167015" green="0.06539960950613022" blue="0.28947368264198303" />
+                     </color>
+                  </DropShadow>
+               </input></Glow>
          </effect>
       </Label>
    </children>

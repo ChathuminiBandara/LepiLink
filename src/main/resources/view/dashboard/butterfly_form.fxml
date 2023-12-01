@@ -5,14 +5,16 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #42424/2;" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.ButterflyFxmlController">
    <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
       <TableView fx:id="Butterfly_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
          <columns>
             <TableColumn prefWidth="75.0" text="BUtterfly Variety ID" />
@@ -86,22 +88,22 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
+      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="52.0" prefWidth="131.0" style="-fx-background-color: #91cff6; -fx-background-radius: 15;" text="Save" textFill="#1b1919">
          <font>
             <Font size="32.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Update" textFill="#1b1919">
+      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #37a7ee; -fx-background-radius: 15;" text="Update" textFill="#1b1919">
          <font>
             <Font size="27.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Delete" textFill="#1b1919">
+      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #0e74b5; -fx-background-radius: 15;" text="Delete" textFill="#1b1919">
          <font>
             <Font size="28.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Clear" textFill="#1b1919">
+      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="Clear" textFill="#1b1919">
          <font>
             <Font size="32.0" />
          </font>
@@ -116,5 +118,27 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="991.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" rotate="37.9">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="952.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" rotate="127.3">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.08075454831123352" green="0.06493664532899857" blue="0.5394737124443054" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1039.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" rotate="60.3">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
    </Pane>
 </AnchorPane>

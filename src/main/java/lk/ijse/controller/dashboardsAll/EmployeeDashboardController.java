@@ -22,7 +22,7 @@ public class EmployeeDashboardController {
 
     }
     public void aboutUsOnAction(ActionEvent actionEvent) throws IOException {
-        setform("/view/dashboard/butterfly_form.fxml");
+        setform("/view/dashboard/aboutus.fxml");
     }
 
     public void SchedulestasksOnAction(ActionEvent actionEvent) throws IOException{

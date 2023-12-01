@@ -2,26 +2,91 @@
 
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.AboutusController">
+<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #9AD0EC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.AboutusController">
    <children>
-      <Label layoutX="384.0" layoutY="345.0" text="About Us Is Gonna Be Here" textFill="WHITE">
-         <font>
-            <Font size="47.0" />
-         </font>
-      </Label>
-      <Hyperlink fx:id="openDilmah" layoutX="572.0" layoutY="636.0" onAction="#openDilmahOnAction" text="Dilmah Conservation">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Hyperlink>
-      <Label layoutX="649.0" layoutY="677.0" text="Click Here " textFill="WHITE" />
-      <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+      <Label layoutX="1184.0" layoutY="956.0" text="\@ 2023 LepiLink v1.01.01" textFill="#ebebeb">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
+      <Label layoutX="402.0" layoutY="90.0" prefHeight="77.0" prefWidth="747.0" text="Wanna Know More About US?" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="52.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.03256579115986824" green="0.009868420660495758" blue="0.2368421107530594" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <Pane layoutX="779.0" layoutY="239.0" prefHeight="545.0" prefWidth="601.0" style="-fx-background-color: #94DAFF; -fx-background-radius: 20;">
+         <children>
+            <Hyperlink fx:id="openDilmah" contentDisplay="TOP" layoutX="3.0" layoutY="5.0" onAction="#openDilmahOnAction" prefHeight="495.0" prefWidth="565.0" text="Dilmah Conservation">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="475.0" fitWidth="565.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asserts/3D/bendy-team-leader-talking-about-a-new-idea.gif" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.0347222238779068" green="0.11872563511133194" blue="0.3947368562221527" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Label layoutX="241.0" layoutY="567.0" prefHeight="51.0" prefWidth="116.0" text="Click Here " textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.029605263844132423" green="0.062171053141355515" blue="0.3552631437778473" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <ImageView fitHeight="595.0" fitWidth="662.0" layoutX="4.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="168.0" fitWidth="157.0" layoutX="290.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image></ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="177.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image></ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="139.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/pablita-butterfly.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" rotate="-68.0">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
