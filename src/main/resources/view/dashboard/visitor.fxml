@@ -5,6 +5,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -12,7 +14,17 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.VisitorController">
 
-    <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #042234;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="495.0" fitWidth="516.0" layoutX="970.0" layoutY="657.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="990.0" fitWidth="958.0" layoutX="-18.0" layoutY="89.0" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
         <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
         <TableView fx:id="Payment_Table" layoutX="128.0" layoutY="656.0" prefHeight="344.0" prefWidth="831.0">
             <columns>
@@ -88,22 +100,22 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #64bbf2; -fx-background-radius: 15;" text="Save" textFill="#1b1919">
             <font>
                 <Font size="32.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Update" textFill="#1b1919">
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #1292e2; -fx-background-radius: 20;" text="Update" textFill="#1b1919">
             <font>
                 <Font size="27.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Delete" textFill="#1b1919">
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="#1b1919">
             <font>
                 <Font size="28.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Clear" textFill="#1b1919">
+        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Clear" textFill="#1b1919">
             <font>
                 <Font size="32.0" />
             </font>
@@ -128,5 +140,21 @@
                 <Font size="15.0" />
             </font>
         </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="498.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="997.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" rotate="66.3">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="91.0" layoutX="943.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="91.0" layoutX="924.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" rotate="102.5">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
     </Pane>
 </AnchorPane>

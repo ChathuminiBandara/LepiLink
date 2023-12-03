@@ -28,26 +28,8 @@
             <Image url="@../../asserts/3D/juicy-information-board-with-search.gif" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="951.0" layoutY="496.0" opacity="0.12" prefHeight="234.0" prefWidth="439.0" style="-fx-background-radius: 15; -fx-background-color: white;">
-         <children>
-            <Label fx:id="lblDate" layoutX="77.0" layoutY="8.0" prefHeight="217.0" prefWidth="356.0" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="56.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <AnchorPane layoutX="961.0" layoutY="798.0" opacity="0.12" prefHeight="209.0" prefWidth="196.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
       <AnchorPane layoutX="1190.0" layoutY="798.0" opacity="0.12" prefHeight="209.0" prefWidth="196.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
-      <AnchorPane layoutX="952.0" layoutY="66.0" opacity="0.12" prefHeight="363.0" prefWidth="433.0" style="-fx-background-radius: 15; -fx-background-color: white;">
-         <children>
-            <Label fx:id="lblTime" layoutX="72.0" layoutY="34.0" prefHeight="315.0" prefWidth="349.0" textFill="WHITE">
-               <font>
-                  <Font size="71.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
          <font>
             <Font size="15.0" />
@@ -146,6 +128,14 @@
       <Label layoutX="347.0" layoutY="58.0" text="WELCOME TO LEPILINK">
          <font>
             <Font name="Georgia Bold" size="52.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="878.0" layoutY="211.0" prefHeight="105.0" prefWidth="477.0">
+         <font>
+            <Font size="52.0" />
+         </font></Label>
+      <Label fx:id="lblTime" layoutX="981.0" layoutY="571.0" prefHeight="105.0" prefWidth="337.0">
+         <font>
+            <Font size="58.0" />
          </font></Label>
    </children>
 </AnchorPane>

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #B1B2FF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.VisitordashboardController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1572A1;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.VisitordashboardController">
     <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
     <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="36.0" layoutY="209.0" onAction="#dashboardOnAction" prefHeight="45.0" prefWidth="474.0" ripplerFill="BLACK" text="Dashboard" textFill="#f2f2f2">
         <font>

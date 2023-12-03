@@ -13,6 +13,9 @@ import java.net.URL;
 
 public class EmployeeDashboardController {
     public AnchorPane subpain;
+    public void initialize() throws IOException {
+        setform("/view/dashboard/dashboardpane_form.fxml");
+    }
     private void setform(String form) throws IOException {
         URL resource = this.getClass().getResource(form);
         assert resource != null;

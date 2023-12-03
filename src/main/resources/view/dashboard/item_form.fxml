@@ -6,23 +6,35 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.ItemFormController">
+<AnchorPane minHeight="-Infinity" prefHeight="647.0" prefWidth="638.0" style="-fx-background-color: #042234;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.ItemFormController">
     <children>
-        <Label layoutX="188.0" layoutY="14.0" text="Item Manage">
+      <ImageView fitHeight="125.0" fitWidth="95.0" layoutX="33.0" layoutY="185.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="675.0" fitWidth="339.0" layoutX="292.0" layoutY="41.0" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
+        <Label layoutX="214.0" layoutY="14.0" text="Item Manage" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="28.0" />
             </font>
         </Label>
         <TextField fx:id="txtCode" layoutX="23.0" layoutY="101.0" onAction="#codeSearchOnAction" prefHeight="35.0" prefWidth="245.0" />
-        <Label layoutX="23.0" layoutY="81.0" text="Item Code*" />
-        <Label layoutX="335.0" layoutY="81.0" text="Description*" />
+        <Label layoutX="23.0" layoutY="81.0" text="Item Code*" textFill="WHITE" />
+        <Label layoutX="335.0" layoutY="81.0" text="Description*" textFill="WHITE" />
         <TextField fx:id="txtDescription" layoutX="335.0" layoutY="101.0" prefHeight="35.0" prefWidth="245.0" />
-        <Label layoutX="24.0" layoutY="151.0" text="unit Price*" />
+        <Label layoutX="24.0" layoutY="151.0" text="unit Price*" textFill="WHITE" />
         <TextField fx:id="txtUnitPrice" layoutX="23.0" layoutY="171.0" prefHeight="35.0" prefWidth="245.0" />
-        <Label layoutX="335.0" layoutY="151.0" text="Qty On Hand*" />
+        <Label layoutX="335.0" layoutY="151.0" text="Qty On Hand*" textFill="WHITE" />
         <TextField fx:id="txtQtyOnHand" layoutX="335.0" layoutY="171.0" prefHeight="35.0" prefWidth="245.0" />
         <JFXButton buttonType="RAISED" layoutX="518.0" layoutY="228.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="61.0" style="-fx-background-color: lightblue;" text="Save">
             <cursor>
@@ -53,10 +65,15 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-        <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+        <Label layoutX="401.0" layoutY="595.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
+      <ImageView fitHeight="186.0" fitWidth="190.0" layoutX="-4.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

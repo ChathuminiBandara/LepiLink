@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" style="-fx-background-color: #9494b8;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormControllerMain">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" style="-fx-background-color: #1572A1;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormControllerMain">
     <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css">
       <effect>
          <DropShadow>

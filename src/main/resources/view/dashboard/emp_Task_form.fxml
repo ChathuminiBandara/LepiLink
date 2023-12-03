@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.AnchorPane?>
-
-
-<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmpTaskForm">
-
-</AnchorPane>

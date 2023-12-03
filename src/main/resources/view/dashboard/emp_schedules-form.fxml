@@ -2,17 +2,51 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmpSchedulesForm">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: B2C8DF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmpSchedulesForm">
    <children>
-      <Pane layoutX="107.0" layoutY="183.0" opacity="0.34" prefHeight="771.0" prefWidth="453.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-      <Pane layoutX="640.0" layoutY="185.0" opacity="0.34" prefHeight="407.0" prefWidth="703.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-      <Pane layoutX="643.0" layoutY="655.0" opacity="0.34" prefHeight="295.0" prefWidth="470.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
-      <Pane layoutX="1163.0" layoutY="653.0" opacity="0.34" prefHeight="295.0" prefWidth="173.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <Pane layoutX="107.0" layoutY="183.0" prefHeight="339.0" prefWidth="453.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="312.0" fitWidth="453.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/november-8-calendar-design-icon-2023-calendar-schedule-appointment-important-date-concept-free-vector.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="394.0" fitWidth="390.0" layoutX="-3.0" layoutY="-3.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="1038.0" layoutY="161.0" prefHeight="361.0" prefWidth="308.0" style="-fx-background-color: B2C8DF; -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="286.0" fitWidth="330.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/bouncy-completed-checklist-form-on-a-clipboard-and-pencil.gif" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="111.0" layoutY="658.0" prefHeight="286.0" prefWidth="243.0" style="-fx-background-color: #B2C8DF; -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="313.0" fitWidth="221.0" layoutX="13.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/bouncy-to-do-in-progress-and-done-columns-of-the-kanban-board.gif" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="1033.0" layoutY="568.0" prefHeight="354.0" prefWidth="321.0" style="-fx-background-color: B2C8DF; -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="302.0" fitWidth="221.0" layoutX="80.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/3D/bouncy-hourglass-and-loading-icon.gif" />
+               </image>
+            </ImageView>
+         </children></Pane>
       <Label layoutX="493.0" layoutY="60.0" text="Employee Schedules" textFill="WHITE">
          <font>
             <Font size="45.0" />

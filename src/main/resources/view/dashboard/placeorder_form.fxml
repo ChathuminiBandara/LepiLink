@@ -12,8 +12,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="684.0" prefWidth="774.0" style="-fx-background-color: #9F91CC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.PlaceOrderFormController">
+<AnchorPane prefHeight="684.0" prefWidth="774.0" style="-fx-background-color: #A4EBF3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.PlaceOrderFormController">
     <children>
+      <ImageView fitHeight="674.0" fitWidth="592.0" layoutX="-3.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
         <Label layoutX="260.0" prefHeight="42.0" prefWidth="330.0" text="Place Order Form" textFill="#282525">
             <font>
                 <Font name="System Bold" size="26.0" />
@@ -158,15 +163,20 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-      <JFXButton buttonType="RAISED" layoutX="322.0" layoutY="617.0" onAction="#reportOnAction" prefHeight="39.0" prefWidth="183.0" text="Generate Report" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="290.0" layoutY="617.0" onAction="#reportOnAction" prefHeight="39.0" prefWidth="183.0" text="Generate Report" textFill="#1e1010">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-        <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+        <Label layoutX="590.0" layoutY="652.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
+      <ImageView fitHeight="94.0" fitWidth="114.0" layoutX="490.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="110.0">
+         <image>
+            <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

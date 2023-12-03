@@ -14,7 +14,17 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #42424/2;" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.ButterflyFxmlController">
-   <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #042234;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="573.0" fitWidth="557.0" layoutX="922.0" layoutY="605.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1138.0" fitWidth="577.0" layoutX="2.0" layoutY="52.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
       <TableView fx:id="Butterfly_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
          <columns>
             <TableColumn prefWidth="75.0" text="BUtterfly Variety ID" />
