@@ -14,13 +14,18 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #42424/2;" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.ButterflyFxmlController">
-   <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #042234;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="629.0" fitWidth="374.0" layoutX="1047.0" layoutY="448.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="573.0" fitWidth="557.0" layoutX="922.0" layoutY="605.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="1138.0" fitWidth="577.0" layoutX="2.0" layoutY="52.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1138.0" fitWidth="577.0" layoutX="2.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/tree.png" />
          </image>
@@ -42,58 +47,100 @@
          <font>
             <Font size="17.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
       <TextField fx:id="name" layoutX="172.0" layoutY="329.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex : King Monarch">
          <font>
             <Font size="17.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
       <TextField fx:id="description" layoutX="172.0" layoutY="439.0" prefHeight="49.0" prefWidth="362.0" promptText="Add The Description Here">
          <font>
             <Font size="17.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
       <TextField fx:id="species" layoutX="172.0" layoutY="550.0" prefHeight="49.0" prefWidth="362.0" promptText="Species Name Here">
          <font>
             <Font size="20.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
       <TextField fx:id="avgLifeTime" layoutX="730.0" layoutY="307.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex :  1 Year">
          <font>
             <Font size="20.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
       <TextField fx:id="currentCount" layoutX="731.0" layoutY="441.0" prefHeight="49.0" prefWidth="362.0" promptText="Ex : 25">
          <font>
             <Font size="18.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.38823530077934265" green="0.6941176652908325" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </TextField>
-      <Label layoutX="172.0" layoutY="196.0" text="Butterfly Variety ID" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="196.0" text="Butterfly Variety ID">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="410.0" text="Description" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="410.0" text="Description">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="170.0" layoutY="300.0" text="Variety Name" textAlignment="RIGHT" textFill="WHITE">
+      <Label layoutX="170.0" layoutY="300.0" text="Variety Name" textAlignment="RIGHT">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="172.0" layoutY="519.0" text="Species" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="519.0" text="Species">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="733.0" layoutY="281.0" text="Average Life Time" textFill="WHITE">
+      <Label layoutX="733.0" layoutY="281.0" text="Average Life Time">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="736.0" layoutY="414.0" text="Current Count" textFill="WHITE">
+      <Label layoutX="736.0" layoutY="414.0" text="Current Count">
          <font>
             <Font size="18.0" />
          </font>
@@ -118,7 +165,7 @@
             <Font size="32.0" />
          </font>
       </JFXButton>
-      <Label layoutX="435.0" layoutY="66.0" text="Butterfly Management" textFill="WHITE">
+      <Label layoutX="435.0" layoutY="66.0" text="Butterfly Management">
          <font>
             <Font size="58.0" />
          </font>
