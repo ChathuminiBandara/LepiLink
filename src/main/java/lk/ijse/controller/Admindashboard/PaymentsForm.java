@@ -4,10 +4,12 @@ package lk.ijse.controller.Admindashboard;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dto.paymentDto;
+import lk.ijse.model.CustomerModel;
 import lk.ijse.model.paymentModel;
 
 import java.net.URL;
@@ -51,9 +53,25 @@ public class PaymentsForm implements Initializable {
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-    }
+        String id = PId.getText();
+        String name = Vname.getText();
+        String Status = status.getText();
+        String tel = TP.getText();
 
-    public void DeleteOnAction(ActionEvent actionEvent) {
+        var dto = new paymentDto(id, name, Status, tel);
+
+//        var model = new CustomerModel();
+        try {
+            boolean isUpdated = paymentModel.updatePayment(dto);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
+                //ClearOnAction();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Something went wrong!").show();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
@@ -63,9 +81,25 @@ public class PaymentsForm implements Initializable {
         TP.clear();
     }
 
+    public void DeleteOnAction(ActionEvent actionEvent) {
+        String id = PId.getText();
+
+//        var model = new CustomerModel();
+        try {
+            boolean isDeleted = paymentModel.deletePayment(id);
+            if(isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Payment deleted!").show();
+            } else {
+                new Alert(Alert.AlertType.CONFIRMATION, "Payment not deleted!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    
+
 }
