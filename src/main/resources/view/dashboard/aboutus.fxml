@@ -10,25 +10,19 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: #9AD0EC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.AboutusController">
+<AnchorPane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.AboutusController">
    <children>
       <Label layoutX="1184.0" layoutY="956.0" text="\@ 2023 LepiLink v1.01.01" textFill="#ebebeb">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="402.0" layoutY="90.0" prefHeight="77.0" prefWidth="747.0" text="Wanna Know More About US?" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="362.0" layoutY="90.0" prefHeight="77.0" prefWidth="747.0" text="Wanna Know More About US?" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="52.0" />
          </font>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.03256579115986824" green="0.009868420660495758" blue="0.2368421107530594" />
-               </color></DropShadow>
-         </effect>
       </Label>
-      <Pane layoutX="779.0" layoutY="239.0" prefHeight="545.0" prefWidth="601.0" style="-fx-background-color: #94DAFF; -fx-background-radius: 20;">
+      <Pane layoutX="655.0" layoutY="239.0" prefHeight="545.0" prefWidth="601.0" style="-fx-background-color: #94DAFF; -fx-background-radius: 20;">
          <children>
             <Hyperlink fx:id="openDilmah" contentDisplay="TOP" layoutX="3.0" layoutY="5.0" onAction="#openDilmahOnAction" prefHeight="495.0" prefWidth="565.0" text="Dilmah Conservation">
                <font>
@@ -49,7 +43,7 @@
                   </ImageView>
                </graphic>
             </Hyperlink>
-            <Label layoutX="241.0" layoutY="567.0" prefHeight="51.0" prefWidth="116.0" text="Click Here " textFill="WHITE">
+            <Label layoutX="241.0" layoutY="567.0" prefHeight="51.0" prefWidth="116.0" text="Click Here ">
                <font>
                   <Font size="22.0" />
                </font>
@@ -88,5 +82,6 @@
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="77.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
