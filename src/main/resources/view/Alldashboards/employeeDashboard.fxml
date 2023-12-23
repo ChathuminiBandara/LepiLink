@@ -98,9 +98,7 @@
         </font>
         <graphic>
             <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@../../asserts/icons/bt.png" />
-                </image>
+                <Image url="@../../asserts/icons/bt.png"/>
             </ImageView>
         </graphic>
     </JFXButton>
