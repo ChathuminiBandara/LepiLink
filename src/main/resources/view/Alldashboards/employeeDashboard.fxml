@@ -11,17 +11,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #9F91CC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.EmployeeDashboardController">
-    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="34.0" layoutY="264.0" lineSpacing="67.0" onAction="#employeeOnAction" prefHeight="45.0" prefWidth="478.0" text=" Employee" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="40" />
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="36.0" layoutY="163.0" onAction="#dashboardOnAction" prefHeight="45.0" prefWidth="474.0" ripplerFill="BLACK" text="Dashboard" textFill="#f2f2f2">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #2a2727;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.dashboardsAll.EmployeeDashboardController">
+    <AnchorPane fx:id="subpain" layoutX="498.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css" />
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="36.0" layoutY="174.0" onAction="#dashboardOnAction" prefHeight="103.0" prefWidth="163.0" ripplerFill="BLACK" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text="Dashboard" textFill="WHITE">
         <font>
             <Font size="25.0" />
         </font>
@@ -29,59 +21,7 @@
             <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="40" text="" wrappingWidth="37.0" />
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="27.0" layoutY="320.0" lineSpacing="67.0" onAction="#weatherOnAction" prefHeight="45.0" prefWidth="478.0" text=" Weather" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <effect>
-            <DropShadow />
-        </effect>
-        <graphic>
-            <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../asserts/icons/icons8-rain-cloud-50.png" />
-            </ImageView>
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="27.0" layoutY="374.0" lineSpacing="60.0" onAction="#populationAreaOnAction" prefHeight="45.0" prefWidth="478.0" text="Population &amp; Area" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <effect>
-            <DropShadow />
-        </effect>
-        <graphic>
-            <ImageView fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../asserts/icons/icons8-butterfly-64%20(1).png" />
-            </ImageView>
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="72.0" layoutX="23.0" layoutY="428.0" lineSpacing="70.0" onAction="#releasplansGeneticsOnAction" prefHeight="45.0" prefWidth="478.0" text="Plans &amp; Genetics" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <effect>
-            <DropShadow />
-        </effect>
-        <graphic>
-            <ImageView fitHeight="43.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../asserts/icons/icons8-butterfly-64.png" />
-            </ImageView>
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="59.0" layoutX="26.0" layoutY="482.0" lineSpacing="67.0" onAction="#visitorsOnAction" prefHeight="45.0" prefWidth="478.0" text=" Visitors &amp; Booking" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <effect>
-            <DropShadow />
-        </effect>
-        <graphic>
-            <ImageView fitHeight="45.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../asserts/icons/icons8-planetarium-visitors-50.png" />
-            </ImageView>
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="694.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="45.0" prefWidth="490.0" text="Suppliers &amp; Goods" textFill="WHITE">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="42.0" layoutY="786.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="59.0" prefWidth="402.0" style="-fx-background-color: #ada192; -fx-background-radius: 16;" text="Suppliers &amp; Goods" textFill="WHITE">
         <font>
             <Font size="25.0" />
         </font>
@@ -107,12 +47,12 @@
         <effect>
             <DropShadow>
             <color>
-               <Color red="0.3166666626930237" blue="1.0" />
+               <Color red="0.3552631437778473" green="0.34580591320991516" blue="0.3305920958518982" />
             </color></DropShadow>
         </effect>
     </Label>
-    <Line endX="338.5" layoutX="115.0" layoutY="667.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
-    <Label layoutX="55.0" layoutY="638.0" text="Other" textFill="WHITE">
+    <Line endX="338.5" layoutX="115.0" layoutY="760.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
+    <Label layoutX="55.0" layoutY="731.0" text="Other" textFill="WHITE">
         <font>
             <Font name="Candara Light" size="24.0" />
         </font>
@@ -122,19 +62,7 @@
             <Font name="Candara Light" size="24.0" />
         </font>
     </Label>
-    <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="28.0" layoutY="216.0" onAction="#butterflyOnAction" prefHeight="45.0" prefWidth="478.0" ripplerFill="BLACK" text="Butterflies" textFill="#f2f2f2">
-        <font>
-            <Font size="25.0" />
-        </font>
-        <graphic>
-            <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@../../asserts/icons/bt.png" />
-                </image>
-            </ImageView>
-        </graphic>
-    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="126.0" layoutY="971.0" lineSpacing="67.0" onAction="#aboutUsOnAction" prefHeight="49.0" prefWidth="217.0" text="About Us" textFill="WHITE">
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="1.0" layoutY="974.0" lineSpacing="67.0" onAction="#aboutUsOnAction" prefHeight="50.0" prefWidth="495.0" text="About Us" textFill="WHITE">
         <font>
             <Font size="23.0" />
         </font>
@@ -147,12 +75,36 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <Label layoutX="103.0" layoutY="1018.0" opacity="0.52" text="© 2023 ALL RIGHTS RESERVED" textFill="WHITE">
+    <Label layoutX="119.0" layoutY="1026.0" opacity="0.52" text="© 2023 ALL RIGHTS RESERVED" textFill="WHITE">
         <font>
             <Font size="18.0" />
         </font>
     </Label>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="29.0" layoutY="536.0" lineSpacing="67.0" onAction="#SchedulestasksOnAction" prefHeight="45.0" prefWidth="478.0" text="Tasks &amp; Schedules" textFill="#f2f2f2">
+   <JFXButton buttonType="RAISED" layoutX="188.0" layoutY="897.0" onAction="#logOutOnAction" prefHeight="60.0" prefWidth="129.0" style="-fx-background-color: #ada192; -fx-background-radius: 17;" text="Logout">
+      <font>
+         <Font size="24.0" />
+      </font></JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="36.0" layoutY="306.0" lineSpacing="67.0" onAction="#employeeOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text=" Employee" textFill="WHITE">
+        <font>
+            <Font size="25.0" />
+        </font>
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="40" />
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="263.0" layoutY="174.0" onAction="#butterflyOnAction" prefHeight="103.0" prefWidth="163.0" ripplerFill="BLACK" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text="Butterflies" textFill="WHITE">
+        <font>
+            <Font size="25.0" />
+        </font>
+        <graphic>
+            <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../asserts/icons/bt.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="263.0" layoutY="305.0" lineSpacing="67.0" onAction="#weatherOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text=" Weather" textFill="WHITE">
         <font>
             <Font size="25.0" />
         </font>
@@ -160,13 +112,61 @@
             <DropShadow />
         </effect>
         <graphic>
-            <ImageView fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../asserts/icons/icons8-rain-cloud-50.png" />
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="36.0" layoutY="434.0" lineSpacing="60.0" onAction="#populationAreaOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text="Population &amp; Area" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+        <effect>
+            <DropShadow />
+        </effect>
+        <graphic>
+            <ImageView fitHeight="69.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../asserts/icons/icons8-butterfly-64%20(1).png" />
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="263.0" layoutY="431.0" lineSpacing="70.0" onAction="#releasplansGeneticsOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text="Plans &amp; Genetics" textFill="WHITE">
+        <font>
+            <Font size="16.0" />
+        </font>
+        <effect>
+            <DropShadow />
+        </effect>
+        <graphic>
+            <ImageView fitHeight="71.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../asserts/icons/icons8-butterfly-64.png" />
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="36.0" layoutY="568.0" lineSpacing="67.0" onAction="#visitorsOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text=" Visitors &amp; Booking" textFill="WHITE">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <effect>
+            <DropShadow />
+        </effect>
+        <graphic>
+            <ImageView fitHeight="68.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../asserts/icons/icons8-planetarium-visitors-50.png" />
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="263.0" layoutY="567.0" lineSpacing="67.0" onAction="#SchedulestasksOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #ada192; -fx-background-radius: 15;" text="Tasks &amp; Schedules" textFill="WHITE">
+        <font>
+            <Font size="17.0" />
+        </font>
+        <effect>
+            <DropShadow />
+        </effect>
+        <graphic>
+            <ImageView fitHeight="65.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../asserts/icons/icons8-schedule-50.png" />
             </ImageView>
         </graphic>
     </JFXButton>
-   <JFXButton buttonType="RAISED" layoutX="164.0" layoutY="885.0" onAction="#logOutOnAction" prefHeight="60.0" prefWidth="129.0" text="Logout">
-      <font>
-         <Font size="24.0" />
-      </font></JFXButton>
 </AnchorPane>
