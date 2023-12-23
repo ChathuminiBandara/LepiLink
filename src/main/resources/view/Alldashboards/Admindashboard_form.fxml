@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -11,16 +12,20 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" style="-fx-background-color: #1572A1;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormControllerMain">
-    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-3.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" styleClass="sidebar" stylesheets="@../../styleSheet.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" style="-fx-background-color: #03254c;" styleClass="my-box" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormControllerMain">
+    <AnchorPane fx:id="subpain" layoutX="509.0" layoutY="-11.0" prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: white;" stylesheets="@../../styleSheet.css">
       <effect>
          <DropShadow>
             <color>
                <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
             </color>
          </DropShadow>
-      </effect></AnchorPane>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="34.0" layoutY="264.0" lineSpacing="67.0" onAction="#employeeOnAction" prefHeight="45.0" prefWidth="478.0" text=" Employee" textFill="#f2f2f2">
+      </effect>
+      <styleClass>
+         <String fx:value="sidebar" />
+         <String fx:value="my-box" />
+      </styleClass></AnchorPane>
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="24.0" layoutY="303.0" lineSpacing="5.0" onAction="#employeeOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text=" Employee" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -35,7 +40,7 @@
             </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="36.0" layoutY="163.0" onAction="#dashboardOnAction" prefHeight="45.0" prefWidth="474.0" ripplerFill="BLACK" text="Dashboard" textFill="#f2f2f2">
+    <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="24.0" layoutY="163.0" lineSpacing="5.0" onAction="#dashboardOnAction" prefHeight="56.0" prefWidth="462.0" ripplerFill="BLACK" style="-fx-background-color: #187bcd; -fx-background-radius: 15; -fx-blend-mode: 50;" styleClass="my-box" stylesheets="@../../styleSheet.css" text="Dashboard" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -50,7 +55,7 @@
             </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="27.0" layoutY="320.0" lineSpacing="67.0" onAction="#weatherOnAction" prefHeight="45.0" prefWidth="478.0" text=" Weather" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="65.0" layoutX="24.0" layoutY="371.0" lineSpacing="67.0" onAction="#weatherOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text=" Weather" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -73,7 +78,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="27.0" layoutY="374.0" lineSpacing="60.0" onAction="#populationAreaOnAction" prefHeight="45.0" prefWidth="478.0" text="Population &amp; Area" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="25.0" layoutY="440.0" lineSpacing="60.0" onAction="#populationAreaOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Population &amp; Area" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -96,7 +101,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="72.0" layoutX="23.0" layoutY="428.0" lineSpacing="70.0" onAction="#releasplansGeneticsOnAction" prefHeight="45.0" prefWidth="478.0" text="Plans &amp; Genetics" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="72.0" layoutX="23.0" layoutY="498.0" lineSpacing="70.0" onAction="#releasplansGeneticsOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Plans &amp; Genetics" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -116,7 +121,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="30.0" layoutY="662.0" lineSpacing="67.0" onAction="#visitSchedulesOnAction" prefHeight="45.0" prefWidth="482.0" text="Purchase" textFill="#dadada">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="30.0" layoutY="724.0" lineSpacing="67.0" onAction="#visitSchedulesOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Purchase" textFill="#dadada">
         <font>
             <Font size="25.0" />
         </font>
@@ -138,7 +143,7 @@
          </ImageView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="59.0" layoutX="26.0" layoutY="482.0" lineSpacing="67.0" onAction="#visitorsOnAction" prefHeight="45.0" prefWidth="478.0" text=" Visitors &amp; Booking" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="59.0" layoutX="26.0" layoutY="552.0" lineSpacing="67.0" onAction="#visitorsOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text=" Visitors &amp; Booking" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>
@@ -158,7 +163,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="27.0" layoutY="711.0" lineSpacing="65.0" onAction="#paymentOnAction" prefHeight="45.0" prefWidth="478.0" text="Payments" textFill="#e8e8e8">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="27.0" layoutY="773.0" lineSpacing="65.0" onAction="#paymentOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Payments" textFill="#e8e8e8">
         <font>
             <Font size="25.0" />
         </font>
@@ -176,7 +181,7 @@
             </effect></FontAwesomeIconView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="755.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="45.0" prefWidth="490.0" text="Suppliers &amp; Goods" textFill="WHITE">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="20.0" layoutY="825.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Suppliers &amp; Goods" textFill="WHITE">
         <font>
             <Font size="25.0" />
         </font>
@@ -210,8 +215,8 @@
          <DropShadow />
       </effect>
     </Label>
-    <Line endX="338.5" layoutX="115.0" layoutY="646.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
-    <Label layoutX="55.0" layoutY="614.0" text="Other" textFill="WHITE">
+    <Line endX="338.5" layoutX="115.0" layoutY="716.0" opacity="0.62" startX="-59.5" stroke="WHITE" />
+    <Label layoutX="55.0" layoutY="684.0" text="Other" textFill="WHITE">
         <font>
             <Font name="Candara Light" size="24.0" />
         </font>
@@ -221,7 +226,7 @@
             <Font name="Candara Light" size="24.0" />
         </font>
     </Label>
-   <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="28.0" layoutY="216.0" onAction="#butterflyOnAction" prefHeight="45.0" prefWidth="478.0" ripplerFill="BLACK" text="Butterflies" textFill="#f2f2f2">
+   <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="23.0" layoutY="231.0" lineSpacing="5.0" onAction="#butterflyOnAction" prefHeight="56.0" prefWidth="462.0" ripplerFill="BLACK" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Butterflies" textFill="#f2f2f2">
       <font>
          <Font size="25.0" />
       </font>
@@ -261,7 +266,7 @@
          <Font size="18.0" />
       </font>
    </Label>
-   <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="30.0" layoutY="804.0" lineSpacing="67.0" onAction="#salaryOnAction" prefHeight="50.0" prefWidth="463.0" text="Salary " textFill="WHITE">
+   <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="30.0" layoutY="874.0" lineSpacing="67.0" onAction="#salaryOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Salary " textFill="WHITE">
       <font>
          <Font size="25.0" />
       </font>
@@ -283,7 +288,7 @@
          </ImageView>
       </graphic>
    </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="29.0" layoutY="536.0" lineSpacing="67.0" onAction="#SchedulestasksOnAction" prefHeight="45.0" prefWidth="478.0" text="Tasks &amp; Schedules" textFill="#f2f2f2">
+    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="29.0" layoutY="622.0" lineSpacing="67.0" onAction="#SchedulestasksOnAction" prefHeight="56.0" prefWidth="462.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Tasks &amp; Schedules" textFill="#f2f2f2">
         <font>
             <Font size="25.0" />
         </font>

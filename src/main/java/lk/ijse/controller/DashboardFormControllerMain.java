@@ -28,7 +28,6 @@ public class DashboardFormControllerMain {
 
     public void dashboardOnAction(ActionEvent actionEvent) throws IOException {
         setform("/view/dashboard/dashboardpane_form.fxml");
-
     }
 
     public void butterflyOnAction(ActionEvent actionEvent) throws IOException {
@@ -85,7 +84,6 @@ public class DashboardFormControllerMain {
 
 
     public void reportOnAction(ActionEvent actionEvent) {
-
     }
 
     public void logoutOnAction(ActionEvent actionEvent) {
