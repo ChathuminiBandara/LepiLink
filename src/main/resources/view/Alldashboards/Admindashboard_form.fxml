@@ -33,18 +33,16 @@
             <DropShadow />
         </effect>
       <graphic>
-         <ImageView fitHeight="49.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../asserts/icons/icons8-delivery-box-64.png" />
-            </image>
-            <effect>
-               <DropShadow>
-                  <color>
-                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
-                  </color>
-               </DropShadow>
-            </effect>
-         </ImageView>
+          <ImageView fitHeight="49.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                  <DropShadow>
+                      <color>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                      </color>
+                  </DropShadow>
+              </effect>
+              <Image url="@../../asserts/icons/icons8-delivery-box-64.png"/>
+          </ImageView>
       </graphic>
     </JFXButton>
     <Line endX="321.5" layoutX="130.0" layoutY="145.0" opacity="0.62" startX="-88.5" stroke="WHITE" />
@@ -117,18 +115,16 @@
          <Font size="25.0" />
       </font>
       <graphic>
-         <ImageView pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../asserts/icons/bt.png" />
-            </image>
-            <effect>
-               <DropShadow>
-                  <color>
-                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
-                  </color>
-               </DropShadow>
-            </effect>
-         </ImageView>
+          <ImageView pickOnBounds="true" preserveRatio="true">
+              <effect>
+                  <DropShadow>
+                      <color>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                      </color>
+                  </DropShadow>
+              </effect>
+              <Image url="@../../asserts/icons/bt.png"/>
+          </ImageView>
       </graphic>
    </JFXButton>
     <JFXButton alignment="TOP_LEFT" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="45.0" layoutY="291.0" lineSpacing="5.0" onAction="#employeeOnAction" prefHeight="103.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text=" Employee" textFill="#f2f2f2">
@@ -302,18 +298,16 @@
          <DropShadow />
       </effect>
       <graphic>
-         <ImageView fitHeight="51.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../asserts/icons/icons8-blueprint-64.png" />
-            </image>
-            <effect>
-               <DropShadow>
-                  <color>
-                     <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
-                  </color>
-               </DropShadow>
-            </effect>
-         </ImageView>
+          <ImageView fitHeight="51.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                  <DropShadow>
+                      <color>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                      </color>
+                  </DropShadow>
+              </effect>
+              <Image url="@../../asserts/icons/icons8-blueprint-64.png"/>
+          </ImageView>
       </graphic>
    </JFXButton>
 </AnchorPane>
