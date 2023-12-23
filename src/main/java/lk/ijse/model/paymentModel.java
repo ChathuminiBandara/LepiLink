@@ -8,7 +8,31 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class paymentModel {
-        public boolean savePayment(paymentDto dto) throws SQLException {
+    public static boolean updatePayment(paymentDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "UPDATE customer SET paymentId = ?, visitorName = ?, paymentStatus = ?, visitorContactNum = ? ";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, dto.getPaymentId());
+        pstm.setString(2, dto.getVisitorName());
+        pstm.setString(3, dto.getPaymentStatus());
+        pstm.setString(4, dto.getVisitorContactNum());
+
+        return pstm.executeUpdate() > 0;
+    }
+
+    public static boolean deletePayment(String id) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM customer WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1, id);
+
+        return pstm.executeUpdate() > 0;
+    }
+
+    public boolean savePayment(paymentDto dto) throws SQLException {
             Connection connection = DbConnection.getInstance().getConnection();
 
             String sql = "INSERT INTO payment VALUES(?,?,?,?)";
