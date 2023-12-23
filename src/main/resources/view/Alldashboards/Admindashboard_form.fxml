@@ -25,7 +25,7 @@
          <String fx:value="sidebar" />
          <String fx:value="my-box" />
       </styleClass></AnchorPane>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="66.0" layoutX="46.0" layoutY="727.0" lineSpacing="67.0" onAction="#visitSchedulesOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Purchase" textFill="#dadada">
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="46.0" layoutY="727.0" lineSpacing="67.0" onAction="#visitSchedulesOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Purchase" textFill="#dadada">
         <font>
             <Font size="25.0" />
         </font>
@@ -37,11 +37,11 @@
               <effect>
                   <DropShadow>
                       <color>
-                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
                       </color>
                   </DropShadow>
               </effect>
-              <Image url="@../../asserts/icons/icons8-delivery-box-64.png"/>
+              <Image url="@../../asserts/icons/icons8-delivery-box-64.png" />
           </ImageView>
       </graphic>
     </JFXButton>
@@ -70,7 +70,7 @@
             <Font name="Candara Light" size="24.0" />
         </font>
     </Label>
-   <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="126.0" layoutY="971.0" lineSpacing="67.0" onAction="#aboutUsOnAction" prefHeight="49.0" prefWidth="217.0" text="About Us" textFill="WHITE">
+   <JFXButton alignment="TOP_CENTER" buttonType="RAISED" graphicTextGap="10.0" layoutX="-3.0" layoutY="987.0" lineSpacing="67.0" onAction="#aboutUsOnAction" prefHeight="50.0" prefWidth="513.0" text="About Us" textFill="WHITE">
       <font>
          <Font size="23.0" />
       </font>
@@ -86,12 +86,12 @@
           </ImageView>
       </graphic>
    </JFXButton>
-   <Label layoutX="103.0" layoutY="1018.0" opacity="0.52" text="© 2023 ALL RIGHTS RESERVED" textFill="WHITE">
+   <Label layoutX="120.0" layoutY="1029.0" opacity="0.52" text="© 2023 ALL RIGHTS RESERVED" textFill="WHITE">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <JFXButton layoutX="167.0" layoutY="933.0" onAction="#logoutOnAction" text="Logout" textFill="#051c75">
+   <JFXButton layoutX="196.0" layoutY="936.0" onAction="#logoutOnAction" style="-fx-background-color: #2a9df4; -fx-background-radius: 15;" text="Logout" textAlignment="CENTER" textFill="#051c75">
       <font>
          <Font size="19.0" />
       </font>
@@ -119,11 +119,11 @@
               <effect>
                   <DropShadow>
                       <color>
-                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
                       </color>
                   </DropShadow>
               </effect>
-              <Image url="@../../asserts/icons/bt.png"/>
+              <Image url="@../../asserts/icons/bt.png" />
           </ImageView>
       </graphic>
    </JFXButton>
@@ -251,7 +251,7 @@
             </ImageView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="69.0" layoutX="270.0" layoutY="726.0" lineSpacing="65.0" onAction="#paymentOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Payments" textFill="#e8e8e8">
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="270.0" layoutY="726.0" lineSpacing="65.0" onAction="#paymentOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Payments" textFill="#e8e8e8">
         <font>
             <Font size="25.0" />
         </font>
@@ -270,9 +270,9 @@
          </FontAwesomeIconView>
       </graphic>
     </JFXButton>
-    <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="73.0" layoutX="43.0" layoutY="826.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Suppliers &amp; Goods" textFill="WHITE">
+    <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="43.0" layoutY="826.0" lineSpacing="67.0" onAction="#suppliersGoodsOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Suppliers &amp; Goods" textFill="WHITE">
         <font>
-            <Font size="25.0" />
+            <Font size="17.0" />
         </font>
         <effect>
             <DropShadow />
@@ -290,7 +290,7 @@
             </ImageView>
         </graphic>
     </JFXButton>
-   <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="67.0" layoutX="271.0" layoutY="825.0" lineSpacing="67.0" onAction="#salaryOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Salary " textFill="WHITE">
+   <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="271.0" layoutY="825.0" lineSpacing="67.0" onAction="#salaryOnAction" prefHeight="89.0" prefWidth="163.0" style="-fx-background-color: #187bcd; -fx-background-radius: 15;" text="Salary " textFill="WHITE">
       <font>
          <Font size="25.0" />
       </font>
@@ -298,15 +298,15 @@
          <DropShadow />
       </effect>
       <graphic>
-          <ImageView fitHeight="51.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+          <ImageView fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
               <effect>
                   <DropShadow>
                       <color>
-                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491"/>
+                          <Color red="0.7411764860153198" green="0.5058823823928833" blue="0.9725490212440491" />
                       </color>
                   </DropShadow>
               </effect>
-              <Image url="@../../asserts/icons/icons8-blueprint-64.png"/>
+              <Image url="@../../asserts/icons/icons8-blueprint-64.png" />
           </ImageView>
       </graphic>
    </JFXButton>
