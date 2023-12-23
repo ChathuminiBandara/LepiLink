@@ -7,8 +7,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.employeeDto;
 
+import lk.ijse.dto.paymentDto;
 import lk.ijse.model.EmployeeModel;
 import javafx.fxml.FXML;
+import lk.ijse.model.paymentModel;
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -56,13 +59,42 @@ public class EmployeeFormController implements Initializable {
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-        // Placeholder for update logic
-        System.out.println("Update action placeholder");
+        String id = Employee_ID.getText();
+        String name = Employee_Name.getText();
+        String Status = StartedDate.getText();
+        String Shift = Shift_Time.getText();
+        String tel = TP.getText();
+
+        var dto = new employeeDto(id, name, Status,Shift, tel);
+
+//        var model = new CustomerModel();
+        try {
+            boolean isUpdated = EmployeeModel.updateEmployee(dto);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
+                //ClearOnAction();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Something went wrong!").show();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) {
-        // Placeholder for delete logic
-        System.out.println("Delete action placeholder");
+        String id = Employee_ID.getText();
+
+//        var model = new CustomerModel();
+        try {
+            boolean isDeleted = EmployeeModel.deleteEmployee(id);
+            if(isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Employee deleted!").show();
+            } else {
+                new Alert(Alert.AlertType.CONFIRMATION, "Employee not deleted!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
