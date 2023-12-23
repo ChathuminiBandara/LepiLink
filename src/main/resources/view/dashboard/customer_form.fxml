@@ -6,13 +6,25 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1243.0" style="-fx-background-color: #042234;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.CustomerFormController">
+<AnchorPane fx:id="root" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.order.CustomerFormController">
     <children>
+      <ImageView fitHeight="588.0" fitWidth="324.0" layoutX="1081.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="447.0" fitWidth="471.0" layoutX="957.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="965.0" fitWidth="552.0" layoutX="3.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/tree.png" />
@@ -23,13 +35,27 @@
             <Image url="@../asserts/weather%20images/dark-blue-texture-with-cloudy-sky-vector.jpg" />
          </image>
       </ImageView>
-        <Label layoutX="568.0" layoutY="55.0" text="Customer Manage" textFill="WHITE">
+        <Label layoutX="568.0" layoutY="55.0" text="Customer Manage">
             <font>
                 <Font name="System Bold" size="34.0" />
             </font>
         </Label>
-        <TextField fx:id="txtId" layoutX="410.0" layoutY="217.0" onAction="#txtSearchOnAction" prefHeight="33.0" prefWidth="230.0" promptText="id" style="-fx-background-radius: 5;" />
-        <TextField fx:id="txtAddress" layoutX="410.0" layoutY="355.0" prefHeight="33.0" prefWidth="230.0" promptText="address" style="-fx-background-radius: 5;" />
+        <TextField fx:id="txtId" layoutX="410.0" layoutY="217.0" onAction="#txtSearchOnAction" prefHeight="33.0" prefWidth="230.0" promptText="id" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.5254902243614197" green="0.7921568751335144" blue="0.8823529481887817" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
+        <TextField fx:id="txtAddress" layoutX="410.0" layoutY="355.0" prefHeight="33.0" prefWidth="230.0" promptText="address" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.5254902243614197" green="0.7921568751335144" blue="0.8823529481887817" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
         <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="849.0" layoutY="484.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #64bbf2;" text="Save" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="15.0" />
@@ -91,8 +117,22 @@
             </graphic>
         </JFXButton>
 
-        <TextField fx:id="txtName" layoutX="713.0" layoutY="217.0" prefHeight="33.0" prefWidth="230.0" promptText="name" style="-fx-background-radius: 5;" />
-        <TextField fx:id="txtTel" layoutX="713.0" layoutY="355.0" prefHeight="33.0" prefWidth="230.0" promptText="tel" style="-fx-background-radius: 5;" />
+        <TextField fx:id="txtName" layoutX="713.0" layoutY="217.0" prefHeight="33.0" prefWidth="230.0" promptText="name" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.5254902243614197" green="0.7921568751335144" blue="0.8823529481887817" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
+        <TextField fx:id="txtTel" layoutX="713.0" layoutY="355.0" prefHeight="33.0" prefWidth="230.0" promptText="tel" style="-fx-background-radius: 5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.5254902243614197" green="0.7921568751335144" blue="0.8823529481887817" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
         <TableView fx:id="tblCustomer" layoutX="410.0" layoutY="626.0" prefHeight="200.0" prefWidth="535.0">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
@@ -106,7 +146,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </JFXButton>
-        <Label layoutX="976.0" layoutY="964.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
+        <Label layoutX="976.0" layoutY="964.0" text="\@ 2023 LepiLink v1.01.01">
             <font>
                 <Font size="15.0" />
             </font>
@@ -116,26 +156,21 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="411.0" layoutY="328.0" style="-fx-background-color: black;" text="ADDRESS" textFill="WHITE">
+      <Label layoutX="411.0" layoutY="328.0" text="ADDRESS">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="717.0" layoutY="194.0" text="NAME" textFill="WHITE">
+      <Label layoutX="717.0" layoutY="194.0" text="NAME">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="717.0" layoutY="332.0" text="TELEPHONE" textFill="WHITE">
+      <Label layoutX="717.0" layoutY="332.0" text="TELEPHONE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <ImageView fitHeight="447.0" fitWidth="471.0" layoutX="957.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../asserts/3D/fabulous-ride-on-the-bike-1.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1008.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" rotate="-39.1">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
