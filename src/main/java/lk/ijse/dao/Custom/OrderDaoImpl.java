@@ -1,11 +1,14 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.OrderDAO;
 import lk.ijse.db.DbConnection;
 
 import java.sql.*;
 import java.time.LocalDate;
 
-public class OrderDaoImpl {
+public class OrderDaoImpl implements OrderDAO {
+
+    @Override
     public String generateNextOrderId() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -19,6 +22,7 @@ public class OrderDaoImpl {
         return splitOrderId(null);
     }
 
+    @Override
     private String splitOrderId(String currentOrderId) {
         if(currentOrderId != null) {
             String[] split = currentOrderId.split("O0");
@@ -31,6 +35,7 @@ public class OrderDaoImpl {
         }
     }
 
+    @Override
     public boolean saveOrder(String orderId, String customerId, LocalDate date) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
