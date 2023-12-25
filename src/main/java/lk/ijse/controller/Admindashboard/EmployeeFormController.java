@@ -7,7 +7,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.employeeDto;
 
-import lk.ijse.dao.EmployeeDaoImpl;
+import lk.ijse.dao.Custom.EmployeeDaoImpl;
 import javafx.fxml.FXML;
 
 import java.net.URL;

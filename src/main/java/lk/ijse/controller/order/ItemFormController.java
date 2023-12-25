@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.dto.tm.ItemTm;
-import lk.ijse.dao.ItemDaoImpl;
+import lk.ijse.dao.Custom.ItemDaoImpl;
 
 import java.sql.SQLException;
 import java.util.List;

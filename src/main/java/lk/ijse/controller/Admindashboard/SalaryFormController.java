@@ -8,7 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.paymentDto;
 import lk.ijse.dto.salaryDto;
-import lk.ijse.dao.salaryDaoImpl;
+import lk.ijse.dao.Custom.salaryDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;

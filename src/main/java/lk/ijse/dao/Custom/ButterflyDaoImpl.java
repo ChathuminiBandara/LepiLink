@@ -1,5 +1,6 @@
-package lk.ijse.dao;
+package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.ButterflyDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.butterfltDto;
 
@@ -8,7 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ButterflyDaoImpl {
+public class ButterflyDaoImpl implements ButterflyDAO {
+
+    @Override
     public static butterfltDto getDetails(String id) throws SQLException {
 
             Connection connection = DbConnection.getInstance().getConnection();
@@ -37,6 +40,7 @@ public class ButterflyDaoImpl {
 
     }
 
+    @Override
     public static boolean deleteButterfly(String intId) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
@@ -49,6 +53,7 @@ public class ButterflyDaoImpl {
         return b;
     }
 
+    @Override
     public boolean saveButterfly(butterfltDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -69,6 +74,7 @@ public class ButterflyDaoImpl {
 
     }
 
+    @Override
     public boolean updateButterfly(butterfltDto dto) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();

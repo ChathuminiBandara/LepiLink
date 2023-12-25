@@ -7,7 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.visitorDto;
-import lk.ijse.dao.visitorDaoImpl;
+import lk.ijse.dao.Custom.visitorDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;

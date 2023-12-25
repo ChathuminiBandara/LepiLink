@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.empScheduleDto;
-import lk.ijse.dao.empScheduleDaoImpl;
+import lk.ijse.dao.Custom.empScheduleDaoImpl;
 
 
 import java.sql.SQLException;

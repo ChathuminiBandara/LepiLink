@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.butterfltDto;
-import lk.ijse.dao.ButterflyDaoImpl;
+import lk.ijse.dao.Custom.ButterflyDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;

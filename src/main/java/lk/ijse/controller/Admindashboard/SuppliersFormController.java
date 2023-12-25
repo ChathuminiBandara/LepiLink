@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.supplierDto;
-import lk.ijse.dao.supplierDaoImpl;
+import lk.ijse.dao.Custom.supplierDaoImpl;
 
 import java.sql.SQLException;
 

@@ -9,7 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dto.paymentDto;
-import lk.ijse.dao.paymentDaoImpl;
+import lk.ijse.dao.Custom.paymentDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
