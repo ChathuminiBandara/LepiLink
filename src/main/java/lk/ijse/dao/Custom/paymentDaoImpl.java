@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.PaymentDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.paymentDto;
 
@@ -7,7 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class paymentDaoImpl {
+public class paymentDaoImpl implements PaymentDAO{
+
+    @Override
     public static boolean updatePayment(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -21,6 +24,7 @@ public class paymentDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public static boolean deletePayment(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -32,6 +36,7 @@ public class paymentDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public boolean savePayment(paymentDto dto) throws SQLException {
             Connection connection = DbConnection.getInstance().getConnection();
 
