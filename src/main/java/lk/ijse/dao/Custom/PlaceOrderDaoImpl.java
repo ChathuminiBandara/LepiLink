@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.PlaceOrderDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.PlaceOrderDto;
 
@@ -7,11 +8,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-public class PlaceOrderDaoImpl {
+public class PlaceOrderDaoImpl implements PlaceOrderDAO {
     private OrderDaoImpl orderDaoImpl = new OrderDaoImpl();
     private ItemDaoImpl itemDaoImpl = new ItemDaoImpl();
     private OrderDetailDaoImpl orderDetailDaoImpl = new OrderDetailDaoImpl();
 
+
+    @Override
     public boolean placeOrder(PlaceOrderDto placeOrderDto) throws SQLException {
         System.out.println(placeOrderDto);
 
