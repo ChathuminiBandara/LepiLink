@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.EmpScheduleDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.empScheduleDto;
 
@@ -7,7 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class empScheduleDaoImpl {
+public class empScheduleDaoImpl implements EmpScheduleDAO {
+
+    @Override
     public boolean saveEmployeeSchedule(empScheduleDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
