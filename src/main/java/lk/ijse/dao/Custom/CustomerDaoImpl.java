@@ -10,7 +10,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDaoImpl {
+public class CustomerDaoImpl implements CustomerDAO {
+
+    @Override
     public CustomerDto searchCustomer(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection ();
 
@@ -33,6 +35,7 @@ public class CustomerDaoImpl {
         return dto;
     }
 
+    @Override
     public boolean saveCustomer(CustomerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -49,6 +52,7 @@ public class CustomerDaoImpl {
         return isSaved;
     }
 
+    @Override
     public List<CustomerDto> getAllCustomer() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -71,6 +75,7 @@ public class CustomerDaoImpl {
         return dtoList;
     }
 
+    @Override
     public boolean deleteCustomer(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -82,6 +87,7 @@ public class CustomerDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public boolean updateCustomer(CustomerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
