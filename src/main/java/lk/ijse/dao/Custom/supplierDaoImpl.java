@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.SupplierDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.supplierDto;
 
@@ -7,8 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class supplierDaoImpl {
+public class supplierDaoImpl implements SupplierDAO {
 
+    @Override
     public static boolean deleteSupplier(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -20,6 +22,7 @@ public class supplierDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public static boolean updateSupplier(supplierDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "UPDATE supplier SET supplierName = ?, supplierCompanyName = ?, dateSupplied = ?, qtySupplied = ? WHERE supplierId = ?";
@@ -33,6 +36,8 @@ public class supplierDaoImpl {
 
         return  pstm.executeUpdate() > 0;
     }
+
+    @Override
     public  boolean saveSupplier(supplierDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO supplier VALUES(?,?,?,?,?)";
