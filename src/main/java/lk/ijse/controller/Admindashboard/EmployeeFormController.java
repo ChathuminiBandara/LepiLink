@@ -7,10 +7,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.employeeDto;
 
-import lk.ijse.dto.paymentDto;
-import lk.ijse.model.EmployeeModel;
+import lk.ijse.dao.EmployeeDaoImpl;
 import javafx.fxml.FXML;
-import lk.ijse.model.paymentModel;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -40,7 +38,7 @@ public class EmployeeFormController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new EmployeeModel().saveEmployee(dto);
+                isSaved = new EmployeeDaoImpl().saveEmployee(dto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -69,7 +67,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = EmployeeModel.updateEmployee(dto);
+            boolean isUpdated = EmployeeDaoImpl.updateEmployee(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -86,7 +84,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = EmployeeModel.deleteEmployee(id);
+            boolean isDeleted = EmployeeDaoImpl.deleteEmployee(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee deleted!").show();
             } else {

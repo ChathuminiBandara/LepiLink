@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.ItemDto;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemModel {
+public class ItemDaoImpl {
     public boolean deleteItem(String code) throws SQLException {
         try (Connection connection = DbConnection.getInstance().getConnection()) {
             String sql = "DELETE FROM item WHERE code=?";

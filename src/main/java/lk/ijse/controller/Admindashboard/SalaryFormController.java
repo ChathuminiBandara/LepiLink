@@ -8,8 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.paymentDto;
 import lk.ijse.dto.salaryDto;
-import lk.ijse.model.paymentModel;
-import lk.ijse.model.salaryModel;
+import lk.ijse.dao.salaryDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -38,7 +37,7 @@ public class SalaryFormController implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new salaryModel().saveSalary(dto);
+            isSaved = new salaryDaoImpl().saveSalary(dto);
 
 
             if (isSaved){
@@ -71,7 +70,7 @@ public class SalaryFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = salaryModel.updateSalary(dto);
+            boolean isUpdated = salaryDaoImpl.updateSalary(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -88,7 +87,7 @@ public class SalaryFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = salaryModel.deletePayment(id);
+            boolean isDeleted = salaryDaoImpl.deletePayment(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Salary details deleted!").show();
             } else {

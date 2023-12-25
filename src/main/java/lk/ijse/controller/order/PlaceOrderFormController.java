@@ -19,10 +19,10 @@ import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.dto.PlaceOrderDto;
 import lk.ijse.dto.tm.CartTm;
-import lk.ijse.model.CustomerModel;
-import lk.ijse.model.ItemModel;
-import lk.ijse.model.OrderModel;
-import lk.ijse.model.PlaceOrderModel;
+import lk.ijse.dao.CustomerDaoImpl;
+import lk.ijse.dao.ItemDaoImpl;
+import lk.ijse.dao.OrderDaoImpl;
+import lk.ijse.dao.PlaceOrderDaoImpl;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
@@ -92,17 +92,17 @@ public class PlaceOrderFormController {
     @FXML
     private Label lblNetTotal;
 
-    private CustomerModel customerModel;
-    private ItemModel itemModel;
-    private OrderModel orderModel;
-    private PlaceOrderModel placeOrderModel;
+    private CustomerDaoImpl customerDaoImpl;
+    private ItemDaoImpl itemDaoImpl;
+    private OrderDaoImpl orderDaoImpl;
+    private PlaceOrderDaoImpl placeOrderDaoImpl;
     private ObservableList<CartTm> obList = FXCollections.observableArrayList();
 
     public PlaceOrderFormController() {
-        this.customerModel = new CustomerModel();
-        this.itemModel = new ItemModel();
-        this.orderModel = new OrderModel();
-        this.placeOrderModel = new PlaceOrderModel();
+        this.customerDaoImpl = new CustomerDaoImpl();
+        this.itemDaoImpl = new ItemDaoImpl();
+        this.orderDaoImpl = new OrderDaoImpl();
+        this.placeOrderDaoImpl = new PlaceOrderDaoImpl();
     }
 
     public void initialize() {
@@ -124,7 +124,7 @@ public class PlaceOrderFormController {
 
     private void generateNextOrderId() {
         try {
-            String orderId = orderModel.generateNextOrderId();
+            String orderId = orderDaoImpl.generateNextOrderId();
             lblOrderId.setText(orderId);
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -134,7 +134,7 @@ public class PlaceOrderFormController {
     private void loadItemCodes() {
         ObservableList<String> obList = FXCollections.observableArrayList();
         try {
-            List<ItemDto> itemDtos = itemModel.loadAllItems();
+            List<ItemDto> itemDtos = itemDaoImpl.loadAllItems();
 
             for (ItemDto dto : itemDtos) {
                 obList.add(dto.getCode());
@@ -149,7 +149,7 @@ public class PlaceOrderFormController {
         ObservableList<String> obList = FXCollections.observableArrayList();
 
         try {
-            List<CustomerDto> idList = customerModel.getAllCustomer();
+            List<CustomerDto> idList = customerDaoImpl.getAllCustomer();
 
             for (CustomerDto dto : idList) {
                 obList.add(dto.getId());
@@ -253,7 +253,7 @@ public class PlaceOrderFormController {
 
         var placeOrderDto = new PlaceOrderDto(orderId, date, customerId, cartTmList);
         try {
-            boolean isSuccess = placeOrderModel.placeOrder(placeOrderDto);
+            boolean isSuccess = placeOrderDaoImpl.placeOrder(placeOrderDto);
             if (isSuccess) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Success!").show();
             } else {
@@ -270,7 +270,7 @@ public class PlaceOrderFormController {
 
         txtQty.requestFocus();
         try {
-            ItemDto dto = itemModel.searchItem(code);
+            ItemDto dto = itemDaoImpl.searchItem(code);
             lblDescription.setText(dto.getDescription());
             lblUnitPrice.setText(String.valueOf(dto.getUnitPrice()));
             lblQtyOnHand.setText(String.valueOf(dto.getQtyOnHand()));
@@ -283,7 +283,7 @@ public class PlaceOrderFormController {
     void cmbCustomerOnAction(ActionEvent event) {
         String id = cmbCustomerId.getValue();
         try {
-            CustomerDto customerDto = customerModel.searchCustomer(id);
+            CustomerDto customerDto = customerDaoImpl.searchCustomer(id);
             lblCustomerName.setText(customerDto.getName());
         } catch (SQLException e) {
             throw new RuntimeException(e);

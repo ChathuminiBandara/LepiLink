@@ -5,8 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,14 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import lk.ijse.db.DbConnection;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.tm.CustomerTm;
-import lk.ijse.model.CustomerModel;
+import lk.ijse.dao.CustomerDaoImpl;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -54,7 +48,7 @@ public class CustomerFormController {
     @FXML
     private TableView<CustomerTm> tblCustomer;
 
-    private CustomerModel cusModel = new CustomerModel();
+    private CustomerDaoImpl cusModel = new CustomerDaoImpl();
 
     public void initialize() {
         setCellValueFactory();
@@ -69,7 +63,7 @@ public class CustomerFormController {
     }
 
     private void loadAllCustomer() {
-        var model = new CustomerModel();
+        var model = new CustomerDaoImpl();
 
         ObservableList<CustomerTm> obList = FXCollections.observableArrayList();
 

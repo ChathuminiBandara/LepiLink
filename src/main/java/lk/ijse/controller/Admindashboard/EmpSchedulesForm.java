@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.empScheduleDto;
-import lk.ijse.model.empScheduleModel;
+import lk.ijse.dao.empScheduleDaoImpl;
 
 
 import java.sql.SQLException;
@@ -33,7 +33,7 @@ public class EmpSchedulesForm {
         var dto =  new empScheduleDto(scheduleId,supervisor,scheduleLocation,date,empId,description,scheduleNote);
 
         boolean isSaved = false;
-        isSaved = new empScheduleModel().saveEmployeeSchedule(dto);
+        isSaved = new empScheduleDaoImpl().saveEmployeeSchedule(dto);
 
 
         if (isSaved){

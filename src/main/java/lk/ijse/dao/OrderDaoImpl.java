@@ -1,12 +1,11 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
-import lk.ijse.dto.PlaceOrderDto;
 
 import java.sql.*;
 import java.time.LocalDate;
 
-public class OrderModel {
+public class OrderDaoImpl {
     public String generateNextOrderId() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 

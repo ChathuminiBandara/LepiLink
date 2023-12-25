@@ -7,7 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.visitorDto;
-import lk.ijse.model.visitorModel;
+import lk.ijse.dao.visitorDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -45,7 +45,7 @@ public class VisitorController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new visitorModel().saveVisitor(dto);
+                isSaved = new visitorDaoImpl().saveVisitor(dto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -62,7 +62,7 @@ public class VisitorController implements Initializable {
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = visitorId.getText();
 
-        visitorDto dto = visitorModel.getDetails(id);
+        visitorDto dto = visitorDaoImpl.getDetails(id);
         if (dto == null) {
             new Alert(Alert.AlertType.ERROR, "Not Found").show();
         } else {
@@ -92,7 +92,7 @@ public class VisitorController implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new visitorModel().updateVisitor(dto);
+            isSaved = new visitorDaoImpl().updateVisitor(dto);
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
@@ -109,7 +109,7 @@ public class VisitorController implements Initializable {
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
         String Int_Id = visitorId.getText();
 
-        boolean b = visitorModel.deleteVisitor(Int_Id);
+        boolean b = visitorDaoImpl.deleteVisitor(Int_Id);
 
         if (b) {
             new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();

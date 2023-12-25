@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.CustomerDto;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerModel {
+public class CustomerDaoImpl {
     public CustomerDto searchCustomer(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection ();
 

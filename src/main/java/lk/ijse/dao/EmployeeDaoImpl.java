@@ -1,14 +1,13 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.employeeDto;
-import lombok.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class EmployeeModel {
+public class EmployeeDaoImpl {
     public static boolean updateEmployee(employeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "UPDATE employee SET eId = ?, eName = ?, contact = ?, startedDate = ? WHERE eSrt = ?";

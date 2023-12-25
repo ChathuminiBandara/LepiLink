@@ -9,8 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dto.paymentDto;
-import lk.ijse.model.CustomerModel;
-import lk.ijse.model.paymentModel;
+import lk.ijse.dao.paymentDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -34,7 +33,7 @@ public class PaymentsForm implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new paymentModel().savePayment(dto);
+            isSaved = new paymentDaoImpl().savePayment(dto);
 
 
             if (isSaved){
@@ -62,7 +61,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = paymentModel.updatePayment(dto);
+            boolean isUpdated = paymentDaoImpl.updatePayment(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -86,7 +85,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = paymentModel.deletePayment(id);
+            boolean isDeleted = paymentDaoImpl.deletePayment(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Payment deleted!").show();
             } else {

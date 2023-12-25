@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.butterfltDto;
@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ButterflyModel {
+public class ButterflyDaoImpl {
     public static butterfltDto getDetails(String id) throws SQLException {
 
             Connection connection = DbConnection.getInstance().getConnection();

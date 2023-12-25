@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.paymentDto;
@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class paymentModel {
+public class paymentDaoImpl {
     public static boolean updatePayment(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 

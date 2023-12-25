@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.empScheduleDto;
@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class empScheduleModel {
+public class empScheduleDaoImpl {
     public boolean saveEmployeeSchedule(empScheduleDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 

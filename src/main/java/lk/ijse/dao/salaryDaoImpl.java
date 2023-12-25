@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.paymentDto;
@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class salaryModel {
+public class salaryDaoImpl {
     public static boolean deletePayment(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 

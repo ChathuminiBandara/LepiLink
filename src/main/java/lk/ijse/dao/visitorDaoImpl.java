@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.visitorDto;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 
 
-public class visitorModel {
+public class visitorDaoImpl {
     public boolean saveVisitor(visitorDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO visitor VALUES(?,?,?,?,?,?,?)";

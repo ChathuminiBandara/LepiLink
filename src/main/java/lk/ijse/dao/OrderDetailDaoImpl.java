@@ -1,4 +1,4 @@
-package lk.ijse.model;
+package lk.ijse.dao;
 
 
 import lk.ijse.db.DbConnection;
@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-public class OrderDetailModel {
+public class OrderDetailDaoImpl {
     public boolean saveOrderDetails(String orderId, List<CartTm> cartTmList) throws SQLException {
         for(CartTm tm : cartTmList) {
             if(!saveOrderDetails(orderId, tm)) {

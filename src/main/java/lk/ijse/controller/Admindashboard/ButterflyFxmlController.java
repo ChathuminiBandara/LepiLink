@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.butterfltDto;
-import lk.ijse.model.ButterflyModel;
+import lk.ijse.dao.ButterflyDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -43,7 +43,7 @@ public class ButterflyFxmlController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new ButterflyModel().saveButterfly(dto);
+                isSaved = new ButterflyDaoImpl().saveButterfly(dto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -75,7 +75,7 @@ public class ButterflyFxmlController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new ButterflyModel().updateButterfly(dto);
+                isSaved = new ButterflyDaoImpl().updateButterfly(dto);
 
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
@@ -128,7 +128,7 @@ public class ButterflyFxmlController implements Initializable {
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
         String Int_Id = bId.getText();
 
-        boolean b = ButterflyModel.deleteButterfly(Int_Id);
+        boolean b = ButterflyDaoImpl.deleteButterfly(Int_Id);
 
         if (b){
             new Alert(Alert.AlertType.CONFIRMATION,"Deleted").show();
@@ -150,7 +150,7 @@ public class ButterflyFxmlController implements Initializable {
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = bId.getText();
 
-        butterfltDto dto = ButterflyModel.getDetails(id);
+        butterfltDto dto = ButterflyDaoImpl.getDetails(id);
         if (dto == null){
             new Alert(Alert.AlertType.ERROR,"Not Found").show();
         } else {

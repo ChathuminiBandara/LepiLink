@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.supplierDto;
-import lk.ijse.model.supplierModel;
+import lk.ijse.dao.supplierDaoImpl;
 
 import java.sql.SQLException;
 
@@ -33,7 +33,7 @@ public class SuppliersFormController {
         var dto = new supplierDto(SupplierId,SupplierName,CompanyName,Description,QtySupplied,ProductSupplied);
         boolean isSaved = false;
         try {
-            isSaved = new supplierModel().saveSupplier(dto);
+            isSaved = new supplierDaoImpl().saveSupplier(dto);
             if (isSaved){
                 System.out.println("Saved");
             } else {
@@ -54,7 +54,7 @@ public class SuppliersFormController {
 
         var dto = new supplierDto(id,name,companyName,description,qtySupplied,productSupplied);
         try {
-            boolean isUpdated = new supplierModel().updateSupplier(dto);
+            boolean isUpdated = new supplierDaoImpl().updateSupplier(dto);
             if (isUpdated){
                 System.out.println("Updated");
             } else {
@@ -68,7 +68,7 @@ public class SuppliersFormController {
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
        String id = Sup_ID.getText();
        try {
-           boolean isDeleted = new supplierModel().deleteSupplier(id);
+           boolean isDeleted = new supplierDaoImpl().deleteSupplier(id);
            if (isDeleted) {
                System.out.println("Deleted");
            } else {
