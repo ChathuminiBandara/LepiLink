@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.ItemDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.dto.tm.CartTm;
@@ -11,7 +12,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemDaoImpl {
+public class ItemDaoImpl implements ItemDAO {
+
+    @Override
     public boolean deleteItem(String code) throws SQLException {
         try (Connection connection = DbConnection.getInstance().getConnection()) {
             String sql = "DELETE FROM item WHERE code=?";
@@ -22,6 +25,8 @@ public class ItemDaoImpl {
             }
         }
     }
+
+    @Override
     public boolean saveItem(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO item VALUES(?, ?, ?, ?)";
@@ -35,6 +40,7 @@ public class ItemDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public List<ItemDto> loadAllItems() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -56,6 +62,7 @@ public class ItemDaoImpl {
         return itemList;
     }
 
+    @Override
     public ItemDto searchItem(String code) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "SELECT * FROM item WHERE code = ?";
@@ -78,6 +85,7 @@ public class ItemDaoImpl {
         return dto;
     }
 
+    @Override
     public boolean updateItem(ItemDto itemDto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -92,6 +100,7 @@ public class ItemDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public boolean updateItem(List<CartTm> cartTmList) throws SQLException {
         for(CartTm tm : cartTmList) {
             System.out.println("Item: " + tm);
@@ -102,6 +111,7 @@ public class ItemDaoImpl {
         return true;
     }
 
+    @Override
     public boolean updateQty(String code, int qty) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
