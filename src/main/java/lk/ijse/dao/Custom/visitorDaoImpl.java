@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.VisitorDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.visitorDto;
 
@@ -10,7 +11,9 @@ import java.sql.SQLException;
 
 
 
-public class visitorDaoImpl {
+public class visitorDaoImpl implements VisitorDAO {
+
+    @Override
     public boolean saveVisitor(visitorDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO visitor VALUES(?,?,?,?,?,?,?)";
@@ -30,6 +33,7 @@ public class visitorDaoImpl {
 
     }
 
+    @Override
     public static boolean deleteVisitor(String intId) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -41,6 +45,8 @@ public class visitorDaoImpl {
         return b;
 
     }
+
+    @Override
     public static visitorDto getDetails(String id) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
@@ -68,6 +74,8 @@ public class visitorDaoImpl {
         return dto;
 
     }
+
+    @Override
     public boolean updateVisitor(visitorDto dto) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
