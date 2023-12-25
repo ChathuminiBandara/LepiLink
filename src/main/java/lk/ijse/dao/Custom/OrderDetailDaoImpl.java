@@ -1,6 +1,7 @@
 package lk.ijse.dao.Custom;
 
 
+import lk.ijse.dao.OrderdetailDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.tm.CartTm;
 
@@ -9,7 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-public class OrderDetailDaoImpl {
+public class OrderDetailDaoImpl implements OrderdetailDAO {
+
+    @Override
     public boolean saveOrderDetails(String orderId, List<CartTm> cartTmList) throws SQLException {
         for(CartTm tm : cartTmList) {
             if(!saveOrderDetails(orderId, tm)) {
@@ -19,6 +22,7 @@ public class OrderDetailDaoImpl {
         return true;
     }
 
+    @Override
     private boolean saveOrderDetails(String orderId, CartTm tm) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
