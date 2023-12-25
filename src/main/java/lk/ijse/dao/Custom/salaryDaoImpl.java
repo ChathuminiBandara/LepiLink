@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.SalaryDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.paymentDto;
 import lk.ijse.dto.salaryDto;
@@ -8,7 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class salaryDaoImpl {
+public class salaryDaoImpl implements SalaryDAO {
+    @Override
     public static boolean deletePayment(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -20,6 +22,7 @@ public class salaryDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public boolean saveSalary(salaryDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -35,6 +38,8 @@ public class salaryDaoImpl {
 
         return isSaved;
     }
+
+    @Override
     public static boolean updateSalary(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
