@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.CustomerDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.CustomerDto;
 

@@ -1,5 +1,6 @@
 package lk.ijse.dao.Custom;
 
+import lk.ijse.dao.EmployeeDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.employeeDto;
 
@@ -7,7 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class EmployeeDaoImpl {
+public class EmployeeDaoImpl implements EmployeeDAO {
+
+    @Override
     public static boolean updateEmployee(employeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "UPDATE employee SET eId = ?, eName = ?, contact = ?, startedDate = ? WHERE eSrt = ?";
@@ -21,6 +24,7 @@ public class EmployeeDaoImpl {
 
     }
 
+    @Override
     public static boolean deleteEmployee(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "DELETE FROM employee WHERE eId = ?";
@@ -30,6 +34,7 @@ public class EmployeeDaoImpl {
         return pstm.executeUpdate() > 0;
     }
 
+    @Override
     public boolean saveEmployee(employeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO employee VALUES(?,?,?,?,?)";

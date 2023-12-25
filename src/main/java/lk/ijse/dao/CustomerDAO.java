@@ -1,4 +1,4 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao;
 
 import lk.ijse.dto.CustomerDto;
 
