@@ -24,6 +24,7 @@ public class EmployeeFormController implements Initializable {
     public TextField StartedDate;
     public TextField Shift_Time;
 
+    private EmployeeDaoImpl employeeDaoImpl = new EmployeeDaoImpl();
 
 
     public void saveEmployee() {
@@ -67,7 +68,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = EmployeeDaoImpl.updateEmployee(dto);
+            boolean isUpdated = employeeDaoImpl.updateEmployee(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -84,7 +85,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = EmployeeDaoImpl.deleteEmployee(id);
+            boolean isDeleted = employeeDaoImpl.deleteEmployee(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee deleted!").show();
             } else {
