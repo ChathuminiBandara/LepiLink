@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public interface VisitorDAO {
     boolean saveVisitor(visitorDto dto) throws SQLException;
-    static boolean deleteVisitor(String intId) throws SQLException;
-    static visitorDto getDetails(String id) throws SQLException;
+    boolean deleteVisitor(String visitorId) throws SQLException;
+    visitorDto getDetails(String id) throws SQLException;
     boolean updateVisitor(visitorDto dto) throws SQLException;
 }

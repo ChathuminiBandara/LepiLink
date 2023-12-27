@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class VisitorController implements Initializable {
     public TableView Payment_Table;
-    public TextField visitorId;
+    public static TextField visitorId;
     public TextField name;
     public TextField status;
     public TextField time;
@@ -29,9 +29,10 @@ public class VisitorController implements Initializable {
     public TableColumn colPayment;
     public TableColumn colDate;
     public TableColumn colBookId;
+    private  visitorDaoImpl VDaoImpl;
 
 
-    public void saveVisitor() {
+    /*public void saveVisitor() {
         if (validateFields()) {
             String VisitorId = visitorId.getText();
             String Name = name.getText();
@@ -57,7 +58,7 @@ public class VisitorController implements Initializable {
                 throw new RuntimeException(e);
             }
         }
-    }
+    }*/
 
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = visitorId.getText();
@@ -76,7 +77,33 @@ public class VisitorController implements Initializable {
     }
 
     public void SaveOnAction(ActionEvent actionEvent) {
-        saveVisitor();
+        if (validateFields()) {
+            String VisitorId = visitorId.getText();
+            String Name = name.getText();
+            String Status = status.getText();
+            String Time = time.getText();
+            String PStatus = pstatus.getText();
+            String Date = date.getText();
+            String BId = bookingId.getText();
+
+            visitorDto visitorDto = new visitorDto(VisitorId, Name, Status, Time, PStatus, Date, BId);
+
+            //var dto = new visitorDto(VisitorId, Name, Status, Time, PStatus, Date, BId);
+
+            boolean isSaved = false;
+            try {
+                isSaved = new visitorDaoImpl().saveVisitor(visitorDto);
+
+                if (isSaved) {
+                    System.out.println("Saved");
+                } else {
+                    System.out.println("Not Saved");
+                }
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
@@ -106,17 +133,24 @@ public class VisitorController implements Initializable {
         }
     }
 
-    public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
-        String Int_Id = visitorId.getText();
 
-        boolean b = visitorDaoImpl.deleteVisitor(Int_Id);
+    public void DeleteOnAction(ActionEvent actionEvent) {
+        try {
+            String visitorIdValue = visitorId.getText();
+            boolean isDeleted = visitorDaoImpl.deleteVisitor(visitorIdValue);
 
-        if (b) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Not Deleted").show();
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Not Deleted").show();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle or log the exception as needed
+            new Alert(Alert.AlertType.ERROR, "Error deleting visitor").show();
         }
     }
+
+
 
     public void ClearOnAction(ActionEvent actionEvent) {
         visitorId.clear();

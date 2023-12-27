@@ -14,18 +14,18 @@ import java.sql.SQLException;
 public class visitorDaoImpl implements VisitorDAO {
 
     @Override
-    public boolean saveVisitor(visitorDto dto) throws SQLException {
+    public boolean saveVisitor(visitorDto visitorDto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO visitor VALUES(?,?,?,?,?,?,?)";
 
         PreparedStatement pstm = connection.prepareStatement(sql);
-        pstm.setString(1, dto.getVisitorId());
-        pstm.setString(2, dto.getName());
-        pstm.setString(3, dto.getStatus());
-        pstm.setString(4, dto.getTime());
-        pstm.setString(5, dto.getPStatus());
-        pstm.setString(6, dto.getDate());
-        pstm.setString(7, dto.getBId());
+        pstm.setString(1, visitorDto.getVisitorId());
+        pstm.setString(2, visitorDto.getName());
+        pstm.setString(3, visitorDto.getStatus());
+        pstm.setString(4, visitorDto.getTime());
+        pstm.setString(5, visitorDto.getPStatus());
+        pstm.setString(6, visitorDto.getDate());
+        pstm.setString(7, visitorDto.getBId());
 
         boolean isSaved = pstm.executeUpdate() > 0;
 
@@ -34,20 +34,21 @@ public class visitorDaoImpl implements VisitorDAO {
     }
 
     @Override
-    public static boolean deleteVisitor(String intId) throws SQLException {
+    public  boolean deleteVisitor(String visitorId) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM visitor WHERE visitorId=?";
-        PreparedStatement pstm = connection.prepareStatement(sql);
-        pstm.setString(1, intId);
+        try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+            pstm.setString(1, visitorId);
 
-        boolean b = pstm.executeUpdate() > 0;
-        return b;
-
+            boolean isDeleted = pstm.executeUpdate() > 0;
+            return isDeleted;
+        }
     }
 
+
     @Override
-    public static visitorDto getDetails(String id) throws SQLException {
+    public visitorDto getDetails(String id) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "select * from visitor where bId=?";
