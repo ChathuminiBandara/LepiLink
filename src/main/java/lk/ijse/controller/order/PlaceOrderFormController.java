@@ -94,7 +94,7 @@ public class PlaceOrderFormController {
 
     private CustomerDaoImpl customerDaoImpl;
     private ItemDaoImpl itemDaoImpl;
-    private OrderDaoImpl orderDaoImpl;
+    private OrderDaoImpl orderDaoImpl = new OrderDaoImpl();
     private PlaceOrderDaoImpl placeOrderDaoImpl;
     private ObservableList<CartTm> obList = FXCollections.observableArrayList();
 
