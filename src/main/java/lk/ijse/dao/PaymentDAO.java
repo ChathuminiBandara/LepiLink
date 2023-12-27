@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public interface PaymentDAO {
-    static boolean updatePayment(paymentDto dto) throws SQLException;
-    static boolean deletePayment(String id) throws SQLException;
+     boolean updatePayment(paymentDto dto) throws SQLException;
+     boolean deletePayment(String id) throws SQLException;
     boolean savePayment(paymentDto dto) throws SQLException;
 }

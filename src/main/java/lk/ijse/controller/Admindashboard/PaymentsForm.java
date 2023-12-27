@@ -23,6 +23,7 @@ public class PaymentsForm implements Initializable {
     public TextField PId;
     public TextField Vname;
     public TextField status;
+    private paymentDaoImpl paymentDao = new paymentDaoImpl();
 
     public void savePayment()  {
         String paymentId = PId.getText();
@@ -61,7 +62,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = paymentDaoImpl.updatePayment(dto);
+            boolean isUpdated = paymentDao.updatePayment(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -85,7 +86,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = paymentDaoImpl.deletePayment(id);
+            boolean isDeleted = paymentDao.deletePayment(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Payment deleted!").show();
             } else {

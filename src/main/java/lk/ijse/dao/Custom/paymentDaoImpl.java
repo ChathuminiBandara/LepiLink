@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class paymentDaoImpl implements PaymentDAO{
 
     @Override
-    public static boolean updatePayment(paymentDto dto) throws SQLException {
+    public  boolean updatePayment(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE customer SET paymentId = ?, visitorName = ?, paymentStatus = ?, visitorContactNum = ? ";
@@ -25,7 +25,7 @@ public class paymentDaoImpl implements PaymentDAO{
     }
 
     @Override
-    public static boolean deletePayment(String id) throws SQLException {
+    public  boolean deletePayment(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM customer WHERE id = ?";
