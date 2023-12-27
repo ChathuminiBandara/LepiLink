@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class salaryDaoImpl implements SalaryDAO {
     @Override
-    public static boolean deletePayment(String id) throws SQLException {
+    public  boolean deletePayment(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM salary WHERE id = ?";
@@ -40,7 +40,7 @@ public class salaryDaoImpl implements SalaryDAO {
     }
 
     @Override
-    public static boolean updateSalary(paymentDto dto) throws SQLException {
+    public  boolean updateSalary(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE salary SET paymentId = ?, visitorName = ?, paymentStatus = ?, visitorContactNum = ? ";

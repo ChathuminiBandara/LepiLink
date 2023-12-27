@@ -25,6 +25,7 @@ public class SalaryFormController implements Initializable {
     public TextField amount;
     @FXML
     public TextField empId;
+    public salaryDaoImpl salaryDAOIMPL = new salaryDaoImpl();
 
 
     public void saveSalary(){
@@ -70,7 +71,7 @@ public class SalaryFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = salaryDaoImpl.updateSalary(dto);
+            boolean isUpdated = salaryDAOIMPL.updateSalary(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -87,7 +88,7 @@ public class SalaryFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = salaryDaoImpl.deletePayment(id);
+            boolean isDeleted = salaryDAOIMPL.deletePayment(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Salary details deleted!").show();
             } else {

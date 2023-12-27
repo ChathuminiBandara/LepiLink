@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public interface SalaryDAO {
-    public static boolean deletePayment(String id) throws SQLException;
+    boolean deletePayment(String id) throws SQLException;
     boolean saveSalary(salaryDto dto) throws SQLException;
-    static boolean updateSalary(paymentDto dto) throws SQLException;
+    boolean updateSalary(paymentDto dto) throws SQLException;
 }
