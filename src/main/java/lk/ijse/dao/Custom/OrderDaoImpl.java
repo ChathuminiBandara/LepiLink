@@ -22,7 +22,7 @@ public class OrderDaoImpl implements OrderDAO {
         return splitOrderId(null);
     }
 
-    @Override
+    //@Override
     private String splitOrderId(String currentOrderId) {
         if(currentOrderId != null) {
             String[] split = currentOrderId.split("O0");

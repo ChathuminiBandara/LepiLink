@@ -10,6 +10,6 @@ import java.time.LocalDate;
 
 public interface OrderDAO {
     String generateNextOrderId() throws SQLException;
-    private splitOrderId(String currentOrderId);
+   // private String splitOrderId(String currentOrderId);
     boolean saveOrder(String orderId, String customerId, LocalDate date) throws SQLException;
 }
