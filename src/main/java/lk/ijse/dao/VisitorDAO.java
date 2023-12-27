@@ -1,11 +1,7 @@
 package lk.ijse.dao;
 
-import lk.ijse.db.DbConnection;
 import lk.ijse.dto.visitorDto;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public interface VisitorDAO {
