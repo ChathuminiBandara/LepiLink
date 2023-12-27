@@ -23,7 +23,7 @@ public class OrderDetailDaoImpl implements OrderdetailDAO {
     }
 
     @Override
-    private boolean saveOrderDetails(String orderId, CartTm tm) throws SQLException {
+    public boolean saveOrderDetails(String orderId, CartTm tm) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO order_detail VALUES(?, ?, ?, ?)";

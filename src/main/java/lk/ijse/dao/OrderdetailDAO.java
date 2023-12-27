@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface OrderdetailDAO {
     public boolean saveOrderDetails(String orderId, List<CartTm> cartTmList) throws SQLException;
-    private boolean saveOrderDetails(String orderId, CartTm tm) throws SQLException;
+     boolean saveOrderDetails(String orderId, CartTm tm) throws SQLException;
 
     }
