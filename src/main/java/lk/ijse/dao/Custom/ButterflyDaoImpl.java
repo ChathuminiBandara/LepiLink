@@ -41,7 +41,7 @@ public class ButterflyDaoImpl implements ButterflyDAO {
     }
 
     @Override
-    public static boolean deleteButterfly(String intId) throws SQLException {
+    public  boolean deleteButterfly(String intId) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
 

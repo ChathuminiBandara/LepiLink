@@ -29,7 +29,7 @@ public class VisitorController implements Initializable {
     public TableColumn colPayment;
     public TableColumn colDate;
     public TableColumn colBookId;
-    private  visitorDaoImpl VDaoImpl;
+    private  visitorDaoImpl VDaoImpl = new visitorDaoImpl();
 
 
     /*public void saveVisitor() {
@@ -137,7 +137,7 @@ public class VisitorController implements Initializable {
     public void DeleteOnAction(ActionEvent actionEvent) {
         try {
             String visitorIdValue = visitorId.getText();
-            boolean isDeleted = visitorDaoImpl.deleteVisitor(visitorIdValue);
+            boolean isDeleted = VDaoImpl.deleteVisitor(visitorIdValue);
 
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
@@ -145,7 +145,7 @@ public class VisitorController implements Initializable {
                 new Alert(Alert.AlertType.ERROR, "Not Deleted").show();
             }
         } catch (SQLException e) {
-            e.printStackTrace(); // Handle or log the exception as needed
+            e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Error deleting visitor").show();
         }
     }
