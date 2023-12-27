@@ -29,6 +29,7 @@ public class ButterflyFxmlController implements Initializable {
     public TextField currentCount;
     @FXML
     public TableView Butterfly_Table;
+    private ButterflyDaoImpl butterflyDaoImpl = new ButterflyDaoImpl();
 
     public void saveButterfly() {
         if (validateFields()) {
@@ -128,7 +129,7 @@ public class ButterflyFxmlController implements Initializable {
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
         String Int_Id = bId.getText();
 
-        boolean b = ButterflyDaoImpl.deleteButterfly(Int_Id);
+        boolean b = butterflyDaoImpl.deleteButterfly(Int_Id);
 
         if (b){
             new Alert(Alert.AlertType.CONFIRMATION,"Deleted").show();
