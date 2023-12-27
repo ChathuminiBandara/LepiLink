@@ -151,7 +151,7 @@ public class ButterflyFxmlController implements Initializable {
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = bId.getText();
 
-        butterfltDto dto = ButterflyDaoImpl.getDetails(id);
+        butterfltDto dto = butterflyDaoImpl.getDetails(id);
         if (dto == null){
             new Alert(Alert.AlertType.ERROR,"Not Found").show();
         } else {

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class ButterflyDaoImpl implements ButterflyDAO {
 
     @Override
-    public static butterfltDto getDetails(String id) throws SQLException {
+    public  butterfltDto getDetails(String id) throws SQLException {
 
             Connection connection = DbConnection.getInstance().getConnection();
             String sql = "select * from butterflyvariety where bId=?";
