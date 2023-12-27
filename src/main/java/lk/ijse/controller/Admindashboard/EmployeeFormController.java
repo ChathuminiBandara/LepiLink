@@ -120,9 +120,6 @@ public class EmployeeFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Telephone must be numeric").show();
             return false;
         }
-
-        // Add more specific validation as needed
-
         return true;
     }
 
