@@ -76,7 +76,7 @@ public class CustomerDaoImpl implements CustomerDAO {
         return dtoList;
     }
 
-    @Overridez
+    @Override
     public boolean deleteCustomer(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
