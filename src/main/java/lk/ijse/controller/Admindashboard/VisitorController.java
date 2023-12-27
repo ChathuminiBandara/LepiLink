@@ -63,7 +63,7 @@ public class VisitorController implements Initializable {
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = visitorId.getText();
 
-        visitorDto dto = visitorDaoImpl.getDetails(id);
+        visitorDto dto = VDaoImpl.getDetails(id);
         if (dto == null) {
             new Alert(Alert.AlertType.ERROR, "Not Found").show();
         } else {
