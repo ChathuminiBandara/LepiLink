@@ -1,6 +1,6 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao.Custom.Impl;
 
-import lk.ijse.dao.OrderDAO;
+import lk.ijse.dao.Custom.OrderDAO;
 import lk.ijse.db.DbConnection;
 
 import java.sql.*;

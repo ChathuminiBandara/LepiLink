@@ -1,6 +1,6 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao.Custom.Impl;
 
-import lk.ijse.dao.EmployeeDAO;
+import lk.ijse.dao.Custom.EmployeeDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.employeeDto;
 

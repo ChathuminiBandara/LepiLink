@@ -1,6 +1,6 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao.Custom.Impl;
 
-import lk.ijse.dao.VisitorDAO;
+import lk.ijse.dao.Custom.VisitorDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.visitorDto;
 

@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.tm.CustomerTm;
-import lk.ijse.dao.Custom.CustomerDaoImpl;
+import lk.ijse.dao.Custom.Impl.CustomerDaoImpl;
 
 import java.sql.SQLException;
 import java.util.List;

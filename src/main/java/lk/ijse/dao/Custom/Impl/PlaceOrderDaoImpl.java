@@ -1,6 +1,6 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao.Custom.Impl;
 
-import lk.ijse.dao.PlaceOrderDAO;
+import lk.ijse.dao.Custom.PlaceOrderDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.PlaceOrderDto;
 

@@ -1,7 +1,7 @@
-package lk.ijse.dao.Custom;
+package lk.ijse.dao.Custom.Impl;
 
 
-import lk.ijse.dao.OrderdetailDAO;
+import lk.ijse.dao.Custom.OrderdetailDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.tm.CartTm;
 
