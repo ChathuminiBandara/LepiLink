@@ -1,6 +1,7 @@
 package lk.ijse.dao.Custom.Impl;
 
 import lk.ijse.dao.Custom.SupplierDAO;
+import lk.ijse.dao.SuperDAO;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.supplierDto;
 
@@ -8,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class supplierDaoImpl implements SupplierDAO {
+public class supplierDaoImpl implements SupplierDAO, SuperDAO {
 
     @Override
     public boolean delete(String id) throws SQLException {
