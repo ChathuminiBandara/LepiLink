@@ -98,7 +98,7 @@ public class CustomerFormController {
             var dto = new CustomerDto(id, name, address, tel);
 
             try {
-                boolean isSaved = cusModel.saveCustomer(dto);
+                boolean isSaved = cusModel.save(dto);
 
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Customer saved!").show();
@@ -116,7 +116,7 @@ public class CustomerFormController {
         String id = txtId.getText();
 
         try {
-            boolean isDeleted = cusModel.deleteCustomer(id);
+            boolean isDeleted = cusModel.delete(id);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Customer deleted!").show();
                 loadAllCustomer(); // Reload the table after deleting
@@ -140,7 +140,7 @@ public class CustomerFormController {
             var dto = new CustomerDto(id, name, address, tel);
 
             try {
-                boolean isUpdated = cusModel.updateCustomer(dto);
+                boolean isUpdated = cusModel.update(dto);
                 if (isUpdated) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Customer updated!").show();
                     clearFields();
