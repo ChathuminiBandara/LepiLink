@@ -37,7 +37,7 @@ public class CustomerDaoImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean saveCustomer(CustomerDto dto) throws SQLException {
+    public boolean save(CustomerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO customer VALUES(?, ?, ?, ?)";
@@ -77,7 +77,7 @@ public class CustomerDaoImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean deleteCustomer(String id) throws SQLException {
+    public boolean delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM customer WHERE id = ?";
@@ -89,7 +89,7 @@ public class CustomerDaoImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean updateCustomer(CustomerDto dto) throws SQLException {
+    public boolean update(CustomerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE customer SET name = ?, address = ?, tel = ? WHERE id = ?";
