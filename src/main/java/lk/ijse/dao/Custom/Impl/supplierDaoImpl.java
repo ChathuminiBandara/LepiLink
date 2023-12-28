@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class supplierDaoImpl implements SupplierDAO {
 
     @Override
-    public boolean deleteSupplier(String id) throws SQLException {
+    public boolean delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM customer WHERE id = ?";
@@ -23,7 +23,7 @@ public class supplierDaoImpl implements SupplierDAO {
     }
 
     @Override
-    public boolean updateSupplier(supplierDto dto) throws SQLException {
+    public boolean update(supplierDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "UPDATE supplier SET supplierName = ?, supplierCompanyName = ?, dateSupplied = ?, qtySupplied = ? WHERE supplierId = ?";
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -38,7 +38,7 @@ public class supplierDaoImpl implements SupplierDAO {
     }
 
     @Override
-    public  boolean saveSupplier(supplierDto dto) throws SQLException {
+    public  boolean save(supplierDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO supplier VALUES(?,?,?,?,?)";
         PreparedStatement pstm = connection.prepareStatement(sql);

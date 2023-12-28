@@ -33,7 +33,7 @@ public class SuppliersFormController {
         var dto = new supplierDto(SupplierId,SupplierName,CompanyName,Description,QtySupplied,ProductSupplied);
         boolean isSaved = false;
         try {
-            isSaved = new supplierDaoImpl().saveSupplier(dto);
+            isSaved = new supplierDaoImpl().save(dto);
             if (isSaved){
                 System.out.println("Saved");
             } else {
@@ -54,7 +54,7 @@ public class SuppliersFormController {
 
         var dto = new supplierDto(id,name,companyName,description,qtySupplied,productSupplied);
         try {
-            boolean isUpdated = new supplierDaoImpl().updateSupplier(dto);
+            boolean isUpdated = new supplierDaoImpl().update(dto);
             if (isUpdated){
                 System.out.println("Updated");
             } else {
@@ -68,7 +68,7 @@ public class SuppliersFormController {
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
        String id = Sup_ID.getText();
        try {
-           boolean isDeleted = new supplierDaoImpl().deleteSupplier(id);
+           boolean isDeleted = new supplierDaoImpl().delete(id);
            if (isDeleted) {
                System.out.println("Deleted");
            } else {

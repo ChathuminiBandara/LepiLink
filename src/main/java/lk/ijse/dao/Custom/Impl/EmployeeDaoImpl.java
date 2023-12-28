@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class EmployeeDaoImpl implements EmployeeDAO {
 
     @Override
-    public boolean updateEmployee(employeeDto dto) throws SQLException {
+    public boolean update(employeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "UPDATE employee SET eId = ?, eName = ?, contact = ?, startedDate = ? WHERE eSrt = ?";
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -25,7 +25,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
     }
 
     @Override
-    public  boolean deleteEmployee(String id) throws SQLException {
+    public  boolean delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "DELETE FROM employee WHERE eId = ?";
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -35,7 +35,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
     }
 
     @Override
-    public boolean saveEmployee(employeeDto dto) throws SQLException {
+    public boolean save(employeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO employee VALUES(?,?,?,?,?)";
 

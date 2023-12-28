@@ -11,7 +11,17 @@ import java.sql.SQLException;
 public class empScheduleDaoImpl implements EmpScheduleDAO {
 
     @Override
-    public boolean saveEmployeeSchedule(empScheduleDto dto) throws SQLException {
+    public boolean update(empScheduleDto dto) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean save(empScheduleDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO schedule VALUES(?,?,?,?,?,?)";
@@ -29,5 +39,7 @@ public class empScheduleDaoImpl implements EmpScheduleDAO {
 
         return isSaved;
     }
+
+
 
 }

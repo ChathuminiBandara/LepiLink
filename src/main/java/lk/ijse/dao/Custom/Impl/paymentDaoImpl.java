@@ -8,10 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class paymentDaoImpl implements PaymentDAO{
+    public class paymentDaoImpl implements PaymentDAO{
 
-    @Override
-    public  boolean updatePayment(paymentDto dto) throws SQLException {
+        @Override
+        public  boolean update(paymentDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE customer SET paymentId = ?, visitorName = ?, paymentStatus = ?, visitorContactNum = ? ";
@@ -25,7 +25,7 @@ public class paymentDaoImpl implements PaymentDAO{
     }
 
     @Override
-    public  boolean deletePayment(String id) throws SQLException {
+    public  boolean delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM customer WHERE id = ?";
@@ -37,7 +37,7 @@ public class paymentDaoImpl implements PaymentDAO{
     }
 
     @Override
-    public boolean savePayment(paymentDto dto) throws SQLException {
+    public boolean save(paymentDto dto) throws SQLException {
             Connection connection = DbConnection.getInstance().getConnection();
 
             String sql = "INSERT INTO payment VALUES(?,?,?,?)";

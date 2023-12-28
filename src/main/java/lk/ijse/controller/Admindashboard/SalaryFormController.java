@@ -38,7 +38,7 @@ public class SalaryFormController implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new salaryDaoImpl().saveSalary(dto);
+            isSaved = new salaryDaoImpl().save(dto);
 
 
             if (isSaved){
@@ -67,11 +67,11 @@ public class SalaryFormController implements Initializable {
         String Amount = amount.getText();
         String Eid = empId.getText();
 
-        var dto = new paymentDto(id, name, Amount, Eid);
+        var dto = new salaryDto(id, name, Amount, Eid);
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = salaryDAOIMPL.updateSalary(dto);
+            boolean isUpdated = salaryDAOIMPL.update(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -88,7 +88,7 @@ public class SalaryFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = salaryDAOIMPL.deletePayment(id);
+            boolean isDeleted = salaryDAOIMPL.delete(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Salary details deleted!").show();
             } else {

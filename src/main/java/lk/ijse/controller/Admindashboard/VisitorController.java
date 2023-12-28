@@ -92,7 +92,7 @@ public class VisitorController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new visitorDaoImpl().saveVisitor(visitorDto);
+                isSaved = new visitorDaoImpl().save(visitorDto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -119,7 +119,7 @@ public class VisitorController implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new visitorDaoImpl().updateVisitor(dto);
+            isSaved = new visitorDaoImpl().update(dto);
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
@@ -137,7 +137,7 @@ public class VisitorController implements Initializable {
     public void DeleteOnAction(ActionEvent actionEvent) {
         try {
             String visitorIdValue = visitorId.getText();
-            boolean isDeleted = VDaoImpl.deleteVisitor(visitorIdValue);
+            boolean isDeleted = VDaoImpl.delete(visitorIdValue);
 
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();

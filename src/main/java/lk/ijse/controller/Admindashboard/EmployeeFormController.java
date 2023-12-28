@@ -39,7 +39,7 @@ public class EmployeeFormController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new EmployeeDaoImpl().saveEmployee(dto);
+                isSaved = new EmployeeDaoImpl().save(dto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -68,7 +68,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = employeeDaoImpl.updateEmployee(dto);
+            boolean isUpdated = employeeDaoImpl.update(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -85,7 +85,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = employeeDaoImpl.deleteEmployee(id);
+            boolean isDeleted = employeeDaoImpl.delete(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee deleted!").show();
             } else {

@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public interface SupplierDAO {
-    boolean deleteSupplier(String id) throws SQLException;
-    boolean updateSupplier(supplierDto dto) throws SQLException;
-    boolean saveSupplier(supplierDto dto) throws SQLException;
+    boolean delete(String id) throws SQLException;
+    boolean update(supplierDto dto) throws SQLException;
+    boolean save(supplierDto dto) throws SQLException;
 }

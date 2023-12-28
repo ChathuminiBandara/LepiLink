@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemDaoImpl implements ItemDAO {
 
     @Override
-    public boolean deleteItem(String code) throws SQLException {
+    public boolean delete(String code) throws SQLException {
         try (Connection connection = DbConnection.getInstance().getConnection()) {
             String sql = "DELETE FROM item WHERE code=?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -27,7 +27,7 @@ public class ItemDaoImpl implements ItemDAO {
     }
 
     @Override
-    public boolean saveItem(ItemDto dto) throws SQLException {
+    public boolean save(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO item VALUES(?, ?, ?, ?)";
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -86,7 +86,7 @@ public class ItemDaoImpl implements ItemDAO {
     }
 
     @Override
-    public boolean updateItem(ItemDto itemDto) throws SQLException {
+    public boolean update(ItemDto itemDto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE item SET description = ?, unit_price = ?, qty_on_hand = ? WHERE code = ?";
@@ -101,7 +101,7 @@ public class ItemDaoImpl implements ItemDAO {
     }
 
     @Override
-    public boolean updateItem(List<CartTm> cartTmList) throws SQLException {
+    public boolean update(List<CartTm> cartTmList) throws SQLException {
         for(CartTm tm : cartTmList) {
             System.out.println("Item: " + tm);
             if(!updateQty(tm.getCode(), tm.getQty())) {

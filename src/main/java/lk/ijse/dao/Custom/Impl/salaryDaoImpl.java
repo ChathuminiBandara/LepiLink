@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class salaryDaoImpl implements SalaryDAO {
     @Override
-    public  boolean deletePayment(String id) throws SQLException {
+    public  boolean delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM salary WHERE id = ?";
@@ -23,7 +23,7 @@ public class salaryDaoImpl implements SalaryDAO {
     }
 
     @Override
-    public boolean saveSalary(salaryDto dto) throws SQLException {
+    public boolean save(salaryDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO salary VALUES(?,?,?,?)";
@@ -40,15 +40,15 @@ public class salaryDaoImpl implements SalaryDAO {
     }
 
     @Override
-    public  boolean updateSalary(paymentDto dto) throws SQLException {
+    public  boolean update(salaryDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE salary SET paymentId = ?, visitorName = ?, paymentStatus = ?, visitorContactNum = ? ";
+        String sql = "UPDATE salary SET sId = ?, status = ?, amount = ?, empId = ? ";
         PreparedStatement pstm = connection.prepareStatement(sql);
-        pstm.setString(1, dto.getPaymentId());
-        pstm.setString(2, dto.getVisitorName());
-        pstm.setString(3, dto.getPaymentStatus());
-        pstm.setString(4, dto.getVisitorContactNum());
+        pstm.setString(1, dto.getAmount());
+        pstm.setString(2, dto.getEmpId());
+        pstm.setString(3, dto.getStatus());
+        pstm.setString(4, dto.getSId());
 
         return pstm.executeUpdate() > 0;
     }

@@ -33,7 +33,7 @@ public class EmpSchedulesForm {
         var dto =  new empScheduleDto(scheduleId,supervisor,scheduleLocation,date,empId,description,scheduleNote);
 
         boolean isSaved = false;
-        isSaved = new empScheduleDaoImpl().saveEmployeeSchedule(dto);
+        isSaved = new empScheduleDaoImpl().save(dto);
 
 
         if (isSaved){

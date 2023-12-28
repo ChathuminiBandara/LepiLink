@@ -2,6 +2,7 @@ package lk.ijse.dao.Custom.Impl;
 
 import lk.ijse.dao.Custom.OrderDAO;
 import lk.ijse.db.DbConnection;
+import lk.ijse.dto.PlaceOrderDto;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -36,15 +37,29 @@ public class OrderDaoImpl implements OrderDAO {
     }
 
     @Override
-    public boolean saveOrder(String orderId, String customerId, LocalDate date) throws SQLException {
+    public boolean update(PlaceOrderDto dto) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean save(PlaceOrderDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO orders VALUES(?, ?, ?)";
         PreparedStatement pstm = connection.prepareStatement(sql);
-        pstm.setString(1, orderId);
-        pstm.setString(2, customerId);
-        pstm.setDate(3, Date.valueOf(date));
+        pstm.setString(1, dto.getOrderId());
+        pstm.setString(2, dto.getCustomerId());
+        pstm.setDate(3, Date.valueOf(dto.getDate()));
 
         return pstm.executeUpdate() > 0;
     }
+
+
+
+
 }

@@ -27,9 +27,9 @@ public class PlaceOrderDaoImpl implements PlaceOrderDAO {
             connection = DbConnection.getInstance().getConnection();
             connection.setAutoCommit(false);
 
-            boolean isOrderSaved = orderDaoImpl.saveOrder(orderId, customerId, date);
+            boolean isOrderSaved = orderDaoImpl.save(placeOrderDto);
             if (isOrderSaved) {
-                boolean isUpdated = itemDaoImpl.updateItem(placeOrderDto.getCartTmList());
+                boolean isUpdated = itemDaoImpl.update(placeOrderDto.getCartTmList());
                 if (isUpdated) {
                     boolean isOrderDetailSaved = orderDetailDaoImpl.saveOrderDetails(placeOrderDto.getOrderId(), placeOrderDto.getCartTmList());
                     if (isOrderDetailSaved) {
@@ -42,5 +42,20 @@ public class PlaceOrderDaoImpl implements PlaceOrderDAO {
             connection.setAutoCommit(true);
         }
         return true;
+    }
+
+    @Override
+    public boolean update(Object dto) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean save(Object dto) throws SQLException {
+        return false;
     }
 }

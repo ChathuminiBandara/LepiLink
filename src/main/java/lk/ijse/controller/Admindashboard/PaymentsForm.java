@@ -34,7 +34,7 @@ public class PaymentsForm implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new paymentDaoImpl().savePayment(dto);
+            isSaved = new paymentDaoImpl().save(dto);
 
 
             if (isSaved){
@@ -62,7 +62,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = paymentDao.updatePayment(dto);
+            boolean isUpdated = paymentDao.update(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -86,7 +86,7 @@ public class PaymentsForm implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isDeleted = paymentDao.deletePayment(id);
+            boolean isDeleted = paymentDao.delete(id);
             if(isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Payment deleted!").show();
             } else {

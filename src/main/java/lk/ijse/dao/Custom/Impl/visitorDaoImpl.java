@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class visitorDaoImpl implements VisitorDAO {
 
     @Override
-    public boolean saveVisitor(visitorDto visitorDto) throws SQLException {
+    public boolean save(visitorDto visitorDto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO visitor VALUES(?,?,?,?,?,?,?)";
 
@@ -34,7 +34,7 @@ public class visitorDaoImpl implements VisitorDAO {
     }
 
     @Override
-    public  boolean deleteVisitor(String visitorId) throws SQLException {
+    public  boolean delete(String visitorId) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM visitor WHERE visitorId=?";
@@ -77,7 +77,7 @@ public class visitorDaoImpl implements VisitorDAO {
     }
 
     @Override
-    public boolean updateVisitor(visitorDto dto) throws SQLException {
+    public boolean update(visitorDto dto) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
 
