@@ -12,6 +12,19 @@ import java.sql.SQLException;
 public class ButterflyDaoImpl implements ButterflyDAO {
 
     @Override
+    public  boolean delete(String intId) throws SQLException {
+
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM butterflyvariety WHERE bId=?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, intId);
+
+        boolean b = pstm.executeUpdate() > 0;
+        return b;
+    }
+
+    @Override
     public  butterfltDto getDetails(String id) throws SQLException {
 
             Connection connection = DbConnection.getInstance().getConnection();
@@ -40,21 +53,9 @@ public class ButterflyDaoImpl implements ButterflyDAO {
 
     }
 
-    @Override
-    public  boolean deleteButterfly(String intId) throws SQLException {
-
-        Connection connection = DbConnection.getInstance().getConnection();
-
-        String sql = "DELETE FROM butterflyvariety WHERE bId=?";
-        PreparedStatement pstm = connection.prepareStatement(sql);
-        pstm.setString(1, intId);
-
-        boolean b = pstm.executeUpdate() > 0;
-        return b;
-    }
 
     @Override
-    public boolean saveButterfly(butterfltDto dto) throws SQLException {
+    public boolean save(butterfltDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO butterflyvariety VALUES(?,?,?,?,?,?)";
@@ -75,7 +76,7 @@ public class ButterflyDaoImpl implements ButterflyDAO {
     }
 
     @Override
-    public boolean updateButterfly(butterfltDto dto) throws SQLException {
+    public boolean update(butterfltDto dto) throws SQLException {
 
         Connection connection = DbConnection.getInstance().getConnection();
 

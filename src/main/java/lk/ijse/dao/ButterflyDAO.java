@@ -8,9 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public interface ButterflyDAO {
+public interface ButterflyDAO extends CrudDAO<butterfltDto>{
      butterfltDto getDetails(String id) throws SQLException;
-     boolean deleteButterfly(String intId) throws SQLException;
-    boolean saveButterfly(butterfltDto dto) throws SQLException;
-    boolean updateButterfly(butterfltDto dto) throws SQLException;
+     boolean delete(String intId) throws SQLException;
+    boolean save(butterfltDto dto) throws SQLException;
+    boolean update(butterfltDto dto) throws SQLException;
 }

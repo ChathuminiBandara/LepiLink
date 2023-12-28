@@ -31,7 +31,7 @@ public class ButterflyFxmlController implements Initializable {
     public TableView Butterfly_Table;
     private ButterflyDaoImpl butterflyDaoImpl = new ButterflyDaoImpl();
 
-    public void saveButterfly() {
+    public void save() {
         if (validateFields()) {
             String BId = bId.getText();
             String Name = name.getText();
@@ -44,7 +44,7 @@ public class ButterflyFxmlController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new ButterflyDaoImpl().saveButterfly(dto);
+                isSaved = new ButterflyDaoImpl().save(dto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -76,7 +76,7 @@ public class ButterflyFxmlController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new ButterflyDaoImpl().updateButterfly(dto);
+                isSaved = new ButterflyDaoImpl().update(dto);
 
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
@@ -123,13 +123,13 @@ public class ButterflyFxmlController implements Initializable {
     }
 
     public void SaveOnAction(ActionEvent actionEvent) {
-        saveButterfly();
+        save();
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
         String Int_Id = bId.getText();
 
-        boolean b = butterflyDaoImpl.deleteButterfly(Int_Id);
+        boolean b = butterflyDaoImpl.delete(Int_Id);
 
         if (b){
             new Alert(Alert.AlertType.CONFIRMATION,"Deleted").show();
