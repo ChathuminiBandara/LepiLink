@@ -77,7 +77,7 @@ public class ItemFormController {
             var dto = new ItemDto(code, description, unitPrice, qtyOnHand);
 
             try {
-                boolean isSaved = itemDaoImpl.saveItem(dto);
+                boolean isSaved = itemDaoImpl.save(dto);
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
                     clearFields();
@@ -141,7 +141,7 @@ public class ItemFormController {
     void btnDeleteOnAction(ActionEvent event) {
         String code = txtCode.getText();
         try {
-            boolean isDeleted = itemDaoImpl.deleteItem(code);
+            boolean isDeleted = itemDaoImpl.delete(code);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item deleted!").show();
                 loadAllItems(); // Reload the table after deleting
@@ -162,7 +162,7 @@ public class ItemFormController {
             int qtyOnHand = Integer.parseInt(txtQtyOnHand.getText());
 
             try {
-                boolean isUpdated = itemDaoImpl.updateItem(new ItemDto(code, description, unitPrice, qtyOnHand));
+                boolean isUpdated = itemDaoImpl.update(new ItemDto(code, description, unitPrice, qtyOnHand));
                 if (isUpdated) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item updated").show();
                     clearFields();

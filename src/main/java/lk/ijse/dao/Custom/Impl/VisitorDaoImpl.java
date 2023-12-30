@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 
 
-public class visitorDaoImpl implements VisitorDAO {
+public class VisitorDaoImpl implements VisitorDAO {
 
     @Override
     public boolean save(visitorDto visitorDto) throws SQLException {

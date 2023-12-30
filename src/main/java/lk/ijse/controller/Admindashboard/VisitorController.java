@@ -7,7 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.visitorDto;
-import lk.ijse.dao.Custom.Impl.visitorDaoImpl;
+import lk.ijse.dao.Custom.Impl.VisitorDaoImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -29,7 +29,7 @@ public class VisitorController implements Initializable {
     public TableColumn colPayment;
     public TableColumn colDate;
     public TableColumn colBookId;
-    private  visitorDaoImpl VDaoImpl = new visitorDaoImpl();
+    private VisitorDaoImpl VDaoImpl = new VisitorDaoImpl();
 
 
     /*public void saveVisitor() {
@@ -92,7 +92,7 @@ public class VisitorController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new visitorDaoImpl().save(visitorDto);
+                isSaved = new VisitorDaoImpl().save(visitorDto);
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -119,7 +119,7 @@ public class VisitorController implements Initializable {
 
         boolean isSaved = false;
         try {
-            isSaved = new visitorDaoImpl().update(dto);
+            isSaved = new VisitorDaoImpl().update(dto);
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();

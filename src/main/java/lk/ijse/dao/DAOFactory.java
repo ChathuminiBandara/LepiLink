@@ -4,16 +4,12 @@ import lk.ijse.dao.Custom.Impl.*;
 
 public class DAOFactory {
         private static DAOFactory daoFactory;
-        private DAOFactory(){
-        }
+        private DAOFactory(){}
         public static DAOFactory getDaoFactory(){
-            return (daoFactory==null)?daoFactory
-                    =new DAOFactory():daoFactory;
+            return (daoFactory==null)?daoFactory =new DAOFactory():daoFactory;
         }
+        public enum DAOTypes{ BUTTERFLY,CUSTOMER,EMPLOYEE,EMPLOYEE_SCHEDULE,ITEM,ORDER,ORDER_DETAIL,PAYMENT,PLACE_ORDER,SALARY,SUPPLIER,VISITOR }
 
-        public enum DAOTypes{
-            BUTTERFLY,CUSTOMER,EMPLOYEE,EMPLOYEE_SCHEDULE,ITEM,ORDER,ORDER_DETAIL,PAYMENT,PLACE_ORDER,SALARY,SUPPLIER,VISITOR
-        }
         public SuperDAO getDAO(DAOTypes daoTypes){
             switch (daoTypes){
                 case BUTTERFLY:
@@ -39,11 +35,10 @@ public class DAOFactory {
                 case SUPPLIER:
                     return new supplierDaoImpl();
                 case VISITOR:
-                    return new visitorDaoImpl();
+                    return new VisitorDaoImpl();
                 default:
                     return null;
             }
         }
-
-    }
+}
 
