@@ -8,11 +8,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.butterfltDto;
 import lk.ijse.dao.Custom.Impl.ButterflyDaoImpl;
-
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 public class ButterflyFxmlController implements Initializable {
 
    @FXML
