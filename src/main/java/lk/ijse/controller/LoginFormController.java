@@ -53,7 +53,7 @@ public class LoginFormController {
                 stage.setScene(scene);
                 stage.centerOnScreen();
             } catch (IOException e) {
-                e.printStackTrace(); // Handle this exception appropriately in a real application
+                e.printStackTrace();
             }
         } else {
             // Incorrect credentials, show an error message
@@ -62,15 +62,11 @@ public class LoginFormController {
     }
 
     private void sendEmail(String email) throws MessagingException, IOException {
-        // Create an instance of the Mail class
         Mail mail = new Mail();
         mail.setTo(email);
         mail.setSubject("Login Notification");
         mail.setMsg("Thank you for logging into the application!");
 
-        // You may want to customize the message and subject as needed.
-
-        // Call the run method to send the email
         mail.outMail();
     }
 

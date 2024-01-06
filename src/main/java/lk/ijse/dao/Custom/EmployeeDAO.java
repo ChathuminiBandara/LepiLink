@@ -1,13 +1,15 @@
 package lk.ijse.dao.Custom;
 
 import lk.ijse.dao.CrudDAO;
-import lk.ijse.dto.employeeDto;
+import lk.ijse.entity.employee;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
-public interface EmployeeDAO extends CrudDAO<employeeDto> {
-    boolean update(employeeDto dto) throws SQLException;
-    boolean delete(String id) throws SQLException;
-    boolean save(employeeDto dto) throws SQLException;
+public interface EmployeeDAO extends CrudDAO<employee> {
+    ArrayList<T> getAll() throws SQLException, ClassNotFoundException;
+    boolean update(employee dto) throws SQLException, ClassNotFoundException;
+    void delete(String id) throws SQLException, ClassNotFoundException;
+    boolean save(employee dto) throws SQLException, ClassNotFoundException;
 
     }

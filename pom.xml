@@ -72,7 +72,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>17</version> <!-- Use the version appropriate for your project -->
+            <version>17</version>
         </dependency>
         <dependency>
             <groupId>javax.mail</groupId>
