@@ -34,7 +34,7 @@ public class VisitorDaoImpl implements VisitorDAO {
     }
 
     @Override
-    public  boolean delete(String visitorId) throws SQLException {
+    public void delete(String visitorId) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM visitor WHERE visitorId=?";
