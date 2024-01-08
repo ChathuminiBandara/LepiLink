@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.controller.order.ReportFormController"
+            fx:controller="lk.ijse.controller.Admindashboard.ReportFormController"
             prefHeight="400.0" prefWidth="600.0">
     <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
         <font>

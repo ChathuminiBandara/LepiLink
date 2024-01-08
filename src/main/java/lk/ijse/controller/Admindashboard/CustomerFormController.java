@@ -1,6 +1,7 @@
-package lk.ijse.controller.order;
+package lk.ijse.controller.Admindashboard;
 
 
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,6 +23,10 @@ import java.util.List;
 
 public class CustomerFormController {
     public AnchorPane root;
+    public JFXButton btnupdate;
+    public JFXButton btndelete;
+    public JFXButton clearbtn;
+    public JFXButton btnsave;
     @FXML
     private TextField txtAddress;
 

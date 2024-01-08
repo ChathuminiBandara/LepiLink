@@ -1,4 +1,4 @@
-package lk.ijse.controller.order;
+package lk.ijse.controller.Admindashboard;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;

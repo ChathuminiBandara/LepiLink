@@ -1,101 +1,118 @@
 package lk.ijse.controller.Admindashboard;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.dto.paymentDto;
+import lk.ijse.bo.SalaryBO;
+import lk.ijse.bo.SalaryBOImpl;
+import lk.ijse.TM.SalaryTM;
 import lk.ijse.dto.salaryDto;
-import lk.ijse.dao.Custom.Impl.salaryDaoImpl;
+
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SalaryFormController implements Initializable {
-    @FXML
-    TableView Salary_Table;
-    @FXML
+
+    public TableView<SalaryTM> Salary_Table;
     public TextField sId;
-    @FXML
     public TextField status;
-    @FXML
     public TextField amount;
-    @FXML
     public TextField empId;
-    public salaryDaoImpl salaryDAOIMPL = new salaryDaoImpl();
+    public JFXButton btnsave;
+    public JFXButton btndelete;
+    public JFXButton btnclear;
 
-
-    public void saveSalary(){
-        String SId = sId.getText();
-        String Status = status.getText();
-        String Amount = amount.getText();
-        String EmpId = empId.getText();
-
-        var dto =  new salaryDto(SId,Status,Amount,EmpId);
-
-        boolean isSaved = false;
-        try {
-            isSaved = new salaryDaoImpl().save(dto);
-
-
-            if (isSaved){
-                System.out.println("Saved");
-                new Alert(Alert.AlertType.CONFIRMATION,"Saved").show();
-
-            } else {
-                System.out.println("Not Saved");
-                new Alert(Alert.AlertType.CONFIRMATION,"Not Saved").show();
-
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    SalaryBO salaryBO = new SalaryBOImpl();
+    boolean existSalary(String id) throws SQLException, ClassNotFoundException {
+        return salaryBO.existSalary(id);
 
     }
 
     public void SaveOnAction(ActionEvent actionEvent) {
-        saveSalary();
-    }
-
-    public void UpdateOnAction(ActionEvent actionEvent) {
         String id = sId.getText();
-        String name = status.getText();
+        String Status = status.getText();
         String Amount = amount.getText();
-        String Eid = empId.getText();
+        String eId = empId.getText();
 
-        var dto = new salaryDto(id, name, Amount, Eid);
+        if (btnsave.getText().equalsIgnoreCase("save")) {
+            /*Save Customer*/
+            try {
+                if (existSalary(id)) {
+                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                }
+                boolean isSaved = salaryBO.saveSalary(new salaryDto(id, Status, Amount,eId));
 
-//        var model = new CustomerModel();
-        try {
-            boolean isUpdated = salaryDAOIMPL.update(dto);
-            if (isUpdated) {
-                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
-                //ClearOnAction();
-            } else {
-                new Alert(Alert.AlertType.WARNING, "Something went wrong!").show();
+                if (isSaved) {
+                    Salary_Table.getItems().add(new SalaryTM(id, Status, Amount,eId));
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+
+
+        } else {
+            /*Update customer*/
+            try {
+                if (!existSalary(id)) {
+                    new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
+                }
+                salaryDto dto = new salaryDto(id,Status,Amount,eId);
+                salaryBO.updateSalary(dto);
+
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to update the customer " + id + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            SalaryTM selectedSalary = Salary_Table.getSelectionModel().getSelectedItem();
+            selectedSalary.setsId(id);
+            selectedSalary.setAmount(Amount);
+            Salary_Table.refresh();
         }
+
+        //btnAddNewSalary.fire();
     }
 
-    public void DeleteOnAction(ActionEvent actionEvent) {
-        String id = sId.getText();
 
-//        var model = new CustomerModel();
+
+    private void initUI() {
+        sId.clear();
+        status.clear();
+        amount.clear();
+        empId.clear();
+        sId.setDisable(true);
+        status.setDisable(true);
+        amount.setDisable(true);
+        empId.setDisable(true);
+        sId.setEditable(false);
+        status.setDisable(true);
+        amount.setDisable(true);
+        empId.setDisable(true);
+    }
+    public void DeleteOnAction(ActionEvent actionEvent) {
+        /*Delete Customer*/
+        String id = Salary_Table.getSelectionModel().getSelectedItem().getsId();
         try {
-            boolean isDeleted = salaryDAOIMPL.delete(id);
-            if(isDeleted) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Salary details deleted!").show();
-            } else {
-                new Alert(Alert.AlertType.CONFIRMATION, "Salary details not deleted!").show();
+            if (!existSalary(id)) {
+                new Alert(Alert.AlertType.ERROR, "There is no such Salary associated with the id " + id).show();
             }
+            salaryBO.deleteSalary(id);
+            Salary_Table.getItems().remove(Salary_Table.getSelectionModel().getSelectedItem());
+            Salary_Table.getSelectionModel().clearSelection();
+            initUI();
+
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            new Alert(Alert.AlertType.ERROR, "Failed to delete the customer " + id).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

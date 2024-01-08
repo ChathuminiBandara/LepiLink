@@ -1,4 +1,4 @@
-package lk.ijse.controller.order;
+package lk.ijse.controller.Admindashboard;
 
 import lk.ijse.db.DbConnection;
 import net.sf.jasperreports.engine.*;

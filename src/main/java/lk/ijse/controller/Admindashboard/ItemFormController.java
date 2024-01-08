@@ -1,4 +1,4 @@
-package lk.ijse.controller.order;
+package lk.ijse.controller.Admindashboard;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

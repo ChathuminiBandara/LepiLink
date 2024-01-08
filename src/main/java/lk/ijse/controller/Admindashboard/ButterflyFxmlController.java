@@ -37,7 +37,6 @@ public class ButterflyFxmlController implements Initializable {
     public TextField currentCount;
     @FXML
     public TableView<ButterflyTM> Butterfly_Table;
-    //private ButterflyDaoImpl butterflyDaoImpl = new ButterflyDaoImpl();
     ButterflyBO butterflyBO = new ButterflyBOImpl();
 
     public void SaveOnAction(ActionEvent actionEvent) throws SQLException, CloneNotSupportedException{
@@ -213,7 +212,7 @@ public class ButterflyFxmlController implements Initializable {
 
     }
 
-    public void idOnAction(ActionEvent actionEvent) throws SQLException {
+   /* public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = bId.getText();
 
         butterflyDto dto = ButterflyBOImpl.getDetails(id);
@@ -226,5 +225,8 @@ public class ButterflyFxmlController implements Initializable {
             avgLifeTime.setText(dto.getLifeTime());
             currentCount.setText(dto.getCount());
         }
+    }
+*/
+    public void btnaddnewbutterfly(ActionEvent actionEvent) {
     }
 }

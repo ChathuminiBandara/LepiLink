@@ -197,5 +197,10 @@
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
+      <JFXButton fx:id="add_new" buttonType="RAISED" layoutX="747.0" layoutY="560.0" onAction="#btnaddnewbutterfly" prefHeight="69.0" prefWidth="142.0" style="-fx-background-color: #91cff6; -fx-background-radius: 15;" text="Add +" textFill="#1b1919">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </JFXButton>
    </Pane>
 </AnchorPane>
