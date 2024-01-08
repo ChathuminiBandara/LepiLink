@@ -2,7 +2,6 @@ package lk.ijse.dao.Custom.Impl;
 
 import lk.ijse.dao.Custom.SalaryDAO;
 import lk.ijse.db.DbConnection;
-import lk.ijse.dto.paymentDto;
 import lk.ijse.dto.salaryDto;
 
 import java.sql.Connection;
@@ -11,7 +10,7 @@ import java.sql.SQLException;
 
 public class salaryDaoImpl implements SalaryDAO {
     @Override
-    public  boolean delete(String id) throws SQLException {
+    public void delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM salary WHERE id = ?";
