@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #42424/2;" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.ButterflyFxmlController">
-   <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <Pane fx:id="root" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <ImageView fitHeight="629.0" fitWidth="374.0" layoutX="1047.0" layoutY="448.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/tree.png" />
@@ -145,7 +145,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="52.0" prefWidth="131.0" style="-fx-background-color: #91cff6; -fx-background-radius: 15;" text="Save" textFill="#1b1919">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="52.0" prefWidth="131.0" style="-fx-background-color: #91cff6; -fx-background-radius: 15;" text="Save" textFill="#1b1919">
          <font>
             <Font size="32.0" />
          </font>
@@ -155,7 +155,7 @@
             <Font size="27.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #0e74b5; -fx-background-radius: 15;" text="Delete" textFill="#1b1919">
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: #0e74b5; -fx-background-radius: 15;" text="Delete" textFill="#1b1919">
          <font>
             <Font size="28.0" />
          </font>

@@ -7,7 +7,7 @@ import lombok.*;
 @Setter
 @ToString
 
-public class butterfltDto {
+public class butterflyDto {
 
 
         private String BId;

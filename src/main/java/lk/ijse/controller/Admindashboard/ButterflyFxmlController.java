@@ -1,16 +1,22 @@
 package lk.ijse.controller.Admindashboard;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.dto.butterfltDto;
+import lk.ijse.bo.Custom.ButterflyBO;
+import lk.ijse.bo.Custom.Impl.ButterflyBOImpl;
+import lk.ijse.dto.butterflyDto;
 import lk.ijse.dao.Custom.Impl.ButterflyDaoImpl;
+import lk.ijse.view.tdm.ButterflyTM;
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
 public class ButterflyFxmlController implements Initializable {
 
    @FXML
@@ -22,44 +28,79 @@ public class ButterflyFxmlController implements Initializable {
     @FXML
     public TextField species;
     @FXML
+    public JFXButton btnDelete;
+    @FXML
+    public JFXButton btnSave;
+    @FXML
     public TextField avgLifeTime;
     @FXML
     public TextField currentCount;
     @FXML
-    public TableView Butterfly_Table;
-    private ButterflyDaoImpl butterflyDaoImpl = new ButterflyDaoImpl();
+    public TableView<ButterflyTM> Butterfly_Table;
+    //private ButterflyDaoImpl butterflyDaoImpl = new ButterflyDaoImpl();
+    ButterflyBO butterflyBO = new ButterflyBOImpl();
 
-    public void save() {
-        if (validateFields()) {
-            String BId = bId.getText();
-            String Name = name.getText();
-            String desc = description.getText();
-            String Specie = species.getText();
-            String lifetime = avgLifeTime.getText();
-            String count = currentCount.getText();
+    public void SaveOnAction(ActionEvent actionEvent) throws SQLException, CloneNotSupportedException{
+        String id = bId.getText();
+        String Name = name.getText();
+        String decs = description.getText();
+        String sp = species.getText();
+        String lt = avgLifeTime.getText();
+        String c = currentCount.getText();
 
-            var dto = new butterfltDto(BId, Name, desc, Specie, lifetime, count);
 
-            boolean isSaved = false;
+        if (!Name.matches("[A-Za-z ]+")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid name").show();
+            //Name.requestFocus();
+            return;
+        } else if (!decs.matches(".{3,}")) {
+            new Alert(Alert.AlertType.ERROR, "Description  should be at least 3 characters long").show();
+           // decs.requestFocus();
+            return;
+        }
+
+        if (btnSave.getText().equalsIgnoreCase("save")) {
+            /*Save Customer*/
             try {
-                isSaved = new ButterflyDaoImpl().save(dto);
+                if (existButterfly(id)) {
+                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                }
+                boolean isSaved = ButterflyBO.saveButterfly(new butterflyDto(id, Name, decs, sp, lt, c ));
 
                 if (isSaved) {
-                    System.out.println("Saved");
-                    new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-
-                } else {
-                    System.out.println("Not Saved");
-                    new Alert(Alert.AlertType.CONFIRMATION, "Not Saved").show();
-
+                    Butterfly_Table.getItems().add(new ButterflyTM(id, Name, decs,sp,lt,c));
                 }
-
-            } catch (Exception e) {
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
                 e.printStackTrace();
-                new Alert(Alert.AlertType.ERROR, "Error occurred").show();
             }
+
+
+        } else {
+            /*Update customer*/
+            try {
+                if (!existButterfly(id)) {
+                    new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
+                }
+                butterflyDto dto = new butterflyDto(id,Name,decs,sp,lt,c);
+                ButterflyBO.updateButterfly(dto);
+
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to update the customer " + id + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            ButterflyTM selectedButterfly = Butterfly_Table.getSelectionModel().getSelectedItem();
+            selectedButterfly.setName(Name);
+            //selectedCustomer.setAddress(address);
+            Butterfly_Table.refresh();
         }
+
+        //btnAddNewCustomer.fire();
     }
+
 
     public void UpdateOnAction(ActionEvent actionEvent) {
         if (validateFields()) {
@@ -70,7 +111,7 @@ public class ButterflyFxmlController implements Initializable {
             String lifetime = avgLifeTime.getText();
             String count = currentCount.getText();
 
-            var dto = new butterfltDto(BId, Name, desc, Specie, lifetime, count);
+            var dto = new butterflyDto(BId, Name, desc, Specie, lifetime, count);
 
             boolean isSaved = false;
             try {
@@ -120,20 +161,46 @@ public class ButterflyFxmlController implements Initializable {
 
     }
 
-    public void SaveOnAction(ActionEvent actionEvent) {
-        save();
-    }
 
-    public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
-        String Int_Id = bId.getText();
 
-        boolean b = butterflyDaoImpl.delete(Int_Id);
+    public void DeleteOnAction(ActionEvent actionEvent) {
+        /*Delete Customer*/
+        String id = Butterfly_Table.getSelectionModel().getSelectedItem().getbId();
+        try {
+            if (!existButterfly(id)) {
+                new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
+            }
+            ButterflyBO.deleteButterfly(id);
+            Butterfly_Table.getItems().remove(Butterfly_Table.getSelectionModel().getSelectedItem());
+            Butterfly_Table.getSelectionModel().clearSelection();
+            initUI();
 
-        if (b){
-            new Alert(Alert.AlertType.CONFIRMATION,"Deleted").show();
-        } else {
-            new Alert(Alert.AlertType.ERROR,"Not Deleted").show();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to delete the customer " + id).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
+    }
+    private void initUI() {
+        bId.clear();
+        name.clear();
+        description.clear();
+        species.clear();
+        avgLifeTime.clear();
+        currentCount.clear();
+        bId.setDisable(true);
+        name.setDisable(true);
+        description.setDisable(true);
+        species.setDisable(true);
+        avgLifeTime.setDisable(true);
+        currentCount.setDisable(true);
+        bId.setEditable(false);
+        btnSave.setDisable(true);
+        btnDelete.setDisable(true);
+    }
+    boolean existButterfly(String id) throws SQLException, ClassNotFoundException {
+        return butterflyBO.existButterfly(id);
+
     }
 
     public void ClearOnAction(ActionEvent actionEvent) {
@@ -149,7 +216,7 @@ public class ButterflyFxmlController implements Initializable {
     public void idOnAction(ActionEvent actionEvent) throws SQLException {
         String id = bId.getText();
 
-        butterfltDto dto = butterflyDaoImpl.getDetails(id);
+        butterflyDto dto = ButterflyBOImpl.getDetails(id);
         if (dto == null){
             new Alert(Alert.AlertType.ERROR,"Not Found").show();
         } else {
