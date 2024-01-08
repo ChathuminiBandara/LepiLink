@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.bo.Custom.CustomerBO;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.tm.CustomerTm;
 import lk.ijse.dao.Custom.Impl.CustomerDaoImpl;
@@ -88,7 +89,7 @@ public class CustomerFormController {
     }
 
     @FXML
-    void btnSaveOnAction(ActionEvent event) {
+    void btnSaveOnAction() {
         if (validateFields()) {
             String id = txtId.getText();
             String name = txtName.getText();
@@ -111,6 +112,70 @@ public class CustomerFormController {
         }
     }
 
+    /*public void btnSaveOnAction(ActionEvent actionEvent) {
+        String id = txtId.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String  tel = txtTel.getText();
+        var dto = new CustomerDto(id, name, address, tel);
+
+
+        if (!name.matches("[A-Za-z ]+")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid name").show();
+            txtName.requestFocus();
+            return;
+        } else if (!address.matches(".{3,}")) {
+            new Alert(Alert.AlertType.ERROR, "Address should be at least 3 characters long").show();
+            txtAddress.requestFocus();
+            return;
+        }
+
+        if (btnSaveOnAction().getText().equalsIgnoreCase("save")) {
+            *//*Save Customer*//*
+            try {
+                if (existCustomer(id)) {
+                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                }
+                boolean isSaved = CustomerBO.saveCustomer(new CustomerDTO(id, name, address,tel));
+
+                if (isSaved) {
+                    tblCustomers.getItems().add(new CustomerTM(id, name, address));
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+
+        } else {
+            *//*Update customer*//*
+            try {
+                if (!existCustomer(id)) {
+                    new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
+                }
+                CustomerDto dto = new CustomerDto(id,name,address,tel);
+                CustomerBO.updateCustomer(dto);
+
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to update the customer " + id + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            CustomerTM selectedCustomer = tblCustomers.getSelectionModel().getSelectedItem();
+            selectedCustomer.setName(name);
+            selectedCustomer.setAddress(address);
+            tblCustomers.refresh();
+        }
+
+       // btnAddNewCustomer.fire();
+    }
+*/
+  /*  boolean existCustomer(String id) throws SQLException, ClassNotFoundException {
+        return CustomerBO.existCustomer(id);
+
+    }*/
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String id = txtId.getText();
