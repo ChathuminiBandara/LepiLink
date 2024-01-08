@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemDaoImpl implements ItemDAO {
 
     @Override
-    public boolean delete(String code) throws SQLException {
+    public void delete(String code) throws SQLException {
         try (Connection connection = DbConnection.getInstance().getConnection()) {
             String sql = "DELETE FROM item WHERE code=?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {

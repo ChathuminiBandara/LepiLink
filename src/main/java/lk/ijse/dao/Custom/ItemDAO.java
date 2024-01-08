@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface ItemDAO extends CrudDAO<ItemDto> {
-    boolean delete(String code) throws SQLException;
+    void delete(String code) throws SQLException;
     boolean save(ItemDto dto) throws SQLException;
     List<ItemDto> loadAllItems() throws SQLException;
     ItemDto searchItem(String code) throws SQLException;
