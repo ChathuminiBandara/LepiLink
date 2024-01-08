@@ -2,11 +2,8 @@ package lk.ijse.dao.Custom.Impl;
 
 import lk.ijse.dao.Custom.EmployeeDAO;
 import lk.ijse.dao.SQLutill;
-import lk.ijse.db.DbConnection;
 import lk.ijse.entity.employee;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -49,6 +46,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
     @Override
     public void delete(String id) throws SQLException , ClassNotFoundException {
         SQLutill.execute("DELETE employee WHERE eId=?", id);
+        return false;
     }
     /*
         Connection connection = DbConnection.getInstance().getConnection();

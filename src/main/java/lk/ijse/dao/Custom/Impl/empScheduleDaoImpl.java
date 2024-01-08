@@ -16,7 +16,7 @@ public class empScheduleDaoImpl implements EmpScheduleDAO {
     }
 
     @Override
-    public boolean delete(String id) throws SQLException {
+    public void delete(String id) throws SQLException {
         return false;
     }
 

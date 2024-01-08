@@ -9,6 +9,7 @@ import lk.ijse.dto.employeeDto;
 
 import lk.ijse.dao.Custom.Impl.EmployeeDaoImpl;
 import javafx.fxml.FXML;
+import lk.ijse.entity.employee;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -39,7 +40,7 @@ public class EmployeeFormController implements Initializable {
 
             boolean isSaved = false;
             try {
-                isSaved = new EmployeeDaoImpl().save(dto);
+                isSaved = new EmployeeDaoImpl().save(new employee());
 
                 if (isSaved) {
                     System.out.println("Saved");
@@ -47,7 +48,7 @@ public class EmployeeFormController implements Initializable {
                     System.out.println("Not Saved");
                 }
 
-            } catch (SQLException e) {
+            } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }
@@ -68,7 +69,7 @@ public class EmployeeFormController implements Initializable {
 
 //        var model = new CustomerModel();
         try {
-            boolean isUpdated = employeeDaoImpl.update(dto);
+            boolean isUpdated = employeeDaoImpl.update(new employee());
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 //ClearOnAction();
@@ -91,7 +92,7 @@ public class EmployeeFormController implements Initializable {
             } else {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee not deleted!").show();
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }

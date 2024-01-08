@@ -1,3 +1,4 @@
+/*
 package lk.ijse.bo.Custom.Impl;
 
 import lk.ijse.bo.Custom.EmployeeBO;
@@ -11,12 +12,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class EmployeeBOImpl implements EmployeeBO {
-
     EmployeeDAO employeeDAO = (EmployeeDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.EMPLOYEE);
+
     @Override
-    public boolean update(employeeDto dto) throws SQLException, ClassNotFoundException {
+    public boolean UpdateOnAction(employeeDto dto) throws SQLException, ClassNotFoundException {
         return employeeDAO.update(new employee(dto.getEId(),dto.getEName(),dto.getTP(),dto.getStartedDate(),dto.getESrt()));
     }
+
 
     boolean ArrayList<employeeDto> getAllEmployee() throws SQLException,ClassNotFoundException{
         ArrayList<employee> employees  = EmployeeDAO.getAll();
@@ -28,6 +30,18 @@ public class EmployeeBOImpl implements EmployeeBO {
         return employeeDtos;
     }
 
-
-
+    @Override
+    public boolean UpdateOnAction(employeeDto dto) throws SQLException, ClassNotFoundException {
+        return EmployeeDAO.update(new employee(dto.getEId(),dto.getEName(),dto.getStartedDate(),dto.getTP(),dto.getESrt()));
+    }
+    @Override
+    public boolean SaveOnAction(employeeDto dto) throws SQLException, ClassNotFoundException{
+        //customer business logic example
+        return EmployeeDAO.update(new employee(dto.getEId(),dto.getEName(),dto.getStartedDate(),dto.getTP(),dto.getESrt()));
+    }
+    @Override
+    public void deleteCustomer(String id) throws SQLException, ClassNotFoundException {
+        customerDAO.delete(id);
+    }
 }
+*/
