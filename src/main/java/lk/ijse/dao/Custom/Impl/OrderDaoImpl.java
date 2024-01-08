@@ -5,7 +5,6 @@ import lk.ijse.db.DbConnection;
 import lk.ijse.dto.PlaceOrderDto;
 
 import java.sql.*;
-import java.time.LocalDate;
 
 public class OrderDaoImpl implements OrderDAO {
 
@@ -42,7 +41,7 @@ public class OrderDaoImpl implements OrderDAO {
     }
 
     @Override
-    public boolean delete(String id) throws SQLException {
+    public void delete(String id) throws SQLException {
         return false;
     }
 
