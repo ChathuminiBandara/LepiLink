@@ -50,7 +50,7 @@ public class PlaceOrderDaoImpl implements PlaceOrderDAO {
     }
 
     @Override
-    public boolean delete(String id) throws SQLException {
+    public void delete(String id) throws SQLException {
         return false;
     }
 

@@ -25,7 +25,7 @@ import java.sql.SQLException;
     }
 
     @Override
-    public  boolean delete(String id) throws SQLException {
+    public void delete(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM customer WHERE id = ?";
