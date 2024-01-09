@@ -4,43 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08244ed1-5f7c-4a58-b3ad-27cb9275f471" name="Changes" comment="Committing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/ButterflyBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/CustomerBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/EmpScheduleBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/EmployeeBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/ItemBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/OrderBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/OrderDetailBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/PaymentBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/PlaceOrderBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/SalaryBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/SupplierBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/VisitoBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/CrudDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/SQLUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/SuperDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/SalaryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/ButterflyDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/CustomerDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/EmpScheduleDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/ItemDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/OrderDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/OrderDetailDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/PlaceOrderDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/SalaryDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/SupplierDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dao/custom/impl/VisitorDaoImpl.java" afterDir="false" />
+    <list default="true" id="08244ed1-5f7c-4a58-b3ad-27cb9275f471" name="Changes" comment=" Debugged">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/TM/EmpTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/EmpBO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/BOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/SalaryBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/SalaryBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/SalaryBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/ButterflyFxmlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/ButterflyFxmlController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/entity/salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/entity/salary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/view/tdm/ButterflyTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/TM/ButterflyTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/TM/VisitorTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/TM/VisitorTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/EmployeeBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bo/custom/impl/EmployeeBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/EmployeeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/VisitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/Admindashboard/VisitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/employee_Form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/employee_Form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +69,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="lk.ijse.controller.Admindashboard" />
+      <recent name="lk.ijse.controller.bo.custom" />
       <recent name="lk.ijse.dao.custom.impl" />
       <recent name="lk.ijse.bo.custom.impl" />
       <recent name="lk.ijse.bo" />
-      <recent name="lk.ijse.controller.view.TM" />
-      <recent name="lk.ijse.bo.Custom" />
     </key>
   </component>
   <component name="RunManager">
@@ -235,6 +207,7 @@
       <workItem from="1704719248833" duration="4496000" />
       <workItem from="1704737666288" duration="10669000" />
       <workItem from="1704790960200" duration="1359000" />
+      <workItem from="1704795193451" duration="17198000" />
     </task>
     <task id="LOCAL-00001" summary="Committing With Errors">
       <option name="closed" value="true" />
@@ -260,7 +233,167 @@
       <option name="project" value="LOCAL" />
       <updated>1704742783416</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adminDto">
+      <option name="closed" value="true" />
+      <created>1704810377888</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810377888</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810396458</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810396458</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810410695</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810410695</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810418295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810418295</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810432401</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810432401</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810438654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810438654</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810445940</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810445940</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810453967</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810453967</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810460015</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810460015</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810470440</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810470440</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810480538</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810480538</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810485418</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810485418</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810490062</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810490062</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810496543</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810496543</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810501004</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810501004</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810505696</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810505696</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Debugging">
+      <option name="closed" value="true" />
+      <created>1704810509417</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810509417</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Butterfly Controller Debugged">
+      <option name="closed" value="true" />
+      <created>1704810863039</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1704810863039</updated>
+    </task>
+    <task id="LOCAL-00022" summary=" Debugged">
+      <option name="closed" value="true" />
+      <created>1704814218385</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1704814218385</updated>
+    </task>
+    <task id="LOCAL-00023" summary=" Debugged">
+      <option name="closed" value="true" />
+      <created>1704823044038</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1704823044038</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +413,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Committing With Errors" />
     <MESSAGE value="Committing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing" />
+    <MESSAGE value="adminDto" />
+    <MESSAGE value="Debugging" />
+    <MESSAGE value="Butterfly Controller Debugged" />
+    <MESSAGE value=" Debugged" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Debugged" />
   </component>
 </project>

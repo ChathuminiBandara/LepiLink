@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmployeeFormController">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.EmployeeFormController">
     <Pane minHeight="-Infinity" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <BorderPane layoutX="1338.0" prefHeight="1080.0" prefWidth="72.0" />
         <TableView fx:id="Employee_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
@@ -75,22 +70,22 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
+        <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
             <font>
                 <Font size="32.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Update" textFill="#1b1919">
+        <JFXButton fx:id="btnupdate" buttonType="RAISED" layoutX="1084.0" layoutY="748.0" onAction="#UpdateOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Update" textFill="#1b1919">
             <font>
                 <Font size="27.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Delete" textFill="#1b1919">
+        <JFXButton fx:id="btndelete" buttonType="RAISED" layoutX="1084.0" layoutY="853.0" onAction="#DeleteOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Delete" textFill="#1b1919">
             <font>
                 <Font size="28.0" />
             </font>
         </JFXButton>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Clear" textFill="#1b1919">
+        <JFXButton fx:id="btnclear" buttonType="RAISED" layoutX="1084.0" layoutY="943.0" onAction="#ClearOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Clear" textFill="#1b1919">
             <font>
                 <Font size="32.0" />
             </font>

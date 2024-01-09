@@ -1,14 +1,20 @@
 package lk.ijse.controller.Admindashboard;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.ijse.TM.EmpTM;
+import lk.ijse.TM.SalaryTM;
+import lk.ijse.bo.custom.EmpBO;
+import lk.ijse.bo.custom.impl.EmployeeBOImpl;
 import lk.ijse.dto.employeeDto;
 
 import lk.ijse.dao.Custom.Impl.EmployeeDaoImpl;
 import javafx.fxml.FXML;
+import lk.ijse.dto.salaryDto;
 import lk.ijse.entity.employee;
 
 import java.net.URL;
@@ -24,34 +30,65 @@ public class EmployeeFormController implements Initializable {
     public TextField Employee_Name;
     public TextField StartedDate;
     public TextField Shift_Time;
+    public JFXButton btnsave;
+    public JFXButton btnupdate;
+    public JFXButton btndelete;
+    public JFXButton btnclear;
 
-    private EmployeeDaoImpl employeeDaoImpl = new EmployeeDaoImpl();
+    EmpBO empBO = new EmployeeBOImpl();
 
 
     public void saveEmployee() {
-        if (validateFields()) {
-            String Id = Employee_ID.getText();
-            String Name = Employee_Name.getText();
-            String SDate = StartedDate.getText();
-            String STime = Shift_Time.getText();
-            String Tel = TP.getText();
+            String id = Employee_ID.getText();
+            String N = Employee_Name.getText();
+            String SD = StartedDate.getText();
+            String ST = Shift_Time.getText();
+            String T = TP.getText();
 
-            var dto = new employeeDto(Id, Name, Tel, SDate, STime);
-
-            boolean isSaved = false;
+        if (btnsave.getText().equalsIgnoreCase("save")) {
+            /*Save Customer*/
             try {
-                isSaved = new EmployeeDaoImpl().save(new employee());
+                if (existEmp(id)) {
+                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                }
+                boolean isSaved = empBO.saveEmp(new employeeDto(id, N,SD,ST,T));
 
                 if (isSaved) {
-                    System.out.println("Saved");
-                } else {
-                    System.out.println("Not Saved");
+                    Employee_Table.getItems().add(new EmpTM(id, N,SD,ST,T));
                 }
-
-            } catch (SQLException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
+
+
+        } else {
+            /*Update customer*/
+            try {
+                if (!existEmp(id)) {
+                    new Alert(Alert.AlertType.ERROR, "There is no such Employee associated with the id " + id).show();
+                }
+                employeeDto dto = new employeeDto(id, N,SD,ST,T);
+                empBO.updateEmp(dto);
+
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to update the Employee " + id + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            EmpTM selectedEMp = (EmpTM) Employee_Table.getSelectionModel().getSelectedItem();
+            selectedEMp.seteId(id);
+            selectedEMp.seteName(N);
+            Employee_Table.refresh();
         }
+
+        //btnAddNewSalary.fire();
+    }
+    boolean existEmp(String id) throws SQLException, ClassNotFoundException {
+        return empBO.existEmp(id);
+
     }
 
     public void SaveOnAction(ActionEvent actionEvent) {
@@ -59,41 +96,25 @@ public class EmployeeFormController implements Initializable {
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-        String id = Employee_ID.getText();
-        String name = Employee_Name.getText();
-        String Status = StartedDate.getText();
-        String Shift = Shift_Time.getText();
-        String tel = TP.getText();
 
-        var dto = new employeeDto(id, name, Status,Shift, tel);
-
-//        var model = new CustomerModel();
-        try {
-            boolean isUpdated = employeeDaoImpl.update(new employee());
-            if (isUpdated) {
-                new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
-                //ClearOnAction();
-            } else {
-                new Alert(Alert.AlertType.WARNING, "Something went wrong!").show();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) {
-        String id = Employee_ID.getText();
 
-//        var model = new CustomerModel();
+        String id = Employee_Table.getSelectionModel().getSelectedItem().toString();
         try {
-            boolean isDeleted = employeeDaoImpl.delete(id);
-            if(isDeleted) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Employee deleted!").show();
-            } else {
-                new Alert(Alert.AlertType.CONFIRMATION, "Employee not deleted!").show();
+            if (!existEmp(id)) {
+                new Alert(Alert.AlertType.ERROR, "There is no such Salary associated with the id " + id).show();
             }
-        } catch (SQLException | ClassNotFoundException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            empBO.deleteEmp(id);
+            Employee_Table.getItems().remove(Employee_Table.getSelectionModel().getSelectedItem());
+            Employee_Table.getSelectionModel().clearSelection();
+            initUI();
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to delete the customer " + id).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

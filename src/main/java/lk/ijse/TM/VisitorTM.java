@@ -3,26 +3,6 @@ package lk.ijse.TM;
 import javafx.scene.control.TextField;
 
 public class VisitorTM implements Comparable<VisitorTM>{
-    private  String bkI;
-    private String visitorId;
-    private String visitorName;
-    private String status;
-    private String time;
-    private String paymentStatus;
-    private String date;
-
-    public VisitorTM(String visitorId, String visitorName, String status, String time, String paymentStatus, String date, String bookingId) {
-        this.visitorId = visitorId;
-        this.visitorName = visitorName;
-        this.status = status;
-        this.time = time;
-        this.paymentStatus = paymentStatus;
-        this.date = date;
-        this.bkI = bookingId;
-    }
-    public VisitorTM(){}
-
-
     public String getVisitorId() {
         return visitorId;
     }
@@ -35,7 +15,9 @@ public class VisitorTM implements Comparable<VisitorTM>{
         return visitorName;
     }
 
-    public void setVisitorName(String visitorName) {this.visitorName = visitorName;}
+    public void setVisitorName(String visitorName) {
+        this.visitorName = visitorName;
+    }
 
     public String getStatus() {
         return status;
@@ -69,11 +51,33 @@ public class VisitorTM implements Comparable<VisitorTM>{
         this.date = date;
     }
 
+    public String getReservationId() {
+        return reservationId;
+    }
 
-    public String getBkI() {return bkI;}
+    public void setReservationId(String reservationId) {
+        this.reservationId = reservationId;
+    }
 
-    public void setBkI(String bkI) {this.bkI = bkI;}
+    public VisitorTM(String visitorId, String visitorName, String status, String time, String paymentStatus, String date, String reservationId) {
+        this.visitorId = visitorId;
+        this.visitorName = visitorName;
+        this.status = status;
+        this.time = time;
+        this.paymentStatus = paymentStatus;
+        this.date = date;
+        this.reservationId = reservationId;
+    }
 
+    private  String visitorId;
+    private String visitorName;
+    private String status;
+    private String time;
+    private String paymentStatus;
+    private String date;
+    private String reservationId;
+    public VisitorTM(){}
     @Override
     public int compareTo(VisitorTM o) {return visitorId.compareTo(o.getVisitorId());}
+
 }

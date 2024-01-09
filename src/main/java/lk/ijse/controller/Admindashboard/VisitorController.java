@@ -109,7 +109,7 @@ public class VisitorController implements Initializable {
 
 
     public void DeleteOnAction(ActionEvent actionEvent) {
-        String id = Payment_Table.getSelectionModel().getSelectedItem().getVisitorId();
+        String id = Payment_Table.getSelectionModel().getSelectedItem().toString();
         try {
             if (!existVisitor(id)) {
                 new Alert(Alert.AlertType.ERROR, "There is no such Visitor associated with the id " + id).show();
