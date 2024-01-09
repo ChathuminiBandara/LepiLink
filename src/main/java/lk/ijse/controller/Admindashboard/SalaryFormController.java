@@ -6,9 +6,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.bo.SalaryBO;
-import lk.ijse.bo.SalaryBOImpl;
+import lk.ijse.bo.custom.impl.SalaryBOImpl;
 import lk.ijse.TM.SalaryTM;
+import lk.ijse.bo.custom.SalaryBO;
 import lk.ijse.dto.salaryDto;
 
 
@@ -93,9 +93,9 @@ public class SalaryFormController implements Initializable {
         amount.setDisable(true);
         empId.setDisable(true);
         sId.setEditable(false);
-        status.setDisable(true);
-        amount.setDisable(true);
-        empId.setDisable(true);
+        status.setDisable(false);
+        amount.setDisable(false);
+        empId.setDisable(false);
     }
     public void DeleteOnAction(ActionEvent actionEvent) {
         /*Delete Customer*/
