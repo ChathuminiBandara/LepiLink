@@ -2,7 +2,9 @@ package lk.ijse.TM;
 
 public class SalaryTM implements Comparable<SalaryTM>{
     private String sId;
-
+    private String Amount;
+    private String EmpId;
+    public SalaryTM() {}
     private String Status;
 
     public SalaryTM(String id,String Status,String Amount,String eId) {}
@@ -38,9 +40,7 @@ public class SalaryTM implements Comparable<SalaryTM>{
     public void setEmpId(String empId) {
         EmpId = empId;
     }
-    private String Amount;
-    private String EmpId;
-    public SalaryTM() {}
+
 
     @Override
     public int compareTo(SalaryTM o) {return sId.compareTo(o.getsId());}
