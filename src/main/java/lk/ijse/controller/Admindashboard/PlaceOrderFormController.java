@@ -19,10 +19,6 @@ import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.dto.PlaceOrderDto;
 import lk.ijse.dto.tm.CartTm;
-import lk.ijse.dao.Custom.Impl.CustomerDaoImpl;
-import lk.ijse.dao.Custom.Impl.ItemDaoImpl;
-import lk.ijse.dao.Custom.Impl.OrderDaoImpl;
-import lk.ijse.dao.Custom.Impl.PlaceOrderDaoImpl;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
@@ -91,20 +87,11 @@ public class PlaceOrderFormController {
 
     @FXML
     private Label lblNetTotal;
-
-    private CustomerDaoImpl customerDaoImpl;
-    private ItemDaoImpl itemDaoImpl;
-    private OrderDaoImpl orderDaoImpl = new OrderDaoImpl();
-    private PlaceOrderDaoImpl placeOrderDaoImpl;
+    private CustomerModel customerModel = new CustomerModel();
+    private ItemModel itemModel = new ItemModel();
+    private OrderModel orderModel = new OrderModel();
+    private PlaceOrderModel placeOrderModel = new PlaceOrderModel();
     private ObservableList<CartTm> obList = FXCollections.observableArrayList();
-
-    public PlaceOrderFormController() {
-        this.customerDaoImpl = new CustomerDaoImpl();
-        this.itemDaoImpl = new ItemDaoImpl();
-        this.orderDaoImpl = new OrderDaoImpl();
-        this.placeOrderDaoImpl = new PlaceOrderDaoImpl();
-    }
-
     public void initialize() {
         setCellValueFactory();
         generateNextOrderId();
@@ -124,7 +111,7 @@ public class PlaceOrderFormController {
 
     private void generateNextOrderId() {
         try {
-            String orderId = orderDaoImpl.generateNextOrderId();
+            String orderId = orderModel.generateNextOrderId();
             lblOrderId.setText(orderId);
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -134,7 +121,7 @@ public class PlaceOrderFormController {
     private void loadItemCodes() {
         ObservableList<String> obList = FXCollections.observableArrayList();
         try {
-            List<ItemDto> itemDtos = itemDaoImpl.loadAllItems();
+            List<ItemDto> itemDtos = itemModel.loadAllItems();
 
             for (ItemDto dto : itemDtos) {
                 obList.add(dto.getCode());
@@ -149,7 +136,7 @@ public class PlaceOrderFormController {
         ObservableList<String> obList = FXCollections.observableArrayList();
 
         try {
-            List<CustomerDto> idList = customerDaoImpl.getAllCustomer();
+            List<CustomerDto> idList = customerModel.getAllCustomer();
 
             for (CustomerDto dto : idList) {
                 obList.add(dto.getId());
@@ -162,6 +149,7 @@ public class PlaceOrderFormController {
     }
 
     private void setDate() {
+//        LocalDate now = LocalDate.now();
         lblOrderDate.setText(String.valueOf(LocalDate.now()));
     }
 
@@ -176,6 +164,7 @@ public class PlaceOrderFormController {
 
         setRemoveBtnAction(btn);
         btn.setCursor(Cursor.HAND);
+
 
         if (!obList.isEmpty()) {
             for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
@@ -227,9 +216,19 @@ public class PlaceOrderFormController {
         lblNetTotal.setText(String.valueOf(total));
     }
 
+   /* @FXML
+    void btnBackOnAction(ActionEvent event) throws IOException {
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboard_form.fxml"));
+        Stage stage = (Stage) pane.getScene().getWindow();
+
+        stage.setScene(new Scene(anchorPane));
+        stage.setTitle("Dashboard");
+        stage.centerOnScreen();
+    }*/
+
     @FXML
     void btnNewCustomerOnAction(ActionEvent event) throws IOException {
-        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboard/customer_form.fxml"));
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/customer_form.fxml"));
         Scene scene = new Scene(anchorPane);
 
         Stage stage = new Stage();
@@ -248,19 +247,19 @@ public class PlaceOrderFormController {
         List<CartTm> cartTmList = new ArrayList<>();
         for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
             CartTm cartTm = obList.get(i);
+
             cartTmList.add(cartTm);
         }
 
+        System.out.println("Place order form controller: " + cartTmList);
         var placeOrderDto = new PlaceOrderDto(orderId, date, customerId, cartTmList);
         try {
-            boolean isSuccess = placeOrderDaoImpl.placeOrder(placeOrderDto);
+            boolean isSuccess = placeOrderModel.placeOrder(placeOrderDto);
             if (isSuccess) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Success!").show();
-            } else {
-                new Alert(Alert.AlertType.ERROR, "Failed to place the order").show();
             }
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Error placing the order: " + e.getMessage()).show();
+            throw new RuntimeException(e);
         }
     }
 
@@ -270,7 +269,7 @@ public class PlaceOrderFormController {
 
         txtQty.requestFocus();
         try {
-            ItemDto dto = itemDaoImpl.searchItem(code);
+            ItemDto dto = itemModel.searchItem(code);
             lblDescription.setText(dto.getDescription());
             lblUnitPrice.setText(String.valueOf(dto.getUnitPrice()));
             lblQtyOnHand.setText(String.valueOf(dto.getQtyOnHand()));
@@ -282,9 +281,11 @@ public class PlaceOrderFormController {
     @FXML
     void cmbCustomerOnAction(ActionEvent event) {
         String id = cmbCustomerId.getValue();
+//        CustomerModel customerModel = new CustomerModel();
         try {
-            CustomerDto customerDto = customerDaoImpl.searchCustomer(id);
+            CustomerDto customerDto = customerModel.searchCustomer(id);
             lblCustomerName.setText(customerDto.getName());
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -294,12 +295,6 @@ public class PlaceOrderFormController {
     void txtQtyOnAction(ActionEvent event) {
         btnAddToCartOnAction(event);
     }
-
-    public void backOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.close();
-    }
-
     public void reportOnAction(ActionEvent actionEvent) throws JRException, SQLException {
         InputStream resourceAsStream = getClass().getResourceAsStream("/report/lap_Blank_A4.jrxml");
         JasperDesign load = JRXmlLoader.load(resourceAsStream);
@@ -309,5 +304,10 @@ public class PlaceOrderFormController {
                 null,
                 DbConnection.getInstance().getConnection());
         JasperViewer.viewReport(jasperPrint,false);
+    }
+
+    public void backOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.close();
     }
 }

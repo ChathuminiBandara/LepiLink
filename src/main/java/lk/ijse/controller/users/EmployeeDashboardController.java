@@ -1,4 +1,4 @@
-package lk.ijse.controller.Admindashboard;
+package lk.ijse.controller.users;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

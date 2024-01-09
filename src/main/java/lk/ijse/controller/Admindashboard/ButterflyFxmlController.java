@@ -7,13 +7,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.TM.SalaryTM;
 import lk.ijse.bo.custom.ButterflyBO;
 import lk.ijse.bo.custom.impl.ButterflyBOImpl;
 import lk.ijse.dto.butterflyDto;
-import lk.ijse.dao.custom.impl.ButterflyDAOImpl;
 import lk.ijse.TM.ButterflyTM;
-import lk.ijse.dto.salaryDto;
+
 
 import java.net.URL;
 import java.sql.SQLException;
