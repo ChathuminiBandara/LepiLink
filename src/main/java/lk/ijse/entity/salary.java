@@ -6,12 +6,13 @@ public class salary {
     private String amount;
     private String empId;
 
-    public salary(String sId, String status, String amount, String empId){
+    public salary(String sId, String status, String amount,String empId){
         this.sId = sId;
         this.status = status;
         this.amount = amount;
         this.empId = empId;
     }
+
 
     public salary(){}
 

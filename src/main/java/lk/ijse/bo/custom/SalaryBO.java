@@ -1,11 +1,12 @@
-package lk.ijse.bo;
+package lk.ijse.bo.custom;
 
+import lk.ijse.bo.SuperBO;
 import lk.ijse.dto.salaryDto;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public interface SalaryBO extends SuperBO{
+public interface SalaryBO extends SuperBO {
     ArrayList<salaryDto> getAllSalary() throws SQLException, ClassNotFoundException;
     boolean saveSalary(salaryDto dto) throws SQLException, ClassNotFoundException;
     boolean updateSalary(salaryDto dto) throws SQLException, ClassNotFoundException;
