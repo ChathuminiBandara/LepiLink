@@ -1,4 +1,4 @@
-package lk.ijse.view.tdm;
+package lk.ijse.TM;
 
 public class ButterflyTM implements Comparable<ButterflyTM>{
 

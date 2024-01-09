@@ -7,11 +7,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.bo.Custom.ButterflyBO;
-import lk.ijse.bo.Custom.Impl.ButterflyBOImpl;
+import lk.ijse.TM.SalaryTM;
+import lk.ijse.bo.custom.ButterflyBO;
+import lk.ijse.bo.custom.impl.ButterflyBOImpl;
 import lk.ijse.dto.butterflyDto;
-import lk.ijse.dao.Custom.Impl.ButterflyDaoImpl;
-import lk.ijse.view.tdm.ButterflyTM;
+import lk.ijse.dao.custom.impl.ButterflyDAOImpl;
+import lk.ijse.TM.ButterflyTM;
+import lk.ijse.dto.salaryDto;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -37,148 +39,71 @@ public class ButterflyFxmlController implements Initializable {
     public TextField currentCount;
     @FXML
     public TableView<ButterflyTM> Butterfly_Table;
+    public JFXButton add_new;
     ButterflyBO butterflyBO = new ButterflyBOImpl();
 
-    public void SaveOnAction(ActionEvent actionEvent) throws SQLException, CloneNotSupportedException{
+
+    public void idOnAction(ActionEvent actionEvent) {
+    }
+    boolean existButterfly(String id) throws SQLException, ClassNotFoundException {
+        return butterflyBO.existButterfly(id);
+
+    }
+
+    public void SaveOnAction(ActionEvent actionEvent) {
         String id = bId.getText();
         String Name = name.getText();
-        String decs = description.getText();
-        String sp = species.getText();
-        String lt = avgLifeTime.getText();
-        String c = currentCount.getText();
-
-
-        if (!Name.matches("[A-Za-z ]+")) {
-            new Alert(Alert.AlertType.ERROR, "Invalid name").show();
-            //Name.requestFocus();
-            return;
-        } else if (!decs.matches(".{3,}")) {
-            new Alert(Alert.AlertType.ERROR, "Description  should be at least 3 characters long").show();
-           // decs.requestFocus();
-            return;
-        }
-
+        String dec = description.getText();
+        String Species = species.getText();
+        String AVG = avgLifeTime.getText();
+        String cc = currentCount.getText();
         if (btnSave.getText().equalsIgnoreCase("save")) {
-            /*Save Customer*/
+            /*Save Butterfly*/
             try {
                 if (existButterfly(id)) {
                     new Alert(Alert.AlertType.ERROR, id + " already exists").show();
                 }
-                boolean isSaved = ButterflyBO.saveButterfly(new butterflyDto(id, Name, decs, sp, lt, c ));
+                boolean isSaved = ButterflyBO.saveButterfly(new butterflyDto(id, Name, dec,Species,AVG,cc));
 
                 if (isSaved) {
-                    Butterfly_Table.getItems().add(new ButterflyTM(id, Name, decs,sp,lt,c));
+                    Butterfly_Table.getItems().add(new ButterflyTM(id,Name, dec,Species,AVG,cc));
                 }
             } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+                new Alert(Alert.AlertType.ERROR, "Failed to save the Butterfly " + e.getMessage()).show();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
 
         } else {
-            /*Update customer*/
+            /*Update Butterfly*/
             try {
                 if (!existButterfly(id)) {
                     new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
                 }
-                butterflyDto dto = new butterflyDto(id,Name,decs,sp,lt,c);
-                ButterflyBO.updateButterfly(dto);
+                butterflyDto dto = new butterflyDto(id,Name, dec,Species,AVG,cc);
+                butterflyBO.updateButterfly(dto);
 
             } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, "Failed to update the customer " + id + e.getMessage()).show();
+                new Alert(Alert.AlertType.ERROR, "Failed to update the Butterfly " + id + e.getMessage()).show();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
-            ButterflyTM selectedButterfly = Butterfly_Table.getSelectionModel().getSelectedItem();
-            selectedButterfly.setName(Name);
-            //selectedCustomer.setAddress(address);
+            ButterflyTM selecteBtt = Butterfly_Table.getSelectionModel().getSelectedItem();
+            selecteBtt.setbId(id);
+            selecteBtt.setName(Name);
+            selecteBtt.setDescription(dec);
+            selecteBtt.setSpecies(Species);
+            selecteBtt.setAvgLifeTime(AVG);
+            selecteBtt.setCurrentCount(cc);
             Butterfly_Table.refresh();
         }
 
-        //btnAddNewCustomer.fire();
+        //btnAddNewButterfly.fire();
     }
-
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-        if (validateFields()) {
-            String BId = bId.getText();
-            String Name = name.getText();
-            String desc = description.getText();
-            String Specie = species.getText();
-            String lifetime = avgLifeTime.getText();
-            String count = currentCount.getText();
-
-            var dto = new butterflyDto(BId, Name, desc, Specie, lifetime, count);
-
-            boolean isSaved = false;
-            try {
-                isSaved = new ButterflyDaoImpl().update(dto);
-
-                if (isSaved) {
-                    new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
-                    System.out.println("Updated");
-                } else {
-                    new Alert(Alert.AlertType.ERROR, "Not Updated").show();
-                    System.out.println("Not Updated");
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-                new Alert(Alert.AlertType.ERROR, "Error occurred").show();
-            }
-        }
-    }
-
-    private boolean validateFields() {
-        if (bId.getText().isEmpty() || name.getText().isEmpty() || description.getText().isEmpty() ||
-                species.getText().isEmpty() || avgLifeTime.getText().isEmpty() || currentCount.getText().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Please fill in all fields").show();
-            return false;
-        }
-
-        if (!isNumeric(avgLifeTime.getText()) || !isNumeric(currentCount.getText())) {
-            new Alert(Alert.AlertType.ERROR, "Average Lifetime and Current Count must be numeric").show();
-            return false;
-        }
-
-        return true;
-    }
-
-    private boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
-
-
-    public void DeleteOnAction(ActionEvent actionEvent) {
-        /*Delete Customer*/
-        String id = Butterfly_Table.getSelectionModel().getSelectedItem().getbId();
-        try {
-            if (!existButterfly(id)) {
-                new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
-            }
-            ButterflyBO.deleteButterfly(id);
-            Butterfly_Table.getItems().remove(Butterfly_Table.getSelectionModel().getSelectedItem());
-            Butterfly_Table.getSelectionModel().clearSelection();
-            initUI();
-
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Failed to delete the customer " + id).show();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
     }
     private void initUI() {
         bId.clear();
@@ -189,19 +114,38 @@ public class ButterflyFxmlController implements Initializable {
         currentCount.clear();
         bId.setDisable(true);
         name.setDisable(true);
-        description.setDisable(true);
         species.setDisable(true);
         avgLifeTime.setDisable(true);
         currentCount.setDisable(true);
-        bId.setEditable(false);
-        btnSave.setDisable(true);
-        btnDelete.setDisable(true);
+        bId.setDisable(false);
+        name.setDisable(false);
+        description.setDisable(false);
+        species.setDisable(false);
+        avgLifeTime.setDisable(false);
+        currentCount.setDisable(false);
     }
-    boolean existButterfly(String id) throws SQLException, ClassNotFoundException {
-        return butterflyBO.existButterfly(id);
 
+    public void DeleteOnAction(ActionEvent actionEvent) {
+        /*Delete Customer*/
+        String id = Butterfly_Table.getSelectionModel().getSelectedItem().getbId();
+        try {
+            if (!butterflyBO.existButterfly(id)) {
+                new Alert(Alert.AlertType.ERROR, "There is no such Salary associated with the id " + id).show();
+            }
+            ButterflyBO.deleteButterfly(id);
+            Butterfly_Table.getItems().remove(Butterfly_Table.getSelectionModel().getSelectedItem());
+            Butterfly_Table.getSelectionModel().clearSelection();
+            initUI();
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to delete the Butterfly " + id).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
+    public void btnaddnewbutterfly(ActionEvent actionEvent) {
+    }
     public void ClearOnAction(ActionEvent actionEvent) {
         bId.clear();
         name.clear();
@@ -209,24 +153,10 @@ public class ButterflyFxmlController implements Initializable {
         species.clear();
         avgLifeTime.clear();
         currentCount.clear();
-
     }
 
-   /* public void idOnAction(ActionEvent actionEvent) throws SQLException {
-        String id = bId.getText();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        butterflyDto dto = ButterflyBOImpl.getDetails(id);
-        if (dto == null){
-            new Alert(Alert.AlertType.ERROR,"Not Found").show();
-        } else {
-            name.setText(dto.getName());
-            description.setText(dto.getDesc());
-            species.setText(dto.getSpecies());
-            avgLifeTime.setText(dto.getLifeTime());
-            currentCount.setText(dto.getCount());
-        }
-    }
-*/
-    public void btnaddnewbutterfly(ActionEvent actionEvent) {
     }
 }
