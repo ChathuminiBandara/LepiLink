@@ -1,91 +1,132 @@
 package lk.ijse.controller.Admindashboard;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.ijse.TM.SalaryTM;
+import lk.ijse.TM.SupTM;
+import lk.ijse.bo.custom.SupBO;
+import lk.ijse.bo.custom.impl.SupplierBOImpl;
+import lk.ijse.dao.custom.impl.SupplierDaoImpl;
+import lk.ijse.dto.salaryDto;
 import lk.ijse.dto.supplierDto;
-import lk.ijse.dao.Custom.Impl.supplierDaoImpl;
 
 import java.sql.SQLException;
 
 public class SuppliersFormController {
-    public TableView Suppliers_Table;
-    public TextField Sup_ID;
-    public TextField Sup_Name;
-    public TextField CompanyNAme;
-    public TextField Description;
-    public TextField QtySupplied;
-    public TextField ProductSupplied;
-    public TableView payment_Table;
+
+
+    public TextField supplierId;
+    public TextField supplierName;
+    public TextField supplierCompanyName;
+    public JFXButton btnsvae;
+    public TextField qtySupplied;
+    public TableView supplier_Table;
+    public TextField TP;
+    SupBO supBO = new SupplierBOImpl();
 
     public void SaveOnAction(ActionEvent actionEvent) {
         saveSupplier();
     }
-    public void saveSupplier(){
-        String SupplierId = Sup_ID.getText();
-        String SupplierName = Sup_Name.getText();
-        String CompanyName = CompanyNAme.getText();
-        String Description = this.Description.getText();
-        String QtySupplied = this.QtySupplied.getText();
-        String ProductSupplied = this.ProductSupplied.getText();
+    boolean existSup(String id) throws SQLException, ClassNotFoundException {
+        return supBO.existSup(id);
 
-        var dto = new supplierDto(SupplierId,SupplierName,CompanyName,Description,QtySupplied,ProductSupplied);
-        boolean isSaved = false;
-        try {
-            isSaved = new supplierDaoImpl().save(dto);
-            if (isSaved){
-                System.out.println("Saved");
-            } else {
-                System.out.println("Not Saved");
+    }
+    private void initUI() {
+        supplierId.clear();
+        supplierName.clear();
+        supplierCompanyName.clear();
+        qtySupplied.clear();
+        TP.clear();
+        supplierId.setDisable(true);
+        supplierName.setDisable(true);
+        supplierCompanyName.setDisable(true);
+        qtySupplied.setDisable(true);
+        TP.setDisable(true);
+        supplierId.setEditable(false);
+        supplierName.setDisable(false);
+        supplierCompanyName.setDisable(false);
+        qtySupplied.setDisable(false);
+        TP.setDisable(false);
+    }
+    public void ClearOnAction(ActionEvent actionEvent) {
+        supplierId.clear();
+        supplierName.clear();
+        supplierCompanyName.clear();
+        qtySupplied.clear();
+        TP.clear();
+    }
+    public void saveSupplier(){
+        String id = supplierId.getText();
+        String spN = supplierName.getText();
+        String cN = supplierCompanyName.getText();
+        String qtys = qtySupplied.getText();
+        String tp = TP.getText();
+
+
+        if (btnsvae.getText().equalsIgnoreCase("save")) {
+            /*Save Customer*/
+            try {
+                if (existSup(id)) {
+                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                }
+                boolean isSaved = supBO.saveSup(new supplierDto(id,cN,qtys,tp));
+
+                if (isSaved) {
+                    supplier_Table.getItems().add(new SalaryTM(id,cN,qtys,tp));
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to save the Supplier " + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        } else {
+            /*Update customer*/
+            try {
+                if (!existSup(id)) {
+                    new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
+                }
+                supplierDto dto = new supplierDto(id,cN,qtys,tp);
+                supBO.updateSup(dto);
+
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to update the customer " + id + e.getMessage()).show();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            SupTM selectedSup = (SupTM) supplier_Table.getSelectionModel().getSelectedItem();
+            selectedSup.setpId(id);
+            selectedSup.setSupplierName(cN);
+            supplier_Table.refresh();
         }
+
+        //btnAddNewSup.fire();
     }
 
     public void UpdateOnAction(ActionEvent actionEvent) {
-        String id = Sup_ID.getText();
-        String name = Sup_Name.getText();
-        String companyName = CompanyNAme.getText();
-        String description = Description.getText();
-        String qtySupplied = QtySupplied.getText();
-        String productSupplied = ProductSupplied.getText();
 
-        var dto = new supplierDto(id,name,companyName,description,qtySupplied,productSupplied);
-        try {
-            boolean isUpdated = new supplierDaoImpl().update(dto);
-            if (isUpdated){
-                System.out.println("Updated");
-            } else {
-                System.out.println("Not Updated");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) throws SQLException {
-       String id = Sup_ID.getText();
-       try {
-           boolean isDeleted = new supplierDaoImpl().delete(id);
-           if (isDeleted) {
-               System.out.println("Deleted");
-           } else {
-               System.out.println("Not Deleted");
-           }
-       }catch (SQLException e){
-           new Alert(Alert.AlertType.WARNING, "Something went wrong!").show();
-       }
+        String id = supplier_Table.getSelectionModel().getSelectedItem().toString();
+        try {
+            if (!existSup(id)) {
+                new Alert(Alert.AlertType.ERROR, "There is no such Supplier associated with the id " + id).show();
+            }
+            supBO.deleteSup(id);
+            supplier_Table.getItems().remove(supplier_Table.getSelectionModel().getSelectedItem());
+            supplier_Table.getSelectionModel().clearSelection();
+            initUI();
 
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to delete the Supplier " + id).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void ClearOnAction(ActionEvent actionEvent) {
-        Sup_ID.clear();
-        Sup_Name.clear();
-        CompanyNAme.clear();
-        Description.clear();
-        QtySupplied.clear();
-        ProductSupplied.clear();
-    }
+
 }

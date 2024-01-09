@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.SuppliersFormController">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" styleClass="sidebar" stylesheets="@../../styleSheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.SuppliersFormController">
     <Pane layoutY="61.0" prefHeight="1000.0" prefWidth="1410.0" styleClass="sidebar" AnchorPane.bottomAnchor="-61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0">
-        <TableView fx:id="payment_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
+        <TableView fx:id="supplier_Table" layoutX="173.0" layoutY="671.0" prefHeight="329.0" prefWidth="754.0">
             <columns>
                 <TableColumn prefWidth="75.0" text="Payment Id" />
                 <TableColumn prefWidth="75.0" text="Visitor Name" />
@@ -70,7 +66,7 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
+        <JFXButton fx:id="btnsvae" buttonType="RAISED" layoutX="1084.0" layoutY="656.0" onAction="#SaveOnAction" prefHeight="69.0" prefWidth="131.0" style="-fx-background-color: white;" text="Save" textFill="#1b1919">
             <font>
                 <Font size="32.0" />
             </font>

@@ -1,13 +1,12 @@
-package lk.ijse.dto;
-import lombok.*;
+package lk.ijse.TM;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class supplierDto {
-
-    public supplierDto(String id, String cN, String qtys, String tp) {
+public class SupTM implements Comparable<SupTM>{
+    public SupTM(){}
+    @Override
+    public int compareTo(SupTM o) {
+        return 0;
+    }
+    public SupTM(String id, String cN, String qtys, String tp) {
     }
 
     public String getSupplierId() {
@@ -65,5 +64,5 @@ public class supplierDto {
     private String qtySupplied;
     private String pId;
 
-
 }
+

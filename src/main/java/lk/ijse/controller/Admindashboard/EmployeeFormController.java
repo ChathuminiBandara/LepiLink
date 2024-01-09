@@ -11,12 +11,7 @@ import lk.ijse.TM.SalaryTM;
 import lk.ijse.bo.custom.EmpBO;
 import lk.ijse.bo.custom.impl.EmployeeBOImpl;
 import lk.ijse.dto.employeeDto;
-
-import lk.ijse.dao.Custom.Impl.EmployeeDaoImpl;
 import javafx.fxml.FXML;
-import lk.ijse.dto.salaryDto;
-import lk.ijse.entity.employee;
-
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -38,6 +33,23 @@ public class EmployeeFormController implements Initializable {
     EmpBO empBO = new EmployeeBOImpl();
 
 
+    private void initUI() {
+        Employee_ID.clear();
+        Employee_Name.clear();
+        StartedDate.clear();
+        Shift_Time.clear();
+        TP.clear();
+        Employee_ID.setDisable(true);
+        Employee_Name.setDisable(true);
+        StartedDate.setDisable(true);
+        Shift_Time.setDisable(true);
+        TP.setDisable(true);
+        Employee_ID.setEditable(false);
+        Employee_Name.setDisable(false);
+        StartedDate.setDisable(false);
+        Shift_Time.setDisable(false);
+        TP.setDisable(false);
+    }
     public void saveEmployee() {
             String id = Employee_ID.getText();
             String N = Employee_Name.getText();
@@ -86,6 +98,7 @@ public class EmployeeFormController implements Initializable {
 
         //btnAddNewSalary.fire();
     }
+
     boolean existEmp(String id) throws SQLException, ClassNotFoundException {
         return empBO.existEmp(id);
 
@@ -94,11 +107,9 @@ public class EmployeeFormController implements Initializable {
     public void SaveOnAction(ActionEvent actionEvent) {
         saveEmployee();
     }
-
     public void UpdateOnAction(ActionEvent actionEvent) {
 
     }
-
     public void DeleteOnAction(ActionEvent actionEvent) {
 
         String id = Employee_Table.getSelectionModel().getSelectedItem().toString();

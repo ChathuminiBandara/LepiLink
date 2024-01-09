@@ -1,4 +1,4 @@
-package lk.ijse.controller.Admindashboard;
+package lk.ijse.controller.Admindashboard.O;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.PlaceOrderDto;

@@ -1,4 +1,4 @@
-package lk.ijse.controller.Admindashboard;
+package lk.ijse.controller.Admindashboard.O;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.dto.tm.ItemTm;
-import lk.ijse.dao.Custom.Impl.ItemDaoImpl;
+
 
 import java.sql.SQLException;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ItemFormController {
     private TextField txtQtyOnHand;
     @FXML
     private TextField txtUnitPrice;
-    private ItemDaoImpl itemDaoImpl = new ItemDaoImpl();
+    private ItemModel itemModel = new ItemModel();
 
     public void initialize() {
         setCellValueFactory();
@@ -77,7 +77,7 @@ public class ItemFormController {
             var dto = new ItemDto(code, description, unitPrice, qtyOnHand);
 
             try {
-                boolean isSaved = itemDaoImpl.save(dto);
+                boolean isSaved = itemModel.saveItem(dto);
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
                     clearFields();
@@ -119,7 +119,7 @@ public class ItemFormController {
     private void loadAllItems() {
         ObservableList<ItemTm> obList = FXCollections.observableArrayList();
         try {
-            List<ItemDto> dtoList = itemDaoImpl.loadAllItems();
+            List<ItemDto> dtoList = itemModel.loadAllItems();
 
             for (ItemDto dto : dtoList) {
                 obList.add(new ItemTm(
@@ -137,11 +137,11 @@ public class ItemFormController {
         }
     }
 
-    @FXML
+   /* @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String code = txtCode.getText();
         try {
-            boolean isDeleted = itemDaoImpl.delete(code);
+            boolean isDeleted = itemModel.deleteItem(code);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item deleted!").show();
                 loadAllItems(); // Reload the table after deleting
@@ -151,7 +151,7 @@ public class ItemFormController {
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
-    }
+    }*/
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
@@ -162,7 +162,7 @@ public class ItemFormController {
             int qtyOnHand = Integer.parseInt(txtQtyOnHand.getText());
 
             try {
-                boolean isUpdated = itemDaoImpl.update(new ItemDto(code, description, unitPrice, qtyOnHand));
+                boolean isUpdated = itemModel.updateItem(new ItemDto(code, description, unitPrice, qtyOnHand));
                 if (isUpdated) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item updated").show();
                     clearFields();
@@ -183,7 +183,7 @@ public class ItemFormController {
     void codeSearchOnAction(ActionEvent event) {
         String code = txtCode.getText();
         try {
-            ItemDto dto = itemDaoImpl.searchItem(code);
+            ItemDto dto = itemModel.searchItem(code);
             if (dto != null) {
                 setFields(dto);
             } else {

@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.CustomerFormController">
+<AnchorPane fx:id="root" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1243.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Admindashboard.O.CustomerFormController">
     <children>
       <ImageView fitHeight="588.0" fitWidth="324.0" layoutX="1081.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
          <image>
