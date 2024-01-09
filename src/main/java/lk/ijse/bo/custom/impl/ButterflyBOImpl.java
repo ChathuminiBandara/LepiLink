@@ -1,6 +1,7 @@
 package lk.ijse.bo.custom.impl;
 
 import lk.ijse.bo.SuperBO;
+import lk.ijse.bo.custom.ButterflyBO;
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.ButterflyDAO;
 import lk.ijse.dao.custom.SalaryDAO;
@@ -10,7 +11,7 @@ import lk.ijse.dto.salaryDto;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ButterflyBOImpl implements SuperBO {
+public class ButterflyBOImpl implements ButterflyBO {
     ButterflyDAO butterflyDAO = (ButterflyDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.BUTTERFLY);
     @Override
     public ArrayList<butterflyDto> getAllButterfly() throws SQLException, ClassNotFoundException {

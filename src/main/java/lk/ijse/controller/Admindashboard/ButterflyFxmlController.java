@@ -63,7 +63,7 @@ public class ButterflyFxmlController implements Initializable {
                 if (existButterfly(id)) {
                     new Alert(Alert.AlertType.ERROR, id + " already exists").show();
                 }
-                boolean isSaved = ButterflyBO.saveButterfly(new butterflyDto(id, Name, dec,Species,AVG,cc));
+                boolean isSaved = butterflyBO.saveButterfly(new butterflyDto(id, Name, dec,Species,AVG,cc));
 
                 if (isSaved) {
                     Butterfly_Table.getItems().add(new ButterflyTM(id,Name, dec,Species,AVG,cc));
@@ -132,7 +132,7 @@ public class ButterflyFxmlController implements Initializable {
             if (!butterflyBO.existButterfly(id)) {
                 new Alert(Alert.AlertType.ERROR, "There is no such Salary associated with the id " + id).show();
             }
-            ButterflyBO.deleteButterfly(id);
+            butterflyBO.deleteButterfly(id);
             Butterfly_Table.getItems().remove(Butterfly_Table.getSelectionModel().getSelectedItem());
             Butterfly_Table.getSelectionModel().clearSelection();
             initUI();
