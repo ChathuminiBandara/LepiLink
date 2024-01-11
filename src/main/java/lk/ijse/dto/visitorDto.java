@@ -4,14 +4,12 @@ import lombok.*;
 
 
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Setter
 @Getter
+@AllArgsConstructor
 
 public class visitorDto {
-    public visitorDto(String visitorId, String name, String status, String time, String pstatus, String date, String bookingId) {
-    }
 
     public String getVisitorId() {
         return visitorId;

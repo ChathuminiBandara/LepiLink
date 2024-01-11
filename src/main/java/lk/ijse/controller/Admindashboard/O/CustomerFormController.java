@@ -62,7 +62,7 @@ public class CustomerFormController {
     private CustomerModel cusModel = new CustomerModel();
 
 
-    CustomerBO customerBO = new CustomerBOImpl();
+    //CustomerBO customerBO = new CustomerBOImpl();
 
     public void initialize() {
         setCellValueFactory();
