@@ -5,12 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.TM.SalaryTM;
-import lk.ijse.TM.SupTM;
+import lk.ijse.entity.TM.SalaryTM;
+import lk.ijse.entity.TM.SupTM;
 import lk.ijse.bo.custom.SupBO;
 import lk.ijse.bo.custom.impl.SupplierBOImpl;
-import lk.ijse.dao.custom.impl.SupplierDaoImpl;
-import lk.ijse.dto.salaryDto;
 import lk.ijse.dto.supplierDto;
 
 import java.sql.SQLException;

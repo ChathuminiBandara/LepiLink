@@ -7,18 +7,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import lk.ijse.TM.SalaryTM;
-import lk.ijse.TM.VisitorTM;
+import lk.ijse.entity.TM.VisitorTM;
 import lk.ijse.bo.custom.VisitorBO;
 import lk.ijse.bo.custom.impl.VisitoBOImpl;
-import lk.ijse.dao.custom.impl.VisitorDaoImpl;
-import lk.ijse.dto.salaryDto;
 import lk.ijse.dto.visitorDto;
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import lk.ijse.TM.VisitorTM;
 
 
 public class VisitorController implements Initializable {

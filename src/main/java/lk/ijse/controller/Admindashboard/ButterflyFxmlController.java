@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import lk.ijse.bo.custom.ButterflyBO;
 import lk.ijse.bo.custom.impl.ButterflyBOImpl;
 import lk.ijse.dto.butterflyDto;
-import lk.ijse.TM.ButterflyTM;
+import lk.ijse.entity.TM.ButterflyTM;
 
 
 import java.net.URL;

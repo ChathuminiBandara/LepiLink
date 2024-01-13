@@ -1,4 +1,4 @@
-package lk.ijse.TM;
+package lk.ijse.entity.TM;
 
 public class PayTM implements Comparable<PayTM>{
     public PayTM() {

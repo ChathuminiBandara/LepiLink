@@ -8,13 +8,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.TM.PayTM;
-import lk.ijse.TM.SalaryTM;
+import lk.ijse.entity.TM.PayTM;
 import lk.ijse.bo.custom.PayBO;
 import lk.ijse.bo.custom.impl.PaymentBOImpl;
-import lk.ijse.dao.custom.impl.PaymentDaoImpl;
 import lk.ijse.dto.paymentDto;
-import lk.ijse.dto.salaryDto;
 
 import java.net.URL;
 import java.sql.SQLException;

@@ -1,6 +1,4 @@
-package lk.ijse.TM;
-
-import lk.ijse.bo.custom.EmpBO;
+package lk.ijse.entity.TM;
 
 public class EmpTM implements Comparable<EmpTM> {
 

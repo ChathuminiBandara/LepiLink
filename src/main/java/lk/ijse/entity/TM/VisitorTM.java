@@ -1,6 +1,4 @@
-package lk.ijse.TM;
-
-import javafx.scene.control.TextField;
+package lk.ijse.entity.TM;
 
 public class VisitorTM implements Comparable<VisitorTM>{
     public String getVisitorId() {

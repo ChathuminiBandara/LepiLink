@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.bo.custom.impl.SalaryBOImpl;
-import lk.ijse.TM.SalaryTM;
+import lk.ijse.entity.TM.SalaryTM;
 import lk.ijse.bo.custom.SalaryBO;
 import lk.ijse.dto.salaryDto;
 

@@ -1,4 +1,4 @@
-package lk.ijse.TM;
+package lk.ijse.entity.TM;
 
 public class CustomerTM implements Comparable<CustomerTM>{
     private String id;

@@ -1,4 +1,4 @@
-package lk.ijse.TM;
+package lk.ijse.entity.TM;
 
 public class SupTM implements Comparable<SupTM>{
     public SupTM(){}
