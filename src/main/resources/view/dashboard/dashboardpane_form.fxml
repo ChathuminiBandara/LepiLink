@@ -4,59 +4,54 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1410.0" style="-fx-background-color: #9EDDFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.DashboardpaneFormController">
+<AnchorPane prefHeight="1080.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.users.DashboardpaneFormController">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="1091.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="1414.0" />
+      <ImageView fitHeight="1087.0" fitWidth="813.0" layoutX="657.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/photos_background/butterfly_Half.jpg" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="351.0" fitWidth="202.0" layoutX="18.0" layoutY="738.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/tree.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="944.0" fitWidth="607.0" layoutX="8.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="575.0" fitWidth="454.0" layoutX="8.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/tree.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="417.0" fitWidth="678.0" layoutX="747.0" layoutY="655.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../asserts/3D/vivid-mountain-lake.gif" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="359.0" fitWidth="612.0" layoutX="15.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../asserts/3D/juicy-information-board-with-search.gif" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="961.0" layoutY="798.0" opacity="0.12" prefHeight="209.0" prefWidth="196.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
-      <AnchorPane layoutX="1190.0" layoutY="798.0" opacity="0.12" prefHeight="209.0" prefWidth="196.0" style="-fx-background-radius: 15; -fx-background-color: white;" />
       <Label layoutX="1178.0" layoutY="1026.0" text="\@ 2023 LepiLink v1.01.01" textFill="#dddddd">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="667.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="646.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" rotate="50.7">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="668.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="346.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" rotate="50.7">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="99.0" fitWidth="81.0" layoutX="656.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" rotate="55.3">
+      <ImageView fitHeight="99.0" fitWidth="81.0" layoutX="955.0" layoutY="639.0" pickOnBounds="true" preserveRatio="true" rotate="55.3">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="625.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="852.0" layoutY="855.0" pickOnBounds="true" preserveRatio="true" rotate="-67.2">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="84.0" fitWidth="92.0" layoutX="528.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true" rotate="126.0">
+      <ImageView fitHeight="84.0" fitWidth="92.0" layoutX="611.0" layoutY="972.0" pickOnBounds="true" preserveRatio="true" rotate="126.0">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="99.0" fitWidth="81.0" layoutX="614.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="99.0" fitWidth="81.0" layoutX="277.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
@@ -76,7 +71,7 @@
             <Image url="@../../asserts/3D/juicy-woman-searching-with-a-magnifying-glass.gif" />
          </image>
       </ImageView>
-      <Label layoutX="739.0" layoutY="431.0" prefHeight="74.0" prefWidth="580.0" text="WE GOT 98089 BUTTERFLIES" textFill="#21035b">
+      <Label layoutX="425.0" layoutY="593.0" prefHeight="74.0" prefWidth="580.0" text="WE GOT 98089 BUTTERFLIES" textFill="#a6acd7">
          <font>
             <Font name="System Bold Italic" size="39.0" />
          </font></Label>
@@ -90,11 +85,6 @@
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <Label layoutX="436.0" layoutY="652.0" prefHeight="74.0" prefWidth="580.0" text="Let's Protect Our NATURE" textFill="#000743">
-         <font>
-            <Font name="System Bold Italic" size="39.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="157.0" fitWidth="193.0" layoutX="130.0" layoutY="604.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
@@ -125,17 +115,22 @@
             <Image url="@../../asserts/3D/pablita-blue-butterfly.gif" />
          </image>
       </ImageView>
-      <Label layoutX="347.0" layoutY="58.0" text="WELCOME TO LEPILINK">
+      <Label layoutX="347.0" layoutY="58.0" text="WELCOME TO LEPILINK" textFill="WHITE">
          <font>
             <Font name="Georgia Bold" size="52.0" />
          </font></Label>
-      <Label fx:id="lblDate" layoutX="878.0" layoutY="211.0" prefHeight="105.0" prefWidth="477.0">
+      <Label fx:id="lblDate" layoutX="1056.0" layoutY="26.0" prefHeight="45.0" prefWidth="354.0" textFill="WHITE">
          <font>
-            <Font size="52.0" />
+            <Font size="28.0" />
          </font></Label>
-      <Label fx:id="lblTime" layoutX="981.0" layoutY="571.0" prefHeight="105.0" prefWidth="337.0">
+      <Label fx:id="lblTime" layoutX="11.0" layoutY="35.0" prefHeight="56.0" prefWidth="318.0" textFill="WHITE">
          <font>
-            <Font size="58.0" />
+            <Font size="39.0" />
          </font></Label>
+      <Label layoutX="436.0" layoutY="652.0" prefHeight="74.0" prefWidth="580.0" text="Let's Protect Our NATURE" textFill="#c5c9eb">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
